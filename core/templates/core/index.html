@@ -1,0 +1,395 @@
+{% extends 'base.html' %} {% load static %}
+<!-- {% load cache %} -->
+{% block body %}
+<!-- banner -->
+
+<main class="">
+  <section class="hero h-dvh w-full grid place-items-center">
+    <video
+      src="{% static 'Drone_Clip.mp4' %}"
+      autoplay
+      loop
+      muted
+      class="h-full lg:w-full object-cover absolute top-0 -z-40"
+    ></video>
+    <div
+      class="container mx-auto mt-40 sm:mt-0 px-6 grid place-content-center gap-4"
+    >
+      <h1
+        class="text-shadow sm:text-6xl text-3xl font-semibold text-center"
+        data-aos="fade-down"
+        data-aos-duration="700"
+
+      >
+        The Future of Mobility is Here.
+      </h1>
+      <p
+        class="text-shadow text-center sm:text-2xl text-xl"
+        data-aos="fade-down"
+        data-aos-duration="700"
+
+      >
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      </p>
+      <div class="cta mx-auto my-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <button
+          class="cta-accent bg-yellow-500 w-56 sm:h-[53px] h-9 text-white text-sm sm:text-lg transition-colors duration-300 ease-in-out hover:bg-yellow-600 xl:inline"
+          data-aos="zoom-in"
+          data-aos-duration="700"
+
+        >
+          Learn More
+        </button>
+        <button
+          class="cta-light bg-transparent saturate-100 backdrop-blur-sm w-56 sm:h-[53px] h-9 border-white border text-white text-sm sm:text-lg transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
+          data-aos="zoom-in"
+          data-aos-duration="700"
+        >
+          Watch the Video
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {% include 'core/counter.html' %}
+
+  <section
+    id="featured-section"
+    class="my-10 py-10 border-y md:border-y-0 border-gray-300"
+  >
+    <div id="product-list" class="relative pb-5 w-full min-h-svh">
+      <div class="container text-center mx-auto space-y-3" data-aos="fade-zoom-in" data-aos-duration="700" data-aos-easing="ease-in-out">
+        <h2 class="lg:text-5xl text-3xl font-semibold">Our Drones</h2>
+        <p class="text-base">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, ducimus.
+        </p>
+      </div>
+
+      <!-- featured products -->
+      <div class="container mx-auto">
+        <div
+          class="container flex flex-col lg:flex-row gap-10 lg:mt-40 mt-8 mb-20 justify-center mx-auto"
+        >
+          <div
+            class="w-11/12 lg:w-4/12 flex mx-auto px-3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="product-item relative bg-white shadow-xl p-8 shadow-gray-400 transition-colors ease-in-out duration-75 anim-op-0"
+            >
+              <div
+                class="product-img w-full relative overflow-hidden bg-gradient-to-b from-blue-300 from-30% to-white"
+              >
+                <a href="/products/cw-15.html"
+                  ><img
+                    loading="lazy"
+                    class="w-full scale-125 transition-all duration-300 ease-in-out drop-shadow-2xl"
+                    src="https://www.jouav.com/wp-content/uploads/2023/01/cw-15-home.png"
+                    alt="drone-img"
+                /></a>
+              </div>
+              <div class="product-detail mt-16 relative">
+                <div class="text-xl font-semibold product-model">CW-15</div>
+                <div class="text-base font-semibold product-description">
+                  Multi-purpose intelligent VTOL drone
+                </div>
+                <div class="text-sm py-6 product-info">
+                  The new generation of JOUAV CW-15 UAV has a brand new upgrade
+                  of flight safety, avionics system, overall machine
+                  performance, and operating experience.
+                </div>
+                <div class="text-start product-learn-more">
+                  <a
+                    class="arrow-btn flex dark-style"
+                    href="/products/cw-15.html"
+                  >
+                    <span class="d-inline-block text-center rounded-circle">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-11/12 lg:w-4/12 flex mx-auto px-3" data-aos="fade-up">
+            <div
+              class="product-item relative bg-white shadow-xl p-8 lg:-mt-20 lg:mb-20 shadow-gray-400 transition-colors ease-in-out duration-75 anim-op-0"
+            >
+              <div
+                class="product-img w-full relative overflow-hidden bg-gradient-to-b from-blue-300 from-30% to-white"
+              >
+                <a href="/products/cw-15.html"
+                  ><img
+                    loading="lazy"
+                    class="w-full scale-125 transition-all duration-300 ease-in-out drop-shadow-2xl"
+                    src="https://www.jouav.com/wp-content/uploads/2023/01/cw-15-home.png"
+                    alt="drone-img"
+                /></a>
+              </div>
+              <div class="product-detail mt-16 relative">
+                <div class="text-xl font-semibold product-model">CW-15</div>
+                <div class="text-base font-semibold product-description">
+                  Multi-purpose intelligent VTOL drone
+                </div>
+                <div class="text-sm py-6 product-info">
+                  The new generation of JOUAV CW-15 UAV has a brand new upgrade
+                  of flight safety, avionics system, overall machine
+                  performance, and operating experience.
+                </div>
+                <div class="text-start product-learn-more">
+                  <a
+                    class="arrow-btn flex dark-style"
+                    href="/products/cw-15.html"
+                  >
+                    <span class="d-inline-block text-center rounded-circle">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-11/12 lg:w-4/12 flex mx-auto px-3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="product-item relative bg-white shadow-xl p-8 shadow-gray-400 transition-colors ease-in-out duration-75 anim-op-0"
+            >
+              <div
+                class="product-img w-full relative overflow-hidden bg-gradient-to-b from-blue-300 from-30% to-white"
+              >
+                <a href="/products/cw-15.html"
+                  ><img
+                    loading="lazy"
+                    class="w-full scale-125 transition-all duration-300 ease-in-out drop-shadow-2xl"
+                    src="https://www.jouav.com/wp-content/uploads/2023/01/cw-15-home.png"
+                    alt="drone-img"
+                /></a>
+              </div>
+              <div class="product-detail mt-16 relative">
+                <div class="text-xl font-semibold product-model">CW-15</div>
+                <div class="text-base font-semibold product-description">
+                  Multi-purpose intelligent VTOL drone
+                </div>
+                <div class="text-sm py-6 product-info">
+                  The new generation of JOUAV CW-15 UAV has a brand new upgrade
+                  of flight safety, avionics system, overall machine
+                  performance, and operating experience.
+                </div>
+                <div class="text-start product-learn-more">
+                  <a
+                    class="arrow-btn flex dark-style"
+                    href="/products/cw-15.html"
+                  >
+                    <span class="d-inline-block text-center rounded-circle">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+        <div class="">
+        <div class="container h-28 relative w-28 mx-auto text-center z-[6] "
+        data-aos="zoom-in">
+          <button
+            class="mx-auto h-full bg-transparent text-center items-center flex font-semibold border-2 border-black rounded-[50%] hover:border-none hover:text-yellow-500 hover:shadow-lg hover:shadow-gray-400 hover:bg-white transition-all duration-300 ease-in-out hover:scale-105"
+          >
+            See all Products
+          </button>
+        </div>
+    </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="partner-section" class="my-28"  data-aos="fade-up">
+    <div class="container text-center mx-auto space-y-3">
+      <h2 class="text-3xl lg:text-5xl font-semibold">Our Partners</h2>
+      <p class="text-base">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, ducimus.
+      </p>
+    </div>
+    <div id="partner-list-container" class="mx-auto my-10 w-10/12">
+      <ul
+        id="partner-list"
+        class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mx-auto w-full"
+      >
+        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
+          ABC
+        </li>
+        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
+          XYZ
+        </li>
+        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
+          ABC
+        </li>
+        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
+          XYZ
+        </li>
+        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
+          ABC
+        </li>
+        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
+          XYZ
+        </li>
+        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
+          ABC
+        </li>
+        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
+          XYZ
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="blog-section" class=""  data-aos="fade-up">
+    <div class="text-center my-10 mx-auto space-y-3">
+      <h2 class="text-3xl lg:text-5xl font-semibold">Our Blogs</h2>
+      <p class="text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor.
+        Nobis, illum cumque?
+      </p>
+    </div>
+
+    <div id="blog-list-container" class="w-10/12 mx-auto">
+      <ul id="blog-list" class="flex flex-col lg:flex-row gap-14">
+        <li class="lg:w-4/12 grid shadow-md overflow-hidden group">
+          <div class="overflow-hidden aspect-[16/9]">
+            <img
+              src="{% static 'core/img/drone-white.jpg' %}"
+              alt=""
+              class="h-full w-full object-cover group-hover:scale-125 transition-transform duration-700 ease-in-out"
+            />
+          </div>
+          <div class="blog-details p-8 space-y-3">
+            <h5
+              class="text-xl group-hover:text-yellow-500 transition-colors duration-300 font-semibold leading-relaxed"
+            >
+              Lorem ipsum dolor sit.
+            </h5>
+            <p class="text-ellipsis line-clamp-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              laudantium reiciendis culpa fugiat laborum atque delectus facere
+              saepe rerum similique beatae, adipisci magni quisquam, assumenda
+              commodi voluptatem nam optio neque.
+            </p>
+          </div>
+          <div class="p-8">
+            <span>March 27, 2024</span>
+            <span></span>
+          </div>
+        </li>
+        <li class="lg:w-4/12 grid shadow-md overflow-hidden group">
+          <div class="overflow-hidden aspect-[16/9]">
+            <img
+              src="{% static 'core/img/drone-white.jpg' %}"
+              alt=""
+              class="h-full w-full object-cover group-hover:scale-125 transition-transform duration-700 ease-in-out"
+            />
+          </div>
+          <div class="blog-details p-8 space-y-3">
+            <h5
+              class="text-xl group-hover:text-yellow-500 transition-colors duration-300 font-semibold leading-relaxed"
+            >
+              Lorem ipsum dolor sit.
+            </h5>
+            <p class="text-ellipsis line-clamp-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              laudantium reiciendis culpa fugiat laborum atque delectus facere
+              saepe rerum similique beatae, adipisci magni quisquam, assumenda
+              commodi voluptatem nam optio neque.
+            </p>
+          </div>
+          <div class="p-8">
+            <span>March 27, 2024</span>
+            <span></span>
+          </div>
+        </li>
+        <li class="lg:w-4/12 grid shadow-md overflow-hidden group">
+          <div class="overflow-hidden aspect-[16/9]">
+            <img
+              src="{% static 'core/img/drone-white.jpg' %}"
+              alt=""
+              class="h-full w-full object-cover group-hover:scale-125 transition-transform duration-700 ease-in-out"
+            />
+          </div>
+          <div class="blog-details p-8 space-y-3">
+            <h5
+              class="text-xl group-hover:text-yellow-500 transition-colors duration-300 font-semibold leading-relaxed"
+            >
+              Lorem ipsum dolor sit.
+            </h5>
+            <p class="text-ellipsis line-clamp-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              laudantium reiciendis culpa fugiat laborum atque delectus facere
+              saepe rerum similique beatae, adipisci magni quisquam, assumenda
+              commodi voluptatem nam optio neque.
+            </p>
+          </div>
+          <div class="p-8">
+            <span>March 27, 2024</span>
+            <span></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="project-section" class="my-28">
+    <div class="text-center my-10 mx-auto space-y-3" data-aos="zoom-in">
+      <h2 class="text-3xl lg:text-5xl font-semibold">Our Projects</h2>
+      <p class="text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor.
+        Nobis, illum cumque?
+      </p>
+    </div>
+
+    <div
+      id="image-slider"
+      class="splide max-w-full min-h-96 m-auto"
+      aria-label="Splide Basic HTML Example"
+      data-aos="zoom-in"
+    >
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img
+              class=""
+              src="{% static 'core/img/drone-white.jpg' %}"
+              alt="Image 1"
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              class="h-full"
+              src="{% static 'core/img/sri_muktsar_sahib_popup.png' %}"
+              alt="Image 2"
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              class=""
+              src="{% static 'core/img/drone-white.jpg' %}"
+              alt="Image 3"
+            />
+          </li>
+          <!-- Add more slides as needed -->
+        </ul>
+      </div>
+    </div>
+    <div class="btn grid place-content-center my-16">
+      <button
+        class="px-14 leading-10 font-semibold text-black bg-yellow-500 hover:bg-yellow-600 transition-colors duration-150"
+      >
+        Read More
+      </button>
+    </div>
+  </section>
+</main>
+
+{% endblock body %}
