@@ -1,4 +1,6 @@
-AOS.init();
+AOS.init({
+    once: true
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('#image-slider', {
