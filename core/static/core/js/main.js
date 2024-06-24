@@ -150,17 +150,15 @@ function updateHeader() {
     if (scrollY > 50 || dropdownActive || mobileMenuActive) {
         header.classList.add(
             "bg-white",
-            "shadow-md",
-            "shadow-shadow",
-            "scale-y-105"
-            
+            // "shadow-md",
+            // "shadow-shadow",
         );
 
         header.classList.remove(
             "bg-transparent",
             "text-white",
             "border-b",
-            "lg:h-24"
+            // "lg:h-18"
         );
         navLinks.classList.add("text-black");
         cta.classList.remove("border-white", "text-white");
@@ -175,15 +173,15 @@ function updateHeader() {
     } else {
         header.classList.remove(
             "bg-white",
-            "shadow-md",
-            "shadow-shadow",
-            "lg:h-22"
+            // "shadow-md",
+            // "shadow-shadow",
+            // "lg:h-22"
         );
         header.classList.add(
             "bg-transparent",
             "text-white",
             "border-b",
-            "lg:h-24"
+            // "lg:h-24"
         );
         cta.classList.remove(
             "border-yellow-500",
