@@ -1,17 +1,32 @@
 {% extends 'base.html' %} {% load static %} {% block body %}
 
-<main class="bg-black">
-  <section id="drone-hero-section" class="container">
-    <div id="agri-hero-1" class="relative">
+<main class="bg-black w-full">
+  <section id="drone-hero-section" class="w-full">
+    <div id="agri-hero-1" class="relative w-full">
       <div
         id="hero-1-content"
-        class="absolute top-0 h-1/4 w-full text-center flex flex-col justify-end bg-black text-white shadow-xl shadow-black"
+        class="absolute top-10 left-1/3 lg:left-1/3 h-1/4 text-black flex flex-col justify-end "
       >
-        <h3>Lorem, ipsum dolor.</h3>
+        <h3 class="text-yellow-500">Lorem, ipsum dolor.</h3>
         <h4>Lorem, ipsum dolor.</h4>
       </div>
     </div>
-    <div id="agri-hero-2" class="w-full h-">
+    <div class="hidden">
+
+        <div class="w-full h-lvh relative overflow-hidden">
+            <video src="{% static 'core/Drone_clip.mp4' %}" autoplay muted loop class="absolute top-0 left-0 -z-10 object-cover h-dvh w-full hidden"></video>
+        </div>
+        <div class="mx-auto scroll-text panel h-lvh bg-transparent grid place-content-center text-white">
+            <ul class="flex flex-col justify-center items-center">
+                <li>aksdjfkw</li>
+                <li>asgw</li>
+                <li>zsdgWe</li>
+                <li>sedfsef</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="agri-hero-2" class="lg:hidden w-full">
       <div id="hero-2-content" class="mx-auto">
         <ul class="flex flex-col items-center">
           <li><p>Lorem, ipsum dolor.</p></li>
@@ -22,53 +37,76 @@
       </div>
     </div>
   </section>
-  <div id="agri-drone-video" class="h-[30vh] bg-black">
+  <div class="w-full lg:h-lvh bg-white lg:grid lg:place-content-center ">
+  <div id="agri-drone-video" class="overflow-hidden lg:rounded-lg h-[27vh] lg:h-[468px] w-full lg:w-7/12 mx-auto relative">
     <div class="play-btn"></div>
     <video
       id="drone-video"
-      src="{% static 'core/video/agri-drone.mp4' %}"
-      autoplay
+      src="{% static 'core/Drone_clip.mp4' %}"
+      paused
       muted
       loop
+      class=""
     ></video>
   </div>
+</div>
 
   <section id="agri-drone-features">
-    <div id="agri-flow-cards-container" class="w-full py-8 space-y-3 bg-white">
-      <div
-        class="p-8 bg-gray-300 w-10/12 mx-auto rounded-md flex flex-col gap-3"
-      >
-        <h6 class="text-lg">Max Flow Rate</h6>
-        <p class="text-base">Lorem ipsum dolor sit. <span>lorem</span></p>
-        <div class="progress-bar-m"></div>
-        <p>Lorem, ipsum dolor. <span>lorem</span></p>
-        <div class="progress-bar-gray-m"></div>
-        <div class="divider"></div>
-        <h6>Lorem ipsum dolor sit amet.</h6>
-        <div class="flex justify-between">
-          <p>Lorem, ipsum. <span>lorem</span></p>
-          <p>Lorem, ipsum. <span>lorem</span></p>
-        </div>
-      </div>
-      <div
-        class="p-8 bg-gray-300 w-10/12 mx-auto rounded-md flex flex-col gap-3"
-      >
-        <h6 class="text-lg">Max Flow Rate</h6>
-        <p class="text-base">Lorem ipsum dolor sit. <span>lorem</span></p>
-        <div class="progress-bar-m"></div>
-        <p>Lorem, ipsum dolor. <span>lorem</span></p>
-        <div class="progress-bar-gray-m"></div>
-        <div class="divider"></div>
-        <h6>Lorem ipsum dolor sit amet.</h6>
-        <div class="flex justify-between">
-          <p>Lorem, ipsum. <span>lorem</span></p>
-          <p>Lorem, ipsum. <span>lorem</span></p>
-        </div>
-      </div>
+    <div id="agri-flow-cards-container" class="w-full py-8 bg-white">
+        <div class="flex flex-col lg:flex-row gap-6 w-11/12 lg:w-10/12 mx-auto">
 
-      <p class="mx-auto text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing.
-      </p>
+            <div
+            class="p-6 lg:p-10 bg-gray-300 w-10/12 mx-auto rounded-md flex flex-col gap-3"
+            >
+                <h6 class="text-xl lg:text-2xl">Max Flow Rate</h6>
+                <div class="">
+
+                    <p class="text-base">Lorem ipsum dolor sit. <span>lorem</span></p>
+                    <div class="flex gap-3 items-center">
+                        
+                        <span class="progress-bar-accent text-right h-2 w-9/12 bg-gradient-to-r from-white to-yellow-500 rounded-lg"></span><span class="-mr-10 -mt10 text-yellow-500"><span class=" text-2xl">1.2 </span>x</span>
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor. <span>lorem</span></p>
+                <div class="flex gap-3 items-center">
+
+                    <span class="progress-bar-gray  text-right h-2 w-1/2 bg-slate-300 rounded-lg"></span>
+                </div>
+                <div class="divider bg-gray-600 w-11/12 border-gray-600 border border-bottom my-12"></div>
+                <h6 class="text-xl lg:text-2xl italic">Lorem <span class="text-yellow-500"> ipsum dolor sit amet.</span></h6>
+                <div class="flex flex-col gap-4">
+                    <p>Open Field <span class="mx-4"> | </span><span class="text-yellow-500"><span class="text-3xl">19 </span>ha/hr</span></p>
+                    <p>Open Field <span class="mx-4"> | </span><span class="text-yellow-500"><span class="text-3xl">19 </span>ha/hr</span></p>
+                </div>
+            </div>
+            <div
+            class="p-6 lg:p-10 bg-gray-300 w-10/12 mx-auto rounded-md flex flex-col gap-3"
+            >
+                <h6 class="text-xl lg:text-2xl">Max Flow Rate</h6>
+                <div class="">
+
+                    <p class="text-base">Lorem ipsum dolor sit. <span>lorem</span></p>
+                    <div class="flex gap-3 items-center">
+                        
+                        <span class="progress-bar-accent  text-right h-2 w-9/12 bg-gradient-to-r from-white to-yellow-500 rounded-lg"></span><span class="-mr-10 -mt10 text-yellow-500"><span class=" text-2xl">1.2 </span>x</span>
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor. <span>lorem</span></p>
+                <div class="flex gap-3 items-center">
+
+                    <span class="progress-bar-gray  text-right h-2 w-1/2 bg-slate-300 rounded-lg"></span>
+                </div>
+                <div class="divider bg-gray-600 w-11/12 border-gray-600 border border-bottom my-12"></div>
+                <h6 class="text-xl lg:text-2xl italic">Lorem <span class="text-yellow-500"> ipsum dolor sit amet.</span></h6>
+                <div class="flex flex-col gap-4">
+                    <p>Open Field <span class="mx-4"> | </span><span class="text-yellow-500"><span class="text-3xl">19 </span>ha/hr</span></p>
+                    <p>Open Field <span class="mx-4"> | </span><span class="text-yellow-500"><span class="text-3xl">19 </span>ha/hr</span></p>
+                </div>
+            </div>    
+        </div>
+        <p class="mx-auto text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+        </p>
     </div>
 
     <div id="agri-payload-container" class="px-8 py-12 flex flex-col gap-6">
@@ -124,6 +162,13 @@
       </div>
     </div>
 
+    <div class="w-full h-lvh hidden lg:block">
+
+        <div class="scale-up-video w-full h-full scale-50 grid place-content-center overflow-hidden">
+            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="object-cover "></video>
+        </div>
+    </div>
+
     <div id="agri-spray-feature-container" class="px-8 py-12 text-white flex flex-col justify-between">
       <div class="flex flex-col gap-2">
         <h6 class="text-sm font-normal">Lorem, ipsum.</h6>
@@ -159,9 +204,57 @@
       </ul>
     </div>
 
-    <div id="agri-application-list-container" class="w-full p-4 bg-white">
-      <ul id="agri-application-list" class="mx-auto text-center grid gap-4">
-        <li class="flex">
+    <div id="agri-application-list-container" class="w-full h-dvh p-8 lg:p-16 bg-white">
+      <ul id="agri-application-list" class="mx-auto text-center grid lg:grid-cols-2 gap-4 lg:w-9/12 lg:h-3/4">
+        <li class="flex lg:relative justify-center items-start rounded-sm">
+          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
+          <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
+            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
+            <div class="flex flex-col lg:flex-row">
+
+                <p class="text-xs">Lorem, ipsum.</p>
+                <p class="text-xs">Lorem, ipsum.</p>
+                <p class="text-xs">Lorem, ipsum.</p>
+            </div>
+          </div>
+        </li>
+        <li class="flex lg:relative justify-center items-start">
+          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
+          <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
+            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
+            <div class="flex flex-col lg:flex-row">
+
+                <p class="text-xs">Lorem, ipsum.</p>
+                <p class="text-xs">Lorem, ipsum.</p>
+                <p class="text-xs">Lorem, ipsum.</p>
+            </div>
+          </div>
+        </li>
+        <li class="flex lg:relative justify-center items-start">
+          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
+          <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
+            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
+            <div class="flex flex-col lg:flex-row">
+
+                <p class="text-xs">Lorem, ipsum.</p>
+                <p class="text-xs">Lorem, ipsum.</p>
+                <p class="text-xs">Lorem, ipsum.</p>
+            </div>
+          </div>
+        </li>
+        <li class="flex lg:relative justify-center items-start">
+          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
+          <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
+            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
+            <div class="flex flex-col lg:flex-row">
+
+                <p class="text-xs">Lorem, ipsum.</p>
+                <p class="text-xs">Lorem, ipsum.</p>
+                <p class="text-xs">Lorem, ipsum.</p>
+            </div>
+          </div>
+        </li>
+        <!-- <li class="flex">
           <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="h-28 w-44"/>
           <div class="flex flex-col p-2 text-start">
             <h5 class="text-sm">Lorem, ipsum dolor.</h5>
@@ -187,16 +280,7 @@
             <p class="text-xs">Lorem, ipsum.</p>
             <p class="text-xs">Lorem, ipsum.</p>
           </div>
-        </li>
-        <li class="flex">
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="h-28 w-44"/>
-          <div class="flex flex-col p-2 text-start">
-            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
-            <p class="text-xs">Lorem, ipsum.</p>
-            <p class="text-xs">Lorem, ipsum.</p>
-            <p class="text-xs">Lorem, ipsum.</p>
-          </div>
-        </li>
+        </li> -->
         
       </ul>
 

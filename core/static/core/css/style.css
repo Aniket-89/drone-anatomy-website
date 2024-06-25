@@ -6,19 +6,25 @@ header {
     max-height: 93px;
 }
 
+
+#agri-hero-1 {
+    background-image: url('../img/agri_drone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
 @media screen and (max-width:798px) {
     header {
         max-height: 62px;
     }
+    #agri-hero-1 {
+        background-image: url('../img/agri-drone-m.png');
+    }
+    
 }
 
-#agri-hero-1 {
-    background-image: url('../img/agri-drone-m.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-}
+
 
 #agri-hero-2 {
     background-image: url('../img/agri-drone-m.png');
@@ -31,9 +37,9 @@ header {
 
 #agri-drone-video video {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     z-index: 1;

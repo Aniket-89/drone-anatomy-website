@@ -33,119 +33,37 @@
           >
           <div
             id="product-dropdown"
-            class="absolute hidden left-0 top-20 w-full justify-between bg-white p-8 text-black transition duration-500 ease-in-out hover:flex"
+            class="absolute hidden left-0 top-16 w-full justify-between bg-white p-8 text-black transition duration-500 ease-in-out hover:flex"
           >
-            <ul class="flex justify-between w-8/12 mx-auto text-nowrap">
-              <li class="pr-6">
-                <ul class="grid gap-1">
-                  <li>
-                    <a href="" class="hover:text-yellow-400"
-                      ><h3 class="font-bold">DRONE</h3></a
-                    >
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                </ul>
+            <ul class="flex justify-between w-10/12 mx-auto text-nowrap pt-8">
+              <li class="pr-6 w-1/4 h-2/3 text-center">
+                <a href="{% url 'core:agri-detail' %}" class="group">
+                    <div class="overflow-hidden h-44 ">
+
+                        <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
+                    </div>
+                    <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
+                </a>
               </li>
-              <li class="pr-6">
-                <ul class="grid gap-1">
-                  <li>
-                    <a href="" class="hover:text-yellow-400"
-                      ><h3 class="font-bold">PAYLOAD</h3></a
-                    >
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                </ul>
+              <li class="pr-6 w-1/4 h-2/3 text-center">
+                <a href="{% url 'core:agri-detail' %}" class="group">
+                    <div class="overflow-hidden h-44 ">
+
+                        <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
+                    </div>
+                    <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
+                </a>
               </li>
-              <li class="pr-6">
-                <ul class="grid gap-1">
-                  <li>
-                    <a href="" class="hover:text-yellow-400"
-                      ><h3 class="font-bold">CONTROLLER</h3></a
-                    >
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                </ul>
+              <li class="pr-6 w-1/4 h-2/3 text-center">
+                <a href="{% url 'core:agri-detail' %}" class="group">
+                    <div class="overflow-hidden h-44 ">
+
+                        <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
+                    </div>
+                    <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
+                </a>
               </li>
-              <li class="pr-6">
-                <ul class="grid gap-1">
-                  <li>
-                    <a href="" class="hover:text-yellow-400"
-                      ><h3 class="font-bold">SOFTWARE</h3></a
-                    >
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                  <li>
-                    <a href="" class="hover:text-yellow-500">CW-007</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="w-3/12">
-                <div class="grid gap-1"></div>
-                <img
-                  src="https://img.freepik.com/free-psd/plane-mockup_1310-1053.jpg?t=st=1718008212~exp=1718011812~hmac=c5a164181038d839c38073e211a2e8a6744f3b8070b337842bb137f217ead80c&w=1380"
-                  alt=""
-                  class="h-20"
-                />
-                <p class="text-wrap">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                  iure voluptatibus dolorum delectus magnam asperiores beatae.
-                  Veniam odio placeat qui rem officiis possimus sit suscipit?
-                </p>
-                <a href="" class="text-yellow-500">Read More</a>
-              </li>
+              
             </ul>
           </div>
         </li>
@@ -158,9 +76,9 @@
           >
           <div
             id="industry-dropdown"
-            class="absolute hidden left-0 top-20 w-full justify-between bg-white p-8 text-black transition duration-500 ease-in-out hover:flex"
+            class="absolute hidden left-0 top-16 w-full justify-between bg-white p-8 text-black transition duration-500 ease-in-out hover:flex"
           >
-            <ul class="flex justify-between w-8/12 mx-auto">
+            <ul class="flex justify-between w-10/12 mx-auto">
               <li class="grid gap-1">
                 <a href="" class="font-bold hover:text-yellow-400">DRONE</a>
                 <a href="" class="hover:text-yellow-500">CW-007</a>
