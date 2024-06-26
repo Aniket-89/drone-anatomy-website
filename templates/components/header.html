@@ -7,19 +7,25 @@
   <div id="logo-container"
     class="container mx-auto h-full flex items-center justify-between w-10/12 xl:w-10/12"
   >
-    <a href="" class="w-28 lg:w-32">
-      <div class="logo overflow-hidden flex">
+    <a href="{% url 'core:home' %}" class="h-[35px] lg:h-[59px] my-4">
+      <div class="logo overflow-hidden flex h-full ">
         <img
           id="logo-light"
-          src="{% static 'core/img/logo-light.png' %}"
+          src="{% static 'core/img/logo.png' %}"
           alt="drone anatomy"
-          class="object-center object-cover"
+          class="object-cover"
         />
+        <!-- <img
+          id="logo-dark"
+          src="{% static 'core/img/logo.png' %}"
+          alt="drone anatomy"
+          class="object-cover"
+        /> -->
         <img
           id="logo-dark"
-          src="{% static 'core/img/logo-dark.png' %}"
+          src="{% static 'core/img/home_logo.png' %}"
           alt="drone anatomy"
-          class="hidden object-center object-cover"
+          class="hidden object-center object-cover h-full"
         />
       </div>
     </a>
@@ -78,29 +84,36 @@
             id="industry-dropdown"
             class="absolute hidden left-0 top-16 w-full justify-between bg-white p-8 text-black transition duration-500 ease-in-out hover:flex"
           >
-            <ul class="flex justify-between w-10/12 mx-auto">
-              <li class="grid gap-1">
-                <a href="" class="font-bold hover:text-yellow-400">DRONE</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-              </li>
+          <ul class="flex justify-between w-10/12 mx-auto text-nowrap pt-8">
+            <li class="pr-6 w-1/4 h-2/3 text-center">
+              <a href="{% url 'core:agri-detail' %}" class="group">
+                  <div class="overflow-hidden h-44 ">
 
-              <li class="grid gap-1"><h3>PAYLOAD</h3></li>
-              <li class="grid gap-1"><h3>CONTROLLER</h3></li>
-              <li class="grid gap-1">SOFTWARE</li>
+                      <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
+                  </div>
+                  <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
+              </a>
+            </li>
+            <li class="pr-6 w-1/4 h-2/3 text-center">
+              <a href="{% url 'core:agri-detail' %}" class="group">
+                  <div class="overflow-hidden h-44 ">
 
-              <li class="">
-                <img
-                  src="https://img.freepik.com/free-psd/plane-mockup_1310-1053.jpg?t=st=1718008212~exp=1718011812~hmac=c5a164181038d839c38073e211a2e8a6744f3b8070b337842bb137f217ead80c&w=1380"
-                  alt=""
-                  class="h-20"
-                />
-              </li>
-            </ul>
+                      <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
+                  </div>
+                  <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
+              </a>
+            </li>
+            <li class="pr-6 w-1/4 h-2/3 text-center">
+              <a href="{% url 'core:agri-detail' %}" class="group">
+                  <div class="overflow-hidden h-44 ">
+
+                      <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
+                  </div>
+                  <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
+              </a>
+            </li>
+            
+          </ul>
           </div>
         </li>
 
@@ -120,7 +133,7 @@
         </li>
         <li>
           <a
-            href=""
+            href="{% url 'core:about' %}"
             class="nav-links transition-colors font-semibold duration-150 ease-in-out hover:text-yellow-400"
             >About</a
           >

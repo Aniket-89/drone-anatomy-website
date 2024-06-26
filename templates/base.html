@@ -38,13 +38,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!-- Le javascript
     ================================================== -->
     {# Placed at the top of the document so pages load faster with defer #}
-    {% block javascript %}
     <script defer src="{% static 'core/js/main.js' %}"></script>
-    {% endblock javascript %}
+    
   </head>
   <body class="">
     <div id="whatsapp-btn" class="fixed bottom-10 right-10 z-50">
-        <a href="https://wa.me/919507207645?text=Hello"
+        <a href="{% url 'core:whatsapp-redirect' %}"
         target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,10 +94,11 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
       {% include 'components/footer.html' %}
     </div>
-    <!-- wrapper end -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    {% block javascript %}
+    {% endblock javascript %}
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js

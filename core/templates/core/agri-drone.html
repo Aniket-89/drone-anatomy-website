@@ -1,20 +1,21 @@
 {% extends 'base.html' %} {% load static %} {% block body %}
 
+
 <main class="bg-black w-full">
   <section id="drone-hero-section" class="w-full">
-    <div id="agri-hero-1" class="relative w-full">
+    <div id="agri-hero-1" class="panel relative w-full">
       <div
         id="hero-1-content"
         class="absolute top-10 left-1/3 lg:left-1/3 h-1/4 text-black flex flex-col justify-end "
       >
-        <h3 class="text-yellow-500">Lorem, ipsum dolor.</h3>
-        <h4>Lorem, ipsum dolor.</h4>
+        <h3 class="text-3xl">Lorem, ipsum dolor.</h3>
+        <h4 class="text-5xl font-normal">Lorem, ipsum dolor.</h4>
       </div>
     </div>
-    <div class="hidden">
+    <div class="panel hidden lg:block">
 
-        <div class="w-full h-lvh relative overflow-hidden">
-            <video src="{% static 'core/Drone_clip.mp4' %}" autoplay muted loop class="absolute top-0 left-0 -z-10 object-cover h-dvh w-full hidden"></video>
+        <div class="w-full h-lvh relative">
+            <video src="{% static 'core/Drone_clip.mp4' %}" autoplay muted loop class="absolute top-0 left-0 -z-10 object-cover h-dvh w-full"></video>
         </div>
         <div class="mx-auto scroll-text panel h-lvh bg-transparent grid place-content-center text-white">
             <ul class="flex flex-col justify-center items-center">
@@ -43,20 +44,19 @@
     <video
       id="drone-video"
       src="{% static 'core/Drone_clip.mp4' %}"
-      paused
-      muted
       loop
+      controls="nodownload"
       class=""
     ></video>
   </div>
 </div>
 
   <section id="agri-drone-features">
-    <div id="agri-flow-cards-container" class="w-full py-8 bg-white">
-        <div class="flex flex-col lg:flex-row gap-6 w-11/12 lg:w-10/12 mx-auto">
+    <div id="agri-flow-cards-container" class="w-full py-8 mb-16 bg-white">
+        <div class="flex flex-col lg:flex-row gap-6 w-10/12 lg:w-9/12 mx-auto">
 
             <div
-            class="p-6 lg:p-10 bg-gray-300 w-10/12 mx-auto rounded-md flex flex-col gap-3"
+            class="p-6 lg:p-10 bg-gray-300 lg:w-1/2 w-full mx-auto rounded-md flex flex-col gap-3"
             >
                 <h6 class="text-xl lg:text-2xl">Max Flow Rate</h6>
                 <div class="">
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div
-            class="p-6 lg:p-10 bg-gray-300 w-10/12 mx-auto rounded-md flex flex-col gap-3"
+            class="p-6 lg:p-10 bg-gray-300 lg:w-1/2 w-full  mx-auto rounded-md flex flex-col gap-3"
             >
                 <h6 class="text-xl lg:text-2xl">Max Flow Rate</h6>
                 <div class="">
@@ -104,12 +104,12 @@
                 </div>
             </div>    
         </div>
-        <p class="mx-auto text-center">
+        <p class="mx-auto text-center text-xs leading-[1.2]">
             Lorem ipsum dolor sit amet consectetur adipisicing.
         </p>
     </div>
 
-    <div id="agri-payload-container" class="px-8 py-12 flex flex-col gap-6">
+    <div id="agri-payload-container-m" class="lg:hidden px-8 py-12 flex flex-col gap-6">
       <p>Lorem ipsum dolor sit amet.</p>
       <h2 class="text-white">Lorem ipsum dolor sit amet consectetur.</h2>
       <div class="space-y-1">
@@ -162,10 +162,21 @@
       </div>
     </div>
 
+    <div class="w-full spray-banner flex items-center">
+        <div class="space-y-6 w-8/12 text-white mx-auto">
+            <h6 class="text-sm">Lorem, ipsum.</h6>
+            <p>Lorem ipsum dolor sit amet consectetur <br>
+            adipisicing elit. Neque laboriosam eum voluptas.</p>
+            <h3 class="text-3xl">Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut unde nisi reprehenderit voluptatum <br>
+            architecto dolor, obcaecati ut nam eaque dicta.</p>
+        </div>
+    </div>
+
     <div class="w-full h-lvh hidden lg:block">
 
         <div class="scale-up-video w-full h-full scale-50 grid place-content-center overflow-hidden">
-            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="object-cover "></video>
+            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="object-cover h-lvh w-full"></video>
         </div>
     </div>
 
@@ -590,3 +601,44 @@
 </main>
 
 {% endblock body %}
+{% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+    
+function setupScrollTriggerAnimation() {
+    if (window.innerWidth >= 1024) { // Change 1024 to your desired screen width
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray(".panel").forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top top",
+                end: "+=500",
+                pin: true,
+                pinSpacing: false,
+                scrub: 1
+            });
+        });
+
+        gsap.to(".scale-up-video", {
+            scrollTrigger: {
+                trigger: ".scale-up-video",
+                start: "top 50%",
+                toggleActions: "play none reverse none",
+            },
+            scale: 1, // Final scale value
+            duration: 1
+        });
+
+    }
+}
+
+setupScrollTriggerAnimation();
+window.addEventListener('resize', function() {
+    setupScrollTriggerAnimation();
+});
+
+</script>
+
+{% endblock javascript %}

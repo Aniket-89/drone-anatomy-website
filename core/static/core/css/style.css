@@ -6,6 +6,20 @@ header {
     max-height: 93px;
 }
 
+#about-banner {
+    background-image: url('../img/cloud-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40vh
+}
+.spray-banner {
+    background-image: url('../img/cloud-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
 
 #agri-hero-1 {
     background-image: url('../img/agri_drone.png');

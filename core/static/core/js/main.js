@@ -2,39 +2,39 @@ AOS.init({
     once: true
 });
 
-function setupScrollTriggerAnimation() {
-    if (window.innerWidth >= 1024) { // Change 1024 to your desired screen width
-        gsap.registerPlugin(ScrollTrigger);
+// function setupScrollTriggerAnimation() {
+//     if (window.innerWidth >= 1024) { // Change 1024 to your desired screen width
+//         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.utils.toArray(".panel").forEach((panel, i) => {
-            ScrollTrigger.create({
-                trigger: panel,
-                start: "top top",
-                end: "+=500",
-                pin: true,
-                pinSpacing: false,
-                scrub: 1
-            });
-        });
+//         gsap.utils.toArray(".panel").forEach((panel, i) => {
+//             ScrollTrigger.create({
+//                 trigger: panel,
+//                 start: "top top",
+//                 end: "+=500",
+//                 pin: true,
+//                 pinSpacing: false,
+//                 scrub: 1
+//             });
+//         });
 
-        gsap.to(".scale-up-video", {
-            scrollTrigger: {
-                trigger: ".scale-up-video",
-                start: "top 50%",
+//         gsap.to(".scale-up-video", {
+//             scrollTrigger: {
+//                 trigger: ".scale-up-video",
+//                 start: "top 50%",
 
-                toggleActions: "play none reverse none",
-            },
-            scale: 1, // Final scale value
-            duration: 1
-        });
+//                 toggleActions: "play none reverse none",
+//             },
+//             scale: 1, // Final scale value
+//             duration: 1
+//         });
 
-    }
-}
+//     }
+// }
 
-setupScrollTriggerAnimation();
-window.addEventListener('resize', function() {
-    setupScrollTriggerAnimation();
-});
+// setupScrollTriggerAnimation();
+// window.addEventListener('resize', function() {
+//     setupScrollTriggerAnimation();
+// });
 
 
 document.addEventListener('DOMContentLoaded', function () {

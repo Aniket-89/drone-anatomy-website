@@ -1,5 +1,4 @@
-{% extends 'base.html' %} 
-{% load static %}
+{% extends 'base.html' %} {% load static %}
 <!-- {% load cache %} -->
 {% block body %}
 <!-- banner -->
@@ -7,12 +6,18 @@
 <main class="">
   <section class="hero h-[100vh] w-full grid place-items-center">
     <video
-      src="{% static 'core/Drone_Clip.mp4' %}"
+      id="home-hero-video"
+      src="{% static 'core/drone-teaser.mp4' %}"
       autoplay
       loop
       muted
       class="h-full lg:w-full object-cover absolute top-0 -z-40"
-    ></video>
+    >
+      Your browser does not support the video tag.
+    </video>
+    <button id="mute-toggle-btn" class="absolute bottom-10 left-1/2 text-white z-10">
+      unmute
+    </button>
     <div
       class="container mx-auto mt-40 sm:mt-0 px-6 grid place-content-center gap-4"
     >
@@ -20,7 +25,6 @@
         class="text-shadow sm:text-6xl text-3xl font-semibold text-center"
         data-aos="fade-down"
         data-aos-duration="700"
-
       >
         The Future of Mobility is Here.
       </h1>
@@ -28,7 +32,6 @@
         class="text-shadow text-center sm:text-2xl text-xl"
         data-aos="fade-down"
         data-aos-duration="700"
-
       >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
       </p>
@@ -37,7 +40,6 @@
           class="cta-accent bg-yellow-500 w-56 sm:h-[53px] h-9 text-white text-sm sm:text-lg transition-colors duration-300 ease-in-out hover:bg-yellow-600 xl:inline"
           data-aos="zoom-in"
           data-aos-duration="700"
-
         >
           Learn More
         </button>
@@ -59,7 +61,12 @@
     class="my-10 py-10 border-y md:border-y-0 border-gray-300"
   >
     <div id="product-list" class="relative pb-5 w-full min-h-svh">
-      <div class=" text-center w-10/12 mx-auto space-y-3" data-aos="fade-zoom-in" data-aos-duration="700" data-aos-easing="ease-in-out">
+      <div
+        class="text-center w-10/12 mx-auto space-y-3"
+        data-aos="fade-zoom-in"
+        data-aos-duration="700"
+        data-aos-easing="ease-in-out"
+      >
         <h2 class="lg:text-5xl text-3xl font-semibold">Our Drones</h2>
         <p class="text-base">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, ducimus.
@@ -191,24 +198,24 @@
               </div>
             </div>
           </div>
-
-          
         </div>
         <div class="">
-        <div class="container h-28 relative w-28 mx-auto text-center z-[6] "
-        data-aos="zoom-in">
-          <button
-            class="mx-auto h-full bg-transparent text-center items-center flex font-semibold border-2 border-black rounded-[50%] hover:border-none hover:text-yellow-500 hover:shadow-lg hover:shadow-gray-400 hover:bg-white transition-all duration-300 ease-in-out hover:scale-105"
+          <div
+            class="container h-28 relative w-28 mx-auto text-center z-[6]"
+            data-aos="zoom-in"
           >
-            See all Products
-          </button>
+            <button
+              class="mx-auto h-full bg-transparent text-center items-center flex font-semibold border-2 border-black rounded-[50%] hover:border-none hover:text-yellow-500 hover:shadow-lg hover:shadow-gray-400 hover:bg-white transition-all duration-300 ease-in-out hover:scale-105"
+            >
+              See all Products
+            </button>
+          </div>
         </div>
-    </div>
       </div>
     </div>
   </section>
 
-  <section id="partner-section" class="my-28"  data-aos="fade-up">
+  <section id="partner-section" class="my-28" data-aos="fade-up">
     <div class="container text-center mx-auto space-y-3">
       <h2 class="text-3xl lg:text-5xl font-semibold">Our Partners</h2>
       <p class="text-base">
@@ -248,7 +255,7 @@
     </div>
   </section>
 
-  <section id="blog-section" class=""  data-aos="fade-up">
+  <section id="blog-section" class="" data-aos="fade-up">
     <div class="text-center my-10 mx-auto space-y-3">
       <h2 class="text-3xl lg:text-5xl font-semibold">Our Blogs</h2>
       <p class="text-base">
@@ -394,3 +401,19 @@
 </main>
 
 {% endblock body %}
+{% block javascript %}
+    
+<script>
+  const video = document.getElementById("home-hero-video");
+  const muteToggleBtn = document.getElementById("mute-toggle-btn");
+
+  muteToggleBtn.addEventListener("click", function () {
+    video.muted = !video.muted; // Toggle muted state
+    if (video.muted) {
+      muteToggleBtn.innerHTML = "unmute"; // Show mute icon
+    } else {
+      muteToggleBtn.innerHTML = "mute"; // Show unmute icon
+    }
+  });
+</script>
+{% endblock javascript %}
