@@ -15,8 +15,22 @@
     >
       Your browser does not support the video tag.
     </video>
-    <button id="mute-toggle-btn" class="absolute bottom-10 left-1/2 text-white z-10">
-      unmute
+    <button
+      id="mute-toggle-btn"
+      class="absolute bottom-10 left-1/2 text-white z-10"
+    >
+      <img
+        id="unmute-icon"
+        src="{% static 'core/img/mute.png' %}"
+        alt="unmute"
+        class="size-6"
+      />
+      <img
+        id="mute-icon"
+        src="{% static 'core/img/unmute.png' %}"
+        alt="mute"
+        class="hidden size-6"
+      />
     </button>
     <div
       class="container mx-auto mt-40 sm:mt-0 px-6 grid place-content-center gap-4"
@@ -400,19 +414,22 @@
   </section>
 </main>
 
-{% endblock body %}
-{% block javascript %}
-    
+{% endblock body %} {% block javascript %}
+
 <script>
   const video = document.getElementById("home-hero-video");
   const muteToggleBtn = document.getElementById("mute-toggle-btn");
+  const muteIcon = document.getElementById("mute-icon");
+  const unmuteIcon = document.getElementById("unmute-icon");
 
   muteToggleBtn.addEventListener("click", function () {
     video.muted = !video.muted; // Toggle muted state
     if (video.muted) {
-      muteToggleBtn.innerHTML = "unmute"; // Show mute icon
+      muteIcon.classList.add("hidden");
+      unmuteIcon.classList.remove("hidden"); // Show mute icon
     } else {
-      muteToggleBtn.innerHTML = "mute"; // Show unmute icon
+      muteIcon.classList.remove("hidden");
+      unmuteIcon.classList.add("hidden");
     }
   });
 </script>

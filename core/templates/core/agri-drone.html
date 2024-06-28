@@ -3,6 +3,8 @@
 
 <main class="bg-black w-full">
   <section id="drone-hero-section" class="w-full">
+    <div class="-z-10">
+
     <div id="agri-hero-1" class="panel relative w-full">
       <div
         id="hero-1-content"
@@ -12,19 +14,22 @@
         <h4 class="text-5xl font-normal">Lorem, ipsum dolor.</h4>
       </div>
     </div>
-    <div class="panel hidden lg:block">
+    <div class="panel">
 
         <div class="w-full h-lvh relative">
-            <video src="{% static 'core/Drone_clip.mp4' %}" autoplay muted loop class="absolute top-0 left-0 -z-10 object-cover h-dvh w-full"></video>
+            <video src="{% static 'core/Drone_clip.mp4' %}" autoplay muted loop class="absolute top-0 left-0 -z-10 object-cover h-full w-full"></video>
         </div>
-        <div class="mx-auto scroll-text panel h-lvh bg-transparent grid place-content-center text-white">
-            <ul class="flex flex-col justify-center items-center">
-                <li>aksdjfkw</li>
-                <li>asgw</li>
-                <li>zsdgWe</li>
-                <li>sedfsef</li>
-            </ul>
-        </div>
+        
+    </div>
+</div>
+
+    <div class="mx-auto h-lvh  grid place-content-center z-50 text-white">
+        <ul class="flex flex-col justify-center items-center">
+            <li>aksdjfkw</li>
+            <li>asgw</li>
+            <li>zsdgWe</li>
+            <li>sedfsef</li>
+        </ul>
     </div>
     
     <div id="agri-hero-2" class="lg:hidden w-full">
@@ -38,25 +43,25 @@
       </div>
     </div>
   </section>
-  <div class="w-full lg:h-lvh bg-white lg:grid lg:place-content-center ">
-  <div id="agri-drone-video" class="overflow-hidden lg:rounded-lg h-[27vh] lg:h-[468px] w-full lg:w-7/12 mx-auto relative">
-    <div class="play-btn"></div>
-    <video
-      id="drone-video"
-      src="{% static 'core/Drone_clip.mp4' %}"
-      loop
-      controls="nodownload"
-      class=""
-    ></video>
-  </div>
-</div>
+    <div class="w-full lg:h-lvh bg-white lg:grid lg:place-content-center ">
+        <div id="agri-drone-video" class="overflow-hidden lg:rounded-lg h-[27vh] lg:h-[468px] w-full lg:w-7/12 mx-auto relative">
+            <div class="play-btn"></div>
+            <video
+            id="drone-video"
+            src="{% static 'core/Drone_clip.mp4' %}"
+            loop
+            controls="nodownload"
+            class=""
+            ></video>
+        </div>
+    </div>
 
   <section id="agri-drone-features">
-    <div id="agri-flow-cards-container" class="w-full py-8 mb-16 bg-white">
+    <div id="agri-flow-cards-container" class="lg:h-[90vh] py-16 w-full space-y-5 bg-white">
         <div class="flex flex-col lg:flex-row gap-6 w-10/12 lg:w-9/12 mx-auto">
 
             <div
-            class="p-6 lg:p-10 bg-gray-300 lg:w-1/2 w-full mx-auto rounded-md flex flex-col gap-3"
+            class="p-6 lg:p-10 bg-gray-300 lg:w-[40%] w-full mx-auto rounded-md flex flex-col gap-3"
             >
                 <h6 class="text-xl lg:text-2xl">Max Flow Rate</h6>
                 <div class="">
@@ -80,7 +85,7 @@
                 </div>
             </div>
             <div
-            class="p-6 lg:p-10 bg-gray-300 lg:w-1/2 w-full  mx-auto rounded-md flex flex-col gap-3"
+            class="p-6 lg:p-10 bg-gray-300 lg:w-[40%] w-full  mx-auto rounded-md flex flex-col gap-3"
             >
                 <h6 class="text-xl lg:text-2xl">Max Flow Rate</h6>
                 <div class="">
@@ -173,10 +178,31 @@
         </div>
     </div>
 
-    <div class="w-full h-lvh hidden lg:block">
+    <div class="w-full h-[94vh] hidden relative lg:block">
 
-        <div class="scale-up-video w-full h-full scale-50 grid place-content-center overflow-hidden">
-            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="object-cover h-lvh w-full"></video>
+        <div class="scale-up-video absolute w-full h-full scale-50 grid place-content-center overflow-hidden">
+            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="object-cover h-full w-full"></video>
+            
+        </div>
+        <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
+            <ul class="flex justify-between w-8/12 mx-auto">
+                <li>
+                    <p class="text-white">Max. Flow Rate</p>
+                    <p class="text-white"><span>22</span> L/min</p>
+                </li>
+                <li>
+                    <p class="text-white">Max. Flow Rate</p>
+                    <p class="text-white"><span>22</span> L/min</p>
+                </li>
+                <li>
+                    <p class="text-white">Max. Flow Rate</p>
+                    <p class="text-white"><span>22</span> L/min</p>
+                </li>
+                <li>
+                    <p class="text-white">Max. Flow Rate</p>
+                    <p class="text-white"><span>22</span> L/min</p>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -215,8 +241,8 @@
       </ul>
     </div>
 
-    <div id="agri-application-list-container" class="w-full h-dvh p-8 lg:p-16 bg-white">
-      <ul id="agri-application-list" class="mx-auto text-center grid lg:grid-cols-2 gap-4 lg:w-9/12 lg:h-3/4">
+    <div id="agri-application-list-container" class="w-full lg:h-dvh p-8 lg:p-16 bg-white">
+      <ul id="agri-application-list" class="mx-auto text-center grid lg:grid-cols-2 gap-4 lg:w-8/12 lg:h-[75vh] max-w">
         <li class="flex lg:relative justify-center items-start rounded-sm">
           <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
           <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
@@ -324,7 +350,7 @@
       </div>
     </div>
 
-    <div id="agri-speed-feature-container" class="px-8 py-12 text-white flex flex-col justify-between">
+    <div id="agri-speed-feature-container" class="px-8 py-12 text-white lg:hidden flex flex-col justify-between">
         <div class="flex flex-col gap-2">
           <h6 class="text-sm font-normal">Lorem, ipsum.</h6>
           <p class="text-xs text-white">
@@ -358,80 +384,168 @@
           
         </ul>
     </div>
+    <div class="">
 
-
-    <div id="agri-more-features-container" class="px-8 py-12 grid gap-8 ">
-        <div class="space-y-4 text-center">
-
-            <h3 class="text-white text-xl">Lorem ipsum dolor sit.</h3>
-            <h2 class="text-yellow-500 text-2xl">Lorem, ipsum.</h2>
+        <div class="hidden lg:flex h-lvh w-9/12 mx-auto items-center justify-between gap-8">
+            <div class="w-1/2">
+                <p class="text-xl text-white">Lorem, ipsum.</p>
+                <h2 class="text-7xl text-white">Spread a bag of fertilizer in just 20 seconds.</h2>
+            </div>
+            <div class="space-y-8 w-1/2">
+                <p class="text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil libero iusto dolorum dolore ut sunt atque modi mollitia voluptatem dolor! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis.</p>
+                <div class="space-y-3">
+                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h3 class="text-yellow-500 text-5xl">Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
         </div>
 
-      <p class="text-center">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
-        doloribus dolorem ut optio perferendis harum in cupiditate id neque
-        explicabo!
-      </p>
-
-      <div class="flex w-full gap-2 text-center">
-        <div class="w-1/2">
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="w-full h-full object-cover"/>
-          <p class="text-white text-xs">Lorem, ipsum.</p>
+        <div class="w-full h-[94vh] hidden relative lg:block">
+            
+            <div class="scale-up-video absolute w-full h-full scale-50 grid place-content-center overflow-hidden">
+            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="object-cover h-full w-full"></video>
+            
+            </div>
+            <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
+                <ul class="flex justify-between w-8/12 mx-auto">
+                    <li>
+                        <p class="text-white">Max. Flow Rate</p>
+                        <p class="text-white"><span>22</span> L/min</p>
+                    </li>
+                    <li>
+                        <p class="text-white">Max. Flow Rate</p>
+                        <p class="text-white"><span>22</span> L/min</p>
+                    </li>
+                    <li>
+                        <p class="text-white">Max. Flow Rate</p>
+                        <p class="text-white"><span>22</span> L/min</p>
+                    </li>
+                    <li>
+                        <p class="text-white">Max. Flow Rate</p>
+                        <p class="text-white"><span>22</span> L/min</p>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="w-1/2">
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="w-full h-full object-cover"/>
-          <p class="text-white text-xs">Lorem, ipsum.</p>
+    </div>
+
+
+    <div id="agri-more-features-container" class=" w-full>
+        <div class="px-8 py-12 grid gap-8 h-full w-full">
+
+            <div class=" text-center lg:h-[75vh] flex flex-col lg:gap-8 gap-4 justify-center">
+                
+                <h3 class="text-white lg:text-3xl text-2xl">What else besides efficient?</h3>
+                <h2 class="text-yellow-500 lg:text-5xl text-3xl font-semibold">Highly Precision</h2>
+            </div>
+        
+        
+            <div class="flex lg:flex-row flex-col gap-4 lg:h-[75vh] lg:w-9/12 mx-auto items-center" data-aos="fade-in" >
+            
+
+            <p class="text-start lg:text-xl lg:w-1/3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
+                doloribus dolorem ut optio perferendis harum in cupiditate id neque
+                explicabo!
+            </p>
+
+            <div class="flex w-full gap-2 text-center">
+                <div class="w-1/2">
+                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="w-full h-full object-cover"/>
+                    <p class="text-white text-xs">Lorem, ipsum.</p>
+                </div>
+                <div class="w-1/2">
+                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="w-full h-full object-cover"/>
+                    <p class="text-white text-xs">Lorem, ipsum.</p>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+      
+
+      <div class="agri-more-feature-list flex flex-col lg:w-8/12 w-10/12 lg:gap-16 gap-8 mx-auto mt-12">
+        <h3 class="text-white lg:text-2xl text-base font-semibold">How to balance efficiency and precision? <br>
+            We address this issue through 3 aspects:
+        </h3>
+
+        <ul id="agri-more-feature-list-m" class="flex lg:hidden flex-col gap-10">
+    
+            <li class="text-white space-y-3">
+              <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                doloremque reiciendis quasi quo quae? Nihil numquam autem
+                consectetur consequuntur esse!
+              </p>
+              <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
+            </li>
+            <li class="text-white space-y-3 ">
+              <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                doloremque reiciendis quasi quo quae? Nihil numquam autem
+                consectetur consequuntur esse!
+              </p>
+              <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
+            </li>
+            <li class="text-white space-y-3 ">
+              <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                doloremque reiciendis quasi quo quae? Nihil numquam autem
+                consectetur consequuntur esse!
+              </p>
+              <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
+            </li>
+            
+          </ul>
+
+        <div class="hidden selector-container lg:flex w-full justify-between mx-auto my-8">
+            <div class="selector-list border-l w-1/3">
+              <div class="selector text-2xl active active:text-white" onclick="toggleContent(0)">Vertical spread from the air</div>
+              <div class="selector-content active" id="content-0">
+                <p>Vertical centrifugal spreading discs provide fast vertically downward acceleration, strong wind resistant. Spread width precisely adjusts according to the flight height, blanket spreading without misses or overlaps.</p>
+              </div>
+              <div class="selector text-2xl active:text-white" onclick="toggleContent(1)">Variable-rate application</div>
+              <div class="selector-content" id="content-1">
+                <p>Intelligent screw feeder automatically adjusts the discharge speed according to the flight speed, spreading is more uniform.</p>
+              </div>
+              <div class="selector text-2xl active:text-white" onclick="toggleContent(2)">Real-time volume sensing</div>
+              <div class="selector-content" id="content-2">
+                <p>Intelligent container adopts non-contact volume sensor to detect level of remaining granules in real time. Resistant to corrosion and adhesion, more precise and reliable. Screw feeder idling and misses are prevented.</p>
+              </div>
+            </div>
+            
+            <div class="w-2/3">
+              <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 1" class="selector-image active" id="image-0">
+              <img src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 2" class="selector-image" id="image-1">
+              <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 3" class="selector-image" id="image-2">
+            </div>
         </div>
         
+        <div class="my-16">
+
+            <ul class="grid grid-cols-2 lg:grid-cols-4 w-full gap-1">
+                <li class="rounded-md overflow-hidden"><img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="size-48 lg:size-72 object-cover"></li>
+                <li class="rounded-md overflow-hidden"><img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="size-48 lg:size-72 object-cover"></li>
+                <li class="rounded-md overflow-hidden"><img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="size-48 lg:size-72 object-cover"></li>
+                <li class="rounded-md overflow-hidden"><img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="size-48 lg:size-72 object-cover"></li>
+                
+                
+            </ul>
+            <div class="flex flex-col lg:flex-row justify-between mt-4 gap-8 text-center lg:text-start">
+                <span class="text-white">Don't worry, they all pour smoothly!</span>
+                <a href="#" class="text-white text-end text-sm lg:text-base lg:w-1/3 mx-auto">Learn more about how RevoCast 3 is
+                    adaptable to different fertilizers. <span>arrow</span>
+                </a>
+            </div>
+        </div>
       </div>
 
-      <ul id="agri-more-features-list" class="flex flex-col gap-10">
-        <h4 class="text-white text-base py-6">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas,
-          officia.
-        </h4>
-
-        <li class="text-white space-y-3">
-          <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-            doloremque reiciendis quasi quo quae? Nihil numquam autem
-            consectetur consequuntur esse!
-          </p>
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
-        </li>
-        <li class="text-white space-y-3 ">
-          <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-            doloremque reiciendis quasi quo quae? Nihil numquam autem
-            consectetur consequuntur esse!
-          </p>
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
-        </li>
-        <li class="text-white space-y-3 ">
-          <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-            doloremque reiciendis quasi quo quae? Nihil numquam autem
-            consectetur consequuntur esse!
-          </p>
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
-        </li>
-        
-      </ul>
-      <div class="grid grid-cols-2 h-80 w-full gap-2">
-        <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="h-full w-full object-cover rounded-md">
-        <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="h-full w-full object-cover rounded-md">
-        <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="h-full w-full object-cover rounded-md">
-        <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="h-full w-full object-cover rounded-md">
-      </div>
-      <h6 class="text-white text-lg text-center">Lorem ipsum dolor sit.</h6>
-      <div class="feature-popup-btn pt-10 text-right">
-        <a href="">
-          <p>Lorem ipsum dolor sit. <span>arrow</span></p>
-        </a>
-      </div>
+      
       <div
         class="feature-popup hidden w-full z-50 bg-black fixed top-0 left-0 p-16 overflow-y-auto"
       >
@@ -455,6 +569,82 @@
         </div>
       </div>
     </div>
+    <div class="h-[80vh] hidden lg:block w-full">
+        <img src="https://static.xag.cn/img/product2022/p100-pro/feature-ruitu-top-img.png" alt="" class="object-cover w-full h-full">
+    </div>
+    <div class="bg-white py-12">
+        <div class="w-10/12 mx-auto py-10">
+            <div class="heading">
+                <h6>XAG RealTerra 2</h6>
+                <h3 class="text-5xl">Need farmland and orchard mapping? Take it easy.</h3>
+            </div>
+
+            <div class="app-slider">
+                <div class="hidden selector-container lg:flex w-full justify-between mx-auto my-8">
+                    <div class="selector-list border-l w-1/3">
+                      <div class="selector text-2xl active active:text-white" onclick="toggleContent(3)">Vertical spread from the air</div>
+                      <div class="selector-content active" id="content-0">
+                        <p>Vertical centrifugal spreading discs provide fast vertically downward acceleration, strong wind resistant. Spread width precisely adjusts according to the flight height, blanket spreading without misses or overlaps.</p>
+                      </div>
+                      <div class="selector text-2xl active:text-white" onclick="toggleContent(4)">Variable-rate application</div>
+                      <div class="selector-content" id="content-1">
+                        <p>Intelligent screw feeder automatically adjusts the discharge speed according to the flight speed, spreading is more uniform.</p>
+                      </div>
+                      <div class="selector text-2xl active:text-white" onclick="toggleContent(5)">Real-time volume sensing</div>
+                      <div class="selector-content" id="content-2">
+                        <p>Intelligent container adopts non-contact volume sensor to detect level of remaining granules in real time. Resistant to corrosion and adhesion, more precise and reliable. Screw feeder idling and misses are prevented.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="w-2/3">
+                      <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 1" class="selector-image active" id="image-3">
+                      <img src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 2" class="selector-image" id="image-4">
+                      <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 3" class="selector-image" id="image-5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="w-10/12 mx-auto text-center space-y-4">
+            <h5 class="text-2xl text-yellow-500">Lorem ipsum dolor sit amet consectetur.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eveniet totam, voluptatibus rem neque sunt!</p>
+            <div class="h-80 w-10/12 mx-auto rounded-md overflow-hidden">
+                <img src="{% static 'core/img/cloud-bg.jpg' %}" alt="" class="object-cover w-full h-full">
+            </div>
+            <div class="w-10/12 text-end">
+
+                <a href="#" class="text-sm w-full">Learn more about how RevoCast 3 is
+                    adaptable to different fertilizers. <span>arrow</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="app-slider2 w-10/12 mx-auto py-12 hidden lg-block">
+        <div class="hidden selector-container lg:flex w-full justify-between mx-auto my-8">
+            <div class="selector-list border-l w-1/3">
+              <div class="selector text-2xl active active:text-white" onclick="toggleContent(6)">Vertical spread from the air</div>
+              <div class="selector-content active" id="content-0">
+                <p>Vertical centrifugal spreading discs provide fast vertically downward acceleration, strong wind resistant. Spread width precisely adjusts according to the flight height, blanket spreading without misses or overlaps.</p>
+              </div>
+              <div class="selector text-2xl active:text-white" onclick="toggleContent(7)">Variable-rate application</div>
+              <div class="selector-content" id="content-1">
+                <p>Intelligent screw feeder automatically adjusts the discharge speed according to the flight speed, spreading is more uniform.</p>
+              </div>
+              <div class="selector text-2xl active:text-white" onclick="toggleContent(8)">Real-time volume sensing</div>
+              <div class="selector-content" id="content-2">
+                <p>Intelligent container adopts non-contact volume sensor to detect level of remaining granules in real time. Resistant to corrosion and adhesion, more precise and reliable. Screw feeder idling and misses are prevented.</p>
+              </div>
+            </div>
+            
+            <div class="w-2/3">
+              <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 8" class="selector-image active" id="image-6">
+              <img src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 7" class="selector-image" id="image-7">
+              <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 8" class="selector-image" id="image-8">
+            </div>
+        </div>
+    </div>
+    
+
     <div id="" class="bg-white">
         <div id="agri-mapping-feature-container" class=" py-12 px-8 text-white flex flex-col justify-between">
             <div class="">
@@ -507,7 +697,8 @@
             </div>
           </div>
     </div>
-    
+
+  
 
     <div
       id="image-slider"
@@ -614,23 +805,37 @@ function setupScrollTriggerAnimation() {
             ScrollTrigger.create({
                 trigger: panel,
                 start: "top top",
-                end: "+=500",
+                end: "bottom top",
                 pin: true,
                 pinSpacing: false,
                 scrub: 1
             });
         });
 
-        gsap.to(".scale-up-video", {
-            scrollTrigger: {
-                trigger: ".scale-up-video",
-                start: "top 50%",
-                toggleActions: "play none reverse none",
-            },
-            scale: 1, // Final scale value
-            duration: 1
+        gsap.utils.toArray(".scale-up-video").forEach((video, i) => {
+            const containerToUnhide = video.nextElementSibling; // Assuming the container to unhide is the next sibling element
+            gsap.to(video, {
+                scrollTrigger: {
+                    trigger: video,
+                    start: "top 50%",
+                    toggleActions: "play none reverse none",
+                    onEnter: () => {
+                        if (containerToUnhide) {
+                            containerToUnhide.classList.add('opacity-100');
+                            containerToUnhide.classList.remove('opacity-0');
+                        }
+                    },
+                    onLeaveBack: () => {
+                        if (containerToUnhide) {
+                            containerToUnhide.classList.remove('opacity-100');
+                            containerToUnhide.classList.add('opacity-0');
+                        }
+                    }
+                },
+                scale: 1, // Final scale value
+                duration: 1
+            });
         });
-
     }
 }
 
@@ -638,6 +843,36 @@ setupScrollTriggerAnimation();
 window.addEventListener('resize', function() {
     setupScrollTriggerAnimation();
 });
+
+function toggleContent(index) {
+      var headers = document.querySelectorAll('.selector');
+      var contents = document.querySelectorAll('.selector-content');
+      var images = document.querySelectorAll('.selector-image');
+
+      headers.forEach((header, i) => {
+        if (i === index) {
+          header.classList.add('active');
+        } else {
+          header.classList.remove('active');
+        }
+      });
+
+      contents.forEach((content, i) => {
+        if (i === index) {
+          content.classList.add('active');
+        } else {
+          content.classList.remove('active');
+        }
+      });
+
+      images.forEach((image, i) => {
+        if (i === index) {
+          image.classList.add('active');
+        } else {
+          image.classList.remove('active');
+        }
+      });
+    }
 
 </script>
 

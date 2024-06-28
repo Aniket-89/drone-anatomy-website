@@ -271,3 +271,6 @@ createCounter('project-counter', 120, 150);
 createCounter('exp-counter', 16);
 createCounter('client-counter', 10, 1000);
 createCounter('flying-time-counter', 100000, 100);
+
+
+// agri-drone page

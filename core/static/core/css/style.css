@@ -1,5 +1,5 @@
 .text-shadow {
-  text-shadow: 0 2px 10px #000;
+    text-shadow: 0 2px 10px #000;
 }
 
 header {
@@ -13,12 +13,13 @@ header {
     background-position: center;
     height: 40vh
 }
+
 .spray-banner {
     background-image: url('../img/cloud-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 90vh;
+    height: 94vh;
 }
 
 #agri-hero-1 {
@@ -28,14 +29,16 @@ header {
     background-position: center;
     height: 100vh;
 }
+
 @media screen and (max-width:798px) {
     header {
         max-height: 62px;
     }
+
     #agri-hero-1 {
         background-image: url('../img/agri-drone-m.png');
     }
-    
+
 }
 
 
@@ -64,7 +67,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 94vh;
 }
 
 #agri-speed-feature-container {
@@ -72,15 +75,17 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 94vh;
 }
+
 #agri-mapping-feature-container {
     background-image: url('../img/drone-white.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 94vh;
 }
+
 /* #featured-section {
     background-image: url('../img/cloud-bg.jpg');
     background-repeat: no-repeat;
@@ -89,252 +94,292 @@ header {
 } */
 
 #featured-section p {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 #featured-section h6 {
-  font-size: 18px;
-  font-weight: 500;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 #featured-section .product-img::before {
-  content: " ";
+    content: " ";
 }
 
 #featured-section .product-img::after {
-  background: linear-gradient(180deg, #96c3e3, #fff);
-  bottom: 0;
-  content: "";
-  left: 0;
-  margin: -2rem;
-  position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  right: 0;
-  top: 0;
-  z-index: -1;
+    background: linear-gradient(180deg, #96c3e3, #fff);
+    bottom: 0;
+    content: "";
+    left: 0;
+    margin: -2rem;
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
 
 #featured-section .product-detail::after {
-  background-color: transparent;
-  bottom: -2rem;
-  clip-path: polygon(0 60px, 100% 60px, 100% 100%, 0 100%);
-  content: "";
-  left: -2rem;
-  position: absolute;
-  right: -2rem;
-  top: -60px;
-  transition: clip-path .3s ease, background-color .3s ease;
-  z-index: -1;
+    background-color: transparent;
+    bottom: -2rem;
+    clip-path: polygon(0 60px, 100% 60px, 100% 100%, 0 100%);
+    content: "";
+    left: -2rem;
+    position: absolute;
+    right: -2rem;
+    top: -60px;
+    transition: clip-path .3s ease, background-color .3s ease;
+    z-index: -1;
 }
 
 #featured-section .product-img {
-  perspective: 1000px;
-  overflow: visible;
+    perspective: 1000px;
+    overflow: visible;
 }
 
 #featured-section .product-item:hover img {
-  transform: rotateY(5deg) scale(1.35);
+    transform: rotateY(5deg) scale(1.35);
 }
 
 #product-list {
-  background-color: #bcd4e8;
-  background-image: url(//www.jouav.com/wp-content/themes/jouav-theme-dist/assets/css/../img/theme/product-list-bg.jpg);
-  background-position: 50%;
-  background-size: cover;
+    background-color: #bcd4e8;
+    background-image: url(//www.jouav.com/wp-content/themes/jouav-theme-dist/assets/css/../img/theme/product-list-bg.jpg);
+    background-position: 50%;
+    background-size: cover;
 }
 
 #product-list::before {
-  background: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, .7) 30%, hsla(0, 0%, 100%, 0));
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 0;
+    background: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, .7) 30%, hsla(0, 0%, 100%, 0));
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
 }
 
 #product-list::after {
-  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .5) 50%, #fff);
-  bottom: 0;
-  content: "";
-  height: 50%;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: 0;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .5) 50%, #fff);
+    bottom: 0;
+    content: "";
+    height: 50%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
 }
 
 footer p {
-  color: white;
+    color: white;
 }
 
 footer h6 {
-  color: #FFCC00;
-  font-size: 18px;
-  font-weight: 500;
+    color: #FFCC00;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 #image-slider {
-  max-width: 100%;
-  margin: auto;
+    max-width: 100%;
+    margin: auto;
 }
 
 /* Ensure images fit within the slider */
 
 .splide__slide img {
-  width: 100%;
-  height: auto;
-  max-height: 640px;
-  /* Set the desired maximum height */
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 1px solid rgba(255, 204, 0, 0.4);
+    width: 100%;
+    height: auto;
+    max-height: 640px;
+    /* Set the desired maximum height */
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 1px solid rgba(255, 204, 0, 0.4);
 }
 
 /* Optional: Additional styling for responsiveness */
 
 @media (max-width: 768px) {
-  .splide__slide img {
-    height: 440px;
-    width: auto;
-  }
+    .splide__slide img {
+        height: 440px;
+        width: auto;
+    }
 }
 
 @media (max-width: 640px) {
-  .splide__slide img {
-    height: 400px;
-    width: auto;
-  }
+    .splide__slide img {
+        height: 400px;
+        width: auto;
+    }
 }
 
 /* drone page  */
 
 #drone-hero-container {
-  background-image: url('../img/agri_drone.png');
-  background-size: cover;
-  /* background-attachment: fixed; */
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
+    background-image: url('../img/agri_drone.png');
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
 }
 
 #v50pro-two-part::before {
-  content: "";
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  background-color: rgba(0, 0, 0, .4);
-  z-index: 5;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 5;
 }
 
 #drone-hero-2 {
-  height: 200vh;
+    height: 200vh;
 }
 
 /*  */
 
 #drone-feature-section .spray-detail {
-  background-image: url('../img/ruipen-detail-bg-v2.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-image: url('../img/ruipen-detail-bg-v2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .drone-application-card {
-  background-image: url('../img/atomized-spary-image1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 320px;
-  width: 487px;
+    background-image: url('../img/atomized-spary-image1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    width: 487px;
 }
 
 .v50pro-two-descbox {
-  transform: translateY(50%);
-  transition: transform 0.2s ease-out, scale 0.2s ease-out;
+    transform: translateY(50%);
+    transition: transform 0.2s ease-out, scale 0.2s ease-out;
 }
 
 .v50pro-tow-part-desc {
-  font-size: 2rem;
-  font-weight: bold;
-  opacity: 0;
-  transform: scale(1);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .v50pro-tow-part-desc.visible {
-  opacity: 1;
+    opacity: 1;
 }
 
 .v50pro-tow-part-desc.scale-up {
-  transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 .sticky-section {
-  position: sticky;
-  top: 0;
-  /* Adjust top offset as needed */
-  height: 100vh;
-  /* Adjust height for desired sticky behavior */
-  overflow: hidden;
-  /* Hide overflowing text initially */
+    position: sticky;
+    top: 0;
+    /* Adjust top offset as needed */
+    height: 100vh;
+    /* Adjust height for desired sticky behavior */
+    overflow: hidden;
+    /* Hide overflowing text initially */
 }
 
 .bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* Adjust fit as needed */
-  z-index: -1;
-  /* Place video behind content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    /* Adjust fit as needed */
+    z-index: -1;
+    /* Place video behind content */
 }
 
 .text-container {
-  height: 100%;
-  /* Match sticky section's height */
-  overflow-y: auto;
-  /* Enable scrolling within the container */
+    height: 100%;
+    /* Match sticky section's height */
+    overflow-y: auto;
+    /* Enable scrolling within the container */
 }
 
 .text-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  transition: transform 0.5s ease-in-out;
-  /* Smooth transition */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease-in-out;
+    /* Smooth transition */
 }
 
 .text-list li {
-  margin-bottom: 10px;
-  /* Add spacing between list items */
+    margin-bottom: 10px;
+    /* Add spacing between list items */
 }
 
 /* Unsticky behavior (triggered by JavaScript) */
 
 .sticky-section.unsticky {
-  position: static;
-  overflow: visible;
-  /* Allow content to overflow */
+    position: static;
+    overflow: visible;
+    /* Allow content to overflow */
 }
 
 /* Parallax effect (optional, adjust as needed) */
 
 .sticky-section .text-container {
-  transform: translateY(calc(-50% + var(--scroll-y)));
-  /* Adjust y-axis movement */
+    transform: translateY(calc(-50% + var(--scroll-y)));
+    /* Adjust y-axis movement */
 }
 
 :root {
-  --scroll-y: 0;
-  /* Initial scroll position */
+    --scroll-y: 0;
+    /* Initial scroll position */
+}
+
+.selector-list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.selector {
+    cursor: pointer;
+    padding: 10px 10px 10px 0;
+    margin-bottom: 5px;
+    padding-left: 1rem;
+    color: gray;
+}
+
+.selector.active {
+    border-left: 2px solid #ccc;
+    color: white;
+
+}
+
+.selector-content {
+    display: none;
+    padding-left: 1rem;
+}
+
+.selector-content.active {
+    display: block;
+}
+
+.selector-image {
+    height: auto;
+    width: 100%;
+    display: none;
+    margin-left: 20px;
+}
+
+.selector-image.active {
+    display: block;
 }

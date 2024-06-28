@@ -47,8 +47,9 @@ module.exports = {
             colors: {
                 shadow: 'hsla(0, 0%, 100%)',
                 white: '#FFFEFE',
+                black: '#0B0C0C',
                 'yellow-500': '#FFCC00',
-                black: '#010001',
+                // black: '#010001',
                 'gray-300': '#F0EEEF',
                 transparentgray: 'hsla(0, 0%, 100%, .2)',
                 darkgray: '#666666'
