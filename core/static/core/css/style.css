@@ -4,7 +4,7 @@
 
 header {
     max-height: 93px;
-}
+} 
 
 #about-banner {
     background-image: url('../img/cloud-bg.jpg');
@@ -172,7 +172,7 @@ header {
 }
 
 footer p {
-    color: white;
+    color: #FFFEFE;
 }
 
 footer h6 {
@@ -344,13 +344,13 @@ footer h6 {
     /* Initial scroll position */
 }
 
-.selector-list {
+.selector-list, .selector-list-1, .selector-list-2 {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
 
-.selector {
+.selector, .selector1, .selector2 {
     cursor: pointer;
     padding: 10px 10px 10px 0;
     margin-bottom: 5px;
@@ -358,28 +358,88 @@ footer h6 {
     color: gray;
 }
 
-.selector.active {
+.selector.active, .selector1.active, .selector2.active {
     border-left: 2px solid #ccc;
-    color: white;
+    color: #FFFEFE;
+    font-weight: 500;
 
 }
+.selector1.active {
+    color: #0B0C0C;
+}
 
-.selector-content {
+.selector-content, .selector-content1, .selector-content2 {
     display: none;
     padding-left: 1rem;
 }
 
-.selector-content.active {
+.selector-content.active, .selector-content1.active, .selector-content2.active {
     display: block;
 }
 
-.selector-image {
+.selector-image, .selector-image1, .selector-image2 {
     height: auto;
     width: 100%;
     display: none;
     margin-left: 20px;
 }
 
-.selector-image.active {
+.selector-image.active, .selector-image1.active, .selector-image2.active {
     display: block;
 }
+
+@keyframes autoBlurAnimation {
+    0% {
+      filter: blur(40px);
+      font-size: 2rem;
+      transform: scale(0.5);
+    }
+    45%, 55% {
+      filter: blur(0px);
+      font-size: 6rem;
+      transform: scale(1);
+        
+    }
+    100% {
+      filter: blur(40px);
+      font-size: 2rem;
+
+      transform: scale(0.5);
+
+    }
+  }
+  
+  .auto-blur {
+    animation: autoBlurAnimation both;
+    animation-timeline: view();
+    /* transition: transform 0.5s; */
+  }
+
+  .bg-image-1 {
+    background-image: url("https://static.xag.cn/img/product2022/p100-pro/industry-leader-fly-image1.png");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Animation for transition */
+  }
+  
+  .bg-image-2 {
+    background-image: url("https://static.xag.cn/img/product2022/p100-pro/industry-leader-fly-image2.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute; /* Overlap the initial image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Animation for transition */
+  }
+  
+  /* Change background image on scroll */
+  .agribanner.in-view .bg-image-1 {
+    opacity: 0;
+  }
+  
+  .agribanner.in-view .bg-image-2 {
+    opacity: 1;
+  }
