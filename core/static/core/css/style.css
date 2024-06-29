@@ -377,9 +377,18 @@ footer h6 {
     display: block;
 }
 
-.selector-image, .selector-image1, .selector-image2 {
+.selector-image, .selector-image1 {
     height: auto;
     width: 100%;
+    object-fit: cover;
+    display: none;
+    margin-left: 20px;
+}
+
+.selector-image2 {
+    height: 90%;
+    /* width: auto; */
+    object-fit: cover;
     display: none;
     margin-left: 20px;
 }
