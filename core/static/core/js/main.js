@@ -97,8 +97,14 @@ const mobileIndustryLink = document.getElementById("mobile-industry-link");
 const mobileIndustryWrapper = document.getElementById("mobile-industry-link-wrapper");
 const mobileIndustryDropdown = document.getElementById("mobile-industry-dropdown");
 
+const isHomePage = window.location.pathname === "/"; // Check for homepage URL
+
 let dropdownActive = false;
 let mobileMenuActive = false;
+
+function isHomepage() {
+    return window.location.pathname === "/" || window.location.pathname === "/index.html";
+}
 
 // Show dropdown on hover
 productsLink.addEventListener("mouseover", () => {
@@ -177,62 +183,86 @@ mobileIndustryLink.addEventListener("click", (e) => {
     mobileProductWrapper.classList.remove("bg-gray-400");
 });
 // Update header on scroll
-window.addEventListener("scroll", updateHeader);
-
-function updateHeader() {
-    const scrollY = window.scrollY;
-
-    if (scrollY > 50 || dropdownActive || mobileMenuActive) {
-        header.classList.add(
-            "bg-white",
-            // "shadow-md",
-            // "shadow-shadow",
-        );
-
-        header.classList.remove(
-            "bg-transparent",
-            "text-white",
-            "border-b",
-            // "lg:h-18"
-        );
-        navLinks.classList.add("text-black");
-        cta.classList.remove("border-white", "text-white");
-        cta.classList.add(
-            "border-yellow-500",
-            "text-yellow-500",
-            "hover:bg-yellow-500",
-            "hover:text-white"
-        );
-        logoLight.classList.add("hidden");
-        logoDark.classList.remove("hidden");
-    } else {
-        header.classList.remove(
-            "bg-white",
-            // "shadow-md",
-            // "shadow-shadow",
-            // "lg:h-22"
-        );
-        header.classList.add(
-            "bg-transparent",
-            "text-white",
-            "border-b",
-            // "lg:h-24"
-        );
-        cta.classList.remove(
-            "border-yellow-500",
-            "text-yellow-500",
-            "hover:bg-yellow-500",
-            "hover:text-white"
-        );
-        cta.classList.add("border-white", "text-white");
-        navLinks.classList.remove("text-black");
-        logoLight.classList.remove("hidden");
-        logoDark.classList.add("hidden");
-    }
+// window.addEventListener("scroll", updateHeader);
+// Function to check if the current page is the homepage
+function isHomepage() {
+    return window.location.pathname === "/" || window.location.pathname === "/index.html";
 }
 
-// Initial check
-updateHeader();
+function applyScrolledHeaderStyles() {
+    header.classList.add(
+        "bg-white",
+        // "shadow-md",
+        // "shadow-shadow",
+    );
+
+    header.classList.remove(
+        "bg-transparent",
+        "text-white",
+        "border-b",
+        // "lg:h-18"
+    );
+    navLinks.classList.add("text-black");
+    cta.classList.remove("border-white", "text-white");
+    cta.classList.add(
+        "border-yellow-500",
+        "text-yellow-500",
+        "hover:bg-yellow-500",
+        "hover:text-white"
+    );
+    logoLight.classList.add("hidden");
+    logoDark.classList.remove("hidden");
+}
+
+function applyInitialHeaderStyles() {
+    header.classList.remove(
+        "bg-white",
+        // "shadow-md",
+        // "shadow-shadow",
+        // "lg:h-22"
+    );
+    header.classList.add(
+        "bg-transparent",
+        "text-white",
+        "border-b",
+        // "lg:h-24"
+    );
+    cta.classList.remove(
+        "border-yellow-500",
+        "text-yellow-500",
+        "hover:bg-yellow-500",
+        "hover:text-white"
+    );
+    cta.classList.add("border-white", "text-white");
+    navLinks.classList.remove("text-black");
+    logoLight.classList.remove("hidden");
+    logoDark.classList.add("hidden");
+}
+
+if (isHomepage()) {
+    // Update header on scroll
+    window.addEventListener("scroll", updateHeader);
+
+    function updateHeader() {
+        const scrollY = window.scrollY;
+
+        if (scrollY > 50 || dropdownActive || mobileMenuActive) {
+            applyScrolledHeaderStyles();
+        } else {
+            applyInitialHeaderStyles();
+        }
+    }
+
+    // Initial check
+    updateHeader();
+} else {
+    // Apply scrolled header styles by default for all other pages
+    applyScrolledHeaderStyles();
+
+
+    
+}
+
 
 
 // counter

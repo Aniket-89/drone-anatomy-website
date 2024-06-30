@@ -41,7 +41,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <script defer src="{% static 'core/js/main.js' %}"></script>
     
   </head>
-  <body class="">
+  <body class="{% block bodyclass %}{% endblock bodyclass %}">
     <div id="whatsapp-btn" class="fixed bottom-10 right-10 z-50">
         <a href="{% url 'core:whatsapp-redirect' %}"
         target="_blank">
