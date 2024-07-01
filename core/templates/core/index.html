@@ -11,27 +11,11 @@
       autoplay
       loop
       muted
-      class="h-full lg:w-full object-cover absolute top-0 -z-40"
+      class="h-full w-full object-cover absolute top-0 left-0 -z-40"
     >
       Your browser does not support the video tag.
     </video>
-    <button
-      id="mute-toggle-btn"
-      class="absolute bottom-10 left-1/2 text-white z-10"
-    >
-      <img
-        id="unmute-icon"
-        src="{% static 'core/img/mute.png' %}"
-        alt="unmute"
-        class="size-6"
-      />
-      <img
-        id="mute-icon"
-        src="{% static 'core/img/unmute.png' %}"
-        alt="mute"
-        class="hidden size-6"
-      />
-    </button>
+    
     <div
       class="container mx-auto mt-40 sm:mt-0 px-6 grid place-content-center gap-4"
     >
@@ -47,24 +31,43 @@
         data-aos="fade-down"
         data-aos-duration="700"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      The most advanced drones for mobility
       </p>
-      <div class="cta mx-auto my-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="cta mx-auto my-[10px] grid grid-cols-1 md:grid-cols-2 gap-4">
         <button
-          class="cta-accent bg-yellow-500 w-56 sm:h-[53px] h-9 text-white text-sm sm:text-lg transition-colors duration-300 ease-in-out hover:bg-yellow-600 xl:inline"
+          class="cta-accent bg-yellow-500 opacity-5 w-56 sm:h-[53px] h-9 text-white text-sm sm:text-lg transition-all duration-400 ease-in-out hover:bg-yellow-400 hover:text-black xl:inline"
           data-aos="zoom-in"
           data-aos-duration="700"
         >
-          Learn More
+          Learn more
         </button>
         <button
-          class="cta-light bg-transparent saturate-100 backdrop-blur-sm w-56 sm:h-[53px] h-9 border-white border text-white text-sm sm:text-lg transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
+          id="watch-video-btn"
+          class="cta-light-hero bg-transparent saturate-100 backdrop-blur-sm w-56 sm:h-[53px] h-9 border-white border text-white text-sm sm:text-lg transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
           data-aos="zoom-in"
           data-aos-duration="700"
         >
-          Watch the Video
+          Watch the video
         </button>
+        
       </div>
+      <!-- <button
+      id="mute-toggle-btn"
+      class="flex justify-center text-white z-10"
+    >
+      <img
+        id="unmute-icon"
+        src="{% static 'core/img/mute.png' %}"
+        alt="unmute"
+        class="size-6 object-center"
+      />
+      <img
+        id="mute-icon"
+        src="{% static 'core/img/unmute.png' %}"
+        alt="mute"
+        class="hidden size-6"
+      />
+    </button> -->
     </div>
   </section>
 
@@ -81,9 +84,9 @@
         data-aos-duration="700"
         data-aos-easing="ease-in-out"
       >
-        <h2 class="lg:text-5xl text-3xl font-semibold">Our Drones</h2>
+        <h2 class="lg:text-5xl text-3xl font-semibold">Our Payload Drones</h2>
         <p class="text-base">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, ducimus.
+            Reliable mobility UAV's make the task easier, safer, and faster
         </p>
       </div>
 
@@ -101,13 +104,13 @@
               class="product-item relative bg-white shadow-xl p-8 shadow-gray-400 transition-colors ease-in-out duration-75 anim-op-0"
             >
               <div
-                class="product-img w-full relative overflow-hidden bg-gradient-to-b from-blue-300 from-30% to-white"
+                class="product-img w-full relative overflow-hidden bg-gradient-to-b from-gray-300 from-30% to-white"
               >
-                <a href="/products/cw-15.html"
+                <a href="{% url 'core:agri-detail' %}"
                   ><img
                     loading="lazy"
                     class="w-full scale-125 transition-all duration-300 ease-in-out drop-shadow-2xl"
-                    src="https://www.jouav.com/wp-content/uploads/2023/01/cw-15-home.png"
+                    src="{% static 'core/img/drone-card-16.png' %}"
                     alt="drone-img"
                 /></a>
               </div>
@@ -139,7 +142,7 @@
               class="product-item relative bg-white shadow-xl p-8 lg:-mt-20 lg:mb-20 shadow-gray-400 transition-colors ease-in-out duration-75 anim-op-0"
             >
               <div
-                class="product-img w-full relative overflow-hidden bg-gradient-to-b from-blue-300 from-30% to-white"
+                class="product-img w-full relative overflow-hidden bg-gradient-to-b from-red-300 from-30% to-white"
               >
                 <a href="/products/cw-15.html"
                   ><img
@@ -278,7 +281,7 @@
       </p>
     </div>
 
-    <div id="blog-list-container" class="w-10/12 mx-auto">
+    <div id="blog-list-container" class="w-10/12 xl:w-8/12 mx-auto">
       <ul id="blog-list" class="flex flex-col lg:flex-row gap-14">
         <li class="lg:w-4/12 grid shadow-md overflow-hidden group">
           <div class="overflow-hidden aspect-[16/9]">
@@ -418,19 +421,12 @@
 
 <script>
   const video = document.getElementById("home-hero-video");
-  const muteToggleBtn = document.getElementById("mute-toggle-btn");
-  const muteIcon = document.getElementById("mute-icon");
-  const unmuteIcon = document.getElementById("unmute-icon");
+  const muteToggleBtn = document.getElementById("watch-video-btn");
+//   const muteIcon = document.getElementById("mute-icon");
+//   const unmuteIcon = document.getElementById("unmute-icon");
 
   muteToggleBtn.addEventListener("click", function () {
     video.muted = !video.muted; // Toggle muted state
-    if (video.muted) {
-      muteIcon.classList.add("hidden");
-      unmuteIcon.classList.remove("hidden"); // Show mute icon
-    } else {
-      muteIcon.classList.remove("hidden");
-      unmuteIcon.classList.add("hidden");
-    }
   });
 </script>
 {% endblock javascript %}

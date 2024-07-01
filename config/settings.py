@@ -25,7 +25,7 @@ SECRET_KEY = '123gerge'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.7', '192.168.1.16']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.7', '192.168.1.27']
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 TAILWIND_APP_NAME = 'theme'

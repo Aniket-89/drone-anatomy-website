@@ -2,18 +2,18 @@
 
 <header
   id="header"
-  class="fixed top-0 z-10 w-full text-black flex-col items-center border-b-transparentgray  drop-shadow-sm bg-white backdrop-blur-sm saturate-100 transition-all duration-300"
+  class="fixed top-0 z-10 w-full text-black flex-col items-center border-b-transparentgray drop-shadow-lg bg-white backdrop-blur-md saturate-100 transition-all duration-300 linear"
 >
   <div id="logo-container"
     class="container mx-auto h-full flex items-center justify-between w-10/12 xl:w-10/12"
   >
-    <a href="{% url 'core:home' %}" class="h-[35px] lg:h-[102px]">
-      <div class="logo items-center overflow-hidden flex h-full">
+    <a id="logoanchor" href="{% url 'core:home' %}" class="h-[64px] md:h-[72px] xl:h-[92px] transition-all duration-400 ease-linear">
+      <div class="logo items-center overflow-hidden flex h-full mt-1">
         <img
           id="logo-light"
           src="{% static 'core/img/da-logo-wht-outline1.png' %}"
           alt="drone anatomy"
-          class="object-contain h-full"
+          class="object-cover h-full"
         />
         <!-- <img
           id="logo-dark"
@@ -25,67 +25,225 @@
           id="logo-dark"
           src="{% static 'core/img/da-logo-blk-outline.png' %}"
           alt="drone anatomy"
-          class="hidden object-top object-cover h-full w-full"
+          class="hidden object-cover h-full"
         />
       </div>
     </a>
-    <nav class="navbar hidden xl:block">
-      <ul class="navlinks flex gap-3 flex-nowrap text-nowrap">
-        <li id="product-link" class="h-full">
+    <nav class="navbar hidden xl:flex h-full">
+      <ul class="navlinks flex gap-6 h-[92px] flex-nowrap text-nowrap items-center">
+        <li id="product-link" class="h-full flex items-center">
             
           <a
             href=""
-            class="nav-links font-semibold transition-colors group duration-150 ease-in-out hover:text-yellow-400"
-            >Products</a
+            class="nav-links transition-colors group duration-150 ease-in-out hover:text-yellow-400"
+            >PRODUCTS</a
           >
           <div
             id="product-dropdown"
-            class="absolute hidden left-0 top-16 w-full justify-between bg-white p-8 text-black transition-all duration-500 ease-in-out hover:flex"
-          >
-            <ul class="flex justify-between w-10/12 mx-auto text-nowrap pt-8">
-              <li class="pr-6 w-1/4 h-2/3 text-center">
-                <a href="{% url 'core:agri-detail' %}" class="group">
-                    <div class="overflow-hidden h-44 ">
-
-                        <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
-                    </div>
-                    <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
-                </a>
-              </li>
-              <li class="pr-6 w-1/4 h-2/3 text-center">
-                <a href="{% url 'core:agri-detail' %}" class="group">
-                    <div class="overflow-hidden h-44 ">
-
-                        <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
-                    </div>
-                    <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
-                </a>
-              </li>
-              <li class="pr-6 w-1/4 h-2/3 text-center">
-                <a href="{% url 'core:agri-detail' %}" class="group">
-                    <div class="overflow-hidden h-44 ">
-
-                        <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
-                    </div>
-                    <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
-                </a>
-              </li>
-              
+            class="h-0 hidden w-fit absolute top-20 justify-between bg-white rounded-lg text-black transition-transform duration-500 ease-linear hover:flex"
+            >
+            <ul>
+                <li class="px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
+                
             </ul>
-          </div>
+            </div>
         </li>
 
-        <li id="industry-link">
+        <li id="industry-link" class="h-full flex items-center">
+            
+            <a
+              href=""
+              class="nav-links transition-colors group duration-150 ease-in-out hover:text-yellow-400"
+              >SOLUTIONS</a
+            >
+            <div
+              id="industry-dropdown"
+              class="h-0 hidden w-fit absolute top-20 justify-between bg-white rounded-lg text-black transition-transform duration-500 ease-linear hover:flex"
+              >
+              <ul>
+                <li class="px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
+                
+            </ul>
+              </div>
+          </li>
+
+        <li>
           <a
             href=""
-            class="nav-links font-semibold transition-colors duration-150 ease-in-out hover:text-yellow-400"
-            >Industry Applications</a
+            class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
+            >TRAINING</a
           >
-          <div
+        </li>
+        <li>
+          <a
+            href=""
+            class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
+            >CAREER</a
+          >
+        </li>
+        <li>
+            <a
+              href=""
+              class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
+              >BLOGS</a
+            >
+          </li>
+        <li>
+          <a
+            href="{% url 'core:about' %}"
+            class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
+            >ABOUT</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="cta space-x-4 flex flex-nowrap text-nowrap">
+      <button
+        id="cta-light"
+        class="hidden border border-white bg-transparent px-4 leading-7 text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
+      >
+        Watch a Demo
+      </button>
+      <button
+      id="cta-white"
+        class="cta-accent hidden bg-white font-medium px-4 leading-8 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-500 hover:text-white xl:inline"
+      >
+        Contact Us
+      </button>
+      <button id="mobile-menu-btn" class="">
+        <img
+          id="closed-menu-icon"
+          src="https://img.icons8.com/?size=100&id=S5biqohaDgd1&format=png&color=EBEBEB"
+          alt=""
+          class="h-8 lg:h-10 xl:hidden"
+        />
+        <img
+          id="open-menu-icon"
+          src="https://img.icons8.com/?size=100&id=9433&format=png&color=EBEBEB"
+          alt=""
+          class="h-8 hidden lg:h-10 xl:hidden"
+        />
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="w-full bg-white p-8 text-black hidden xl:hidden">
+    <div class="w-11/12 mx-auto space-y-7 grid-col justify-center">
+      <div class="cta flex w-full justify-center space-x-3 text-nowrap">
+        <button
+          class="cta-accent-border border border-yellow-500 bg-transparent px-4 leading-7 text-yellow-500 transition-colors duration-300 ease-in-out hover:bg-yellow-500 hover:text-black"
+        >
+          Watch a Demo
+        </button>
+        <button
+          class="cta-accent bg-yellow-500 px-4 leading-8 text-white transition-colors duration-300 ease-in-out hover:bg-yellow-600"
+        >
+          Contact Us
+        </button>
+      </div>
+      <nav id="mobile-nav" class="">
+        <ul class="navlinks space-y-5 flex-col">
+          <li id="mobile-product-link-wrapper" class="">
+            <a
+              href="#"
+              id="mobile-product-link"
+              class="nav-links block transition-colors duration-300 ease-in-out w-full hover:text-yellow-400 peer"
+              >PRODUCTS</a
+            >
+          </li>
+          <div id="mobile-product-dropdown" class="py-5 hidden">
+            <!-- <div class="grid w-8/12 gap-10">
+              <div class="grid gap-1">
+                <a href="" class="font-bold hover:text-yellow-400">DRONE</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+              </div>
+              <div class="flex-col space-y-4">
+                <div class="">PAYLOAD</div>
+                <div class="">CONTROLLER</div>
+                <div class="">SOFTWARE</div>
+              </div>
+              <div class=""></div>
+            </div> -->
+          </div>
+          <li id="mobile-industry-link-wrapper">
+            <a
+              href="#"
+              id="mobile-industry-link"
+              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
+              >SOLUTIONS</a
+            >
+          </li>
+          <!-- <div id="mobile-industry-dropdown" class="py-5 hidden">
+            <div class="grid w-8/12 gap-10">
+              <div class="grid gap-1">
+                <a href="" class="font-bold hover:text-yellow-400">DRONE</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+                <a href="" class="hover:text-yellow-500">CW-007</a>
+              </div>
+              <div class="flex-col space-y-4">
+                <div class="">PAYLOAD</div>
+                <div class="">CONTROLLER</div>
+                <div class="">SOFTWARE</div>
+              </div>
+              <div class=""></div>
+            </div>
+          </div> -->
+
+          <li>
+            <a
+              href=""
+              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
+              >TRAINING</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
+              >CAREER</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
+              >BLOGS</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
+              >ABOUT</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+    
+    <div
             id="industry-dropdown"
-            class="absolute hidden left-0 top-16 w-full justify-between bg-white p-8 text-black transition duration-500 ease-in-out hover:flex"
+            class="hidden w-full justify-between bg-white px-8 py-4 text-black transition-all duration-500 ease-in-out hover:flex"
           >
-          <ul class="flex justify-between w-10/12 mx-auto text-nowrap pt-8">
+          <ul class="flex justify-between w-10/12 mx-auto text-nowrap">
             <li class="pr-6 w-1/4 h-2/3 text-center">
               <a href="{% url 'core:agri-detail' %}" class="group">
                   <div class="overflow-hidden h-44 ">
@@ -116,155 +274,4 @@
             
           </ul>
           </div>
-        </li>
-
-        <li>
-          <a
-            href=""
-            class="nav-links transition-colors font-semibold duration-150 ease-in-out hover:text-yellow-400"
-            >Learn</a
-          >
-        </li>
-        <li>
-          <a
-            href=""
-            class="nav-links transition-colors font-semibold duration-150 ease-in-out hover:text-yellow-400"
-            >Case Study</a
-          >
-        </li>
-        <li>
-          <a
-            href="{% url 'core:about' %}"
-            class="nav-links transition-colors font-semibold duration-150 ease-in-out hover:text-yellow-400"
-            >About</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <div class="cta space-x-4 flex flex-nowrap text-nowrap">
-      <button
-        id="cta-light"
-        class="hidden border border-white bg-transparent px-4 leading-7 text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
-      >
-        Watch a Demo
-      </button>
-      <button
-        class="cta-accent hidden bg-yellow-500 px-4 leading-8 text-white transition-colors duration-300 ease-in-out hover:bg-yellow-600 xl:inline"
-      >
-        Contact Us
-      </button>
-      <button id="mobile-menu-btn" class="">
-        <img
-          id="closed-menu-icon"
-          src="https://img.icons8.com/?size=100&id=S5biqohaDgd1&format=png&color=EBEBEB"
-          alt=""
-          class="h-8 lg:h-10 xl:hidden"
-        />
-        <img
-          id="open-menu-icon"
-          src="https://img.icons8.com/?size=100&id=9433&format=png&color=EBEBEB"
-          alt=""
-          class="h-8 hidden lg:h-10 xl:hidden"
-        />
-      </button>
-    </div>
-  </div>
-
-  <div id="mobile-menu" class="w-full bg-white p-8 text-black hidden xl:hidden">
-    <div class="w-11/12 mx-auto space-y-7 grid-col justify-center">
-      <div class="cta flex w-full justify-center space-x-3 text-nowrap">
-        <button
-          class="cta-accent-border border border-yellow-500 bg-transparent px-4 leading-7 text-yellow-500 transition-colors duration-300 ease-in-out hover:bg-yellow-500 hover:text-black"
-        >
-          Watch A Demo
-        </button>
-        <button
-          class="cta-accent bg-yellow-500 px-4 leading-8 text-white transition-colors duration-300 ease-in-out hover:bg-yellow-600"
-        >
-          Contact Us
-        </button>
-      </div>
-      <nav id="mobile-nav" class="">
-        <ul class="navlinks space-y-5 flex-col">
-          <li id="mobile-product-link-wrapper" class="">
-            <a
-              href="#"
-              id="mobile-product-link"
-              class="nav-links block transition-colors duration-300 ease-in-out w-full hover:text-yellow-400 peer"
-              >Products</a
-            >
-          </li>
-          <div id="mobile-product-dropdown" class="py-5 hidden">
-            <div class="grid w-8/12 gap-10">
-              <div class="grid gap-1">
-                <a href="" class="font-bold hover:text-yellow-400">DRONE</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-              </div>
-              <div class="flex-col space-y-4">
-                <div class="">PAYLOAD</div>
-                <div class="">CONTROLLER</div>
-                <div class="">SOFTWARE</div>
-              </div>
-              <div class=""></div>
-            </div>
-          </div>
-          <li id="mobile-industry-link-wrapper">
-            <a
-              href="#"
-              id="mobile-industry-link"
-              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
-              >Industry Applications</a
-            >
-          </li>
-          <div id="mobile-industry-dropdown" class="py-5 hidden">
-            <div class="grid w-8/12 gap-10">
-              <div class="grid gap-1">
-                <a href="" class="font-bold hover:text-yellow-400">DRONE</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-              </div>
-              <div class="flex-col space-y-4">
-                <div class="">PAYLOAD</div>
-                <div class="">CONTROLLER</div>
-                <div class="">SOFTWARE</div>
-              </div>
-              <div class=""></div>
-            </div>
-          </div>
-
-          <li>
-            <a
-              href=""
-              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
-              >Learn</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
-              >Case Study</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
-              >About</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  
 </header>

@@ -107,7 +107,7 @@ header {
 }
 
 #featured-section .product-img::after {
-    background: linear-gradient(180deg, #96c3e3, #fff);
+    background: linear-gradient(180deg, #659B91, #fff);
     bottom: 0;
     content: "";
     left: 0;

@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const header = document.getElementById("header");
 const cta = document.getElementById("cta-light");
+const ctaAccent = document.getElementById("cta-white");
 
 const productsLink = document.getElementById("product-link");
 const productDropdown = document.getElementById("product-dropdown");
@@ -85,6 +86,7 @@ const navLinks = document.querySelector(".navlinks");
 
 const logoLight = document.getElementById("logo-light");
 const logoDark = document.getElementById("logo-dark");
+const logoSize = document.getElementById("logoanchor");
 
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
@@ -97,6 +99,8 @@ const mobileIndustryLink = document.getElementById("mobile-industry-link");
 const mobileIndustryWrapper = document.getElementById("mobile-industry-link-wrapper");
 const mobileIndustryDropdown = document.getElementById("mobile-industry-dropdown");
 
+const whatsappBtn = document.getElementById("whatsapp-btn");
+
 const isHomePage = window.location.pathname === "/"; // Check for homepage URL
 
 let dropdownActive = false;
@@ -108,16 +112,23 @@ function isHomepage() {
 
 // Show dropdown on hover
 productsLink.addEventListener("mouseover", () => {
-    productDropdown.classList.remove("hidden");
+    productDropdown.classList.remove("hidden", "h-0");
     productDropdown.classList.add("flex");
-    industryDropdown.classList.add("hidden");
+    industryDropdown.classList.add("hidden", "h-0");
     dropdownActive = true;
+    updateHeader();
+});
+
+productsLink.addEventListener("mouseout", () => {
+    productDropdown.classList.remove("flex");
+    productDropdown.classList.add("hidden", "h-0");
+    dropdownActive = false;
     updateHeader();
 });
 
 // Keep dropdown visible when hovering over it
 productDropdown.addEventListener("mouseover", () => {
-    productDropdown.classList.remove("hidden");
+    productDropdown.classList.remove("hidden", "h-0");
     productDropdown.classList.add("flex");
     dropdownActive = true;
     updateHeader();
@@ -126,22 +137,28 @@ productDropdown.addEventListener("mouseover", () => {
 // Hide dropdown on mouseout
 productDropdown.addEventListener("mouseout", () => {
     productDropdown.classList.remove("flex");
-    productDropdown.classList.add("hidden");
+    productDropdown.classList.add("hidden", "h-0");
     dropdownActive = false;
     updateHeader();
 });
 
 industryLink.addEventListener("mouseover", () => {
-    industryDropdown.classList.remove("hidden");
+    industryDropdown.classList.remove("hidden", "h-0");
     industryDropdown.classList.add("flex");
-    productDropdown.classList.add("hidden");
+    productDropdown.classList.add("hidden", "h-0");
     dropdownActive = true;
+    updateHeader();
+});
+industryLink.addEventListener("mouseout", () => {
+    industryDropdown.classList.remove("flex");
+    industryDropdown.classList.add("hidden", "h-0");
+    dropdownActive = false;
     updateHeader();
 });
 
 // Keep dropdown visible when hovering over it
 industryDropdown.addEventListener("mouseover", () => {
-    industryDropdown.classList.remove("hidden");
+    industryDropdown.classList.remove("hidden", "h-0");
     industryDropdown.classList.add("flex");
     dropdownActive = true;
     updateHeader();
@@ -150,7 +167,7 @@ industryDropdown.addEventListener("mouseover", () => {
 // Hide dropdown on mouseout
 industryDropdown.addEventListener("mouseout", () => {
     industryDropdown.classList.remove("flex");
-    industryDropdown.classList.add("hidden");
+    industryDropdown.classList.add("hidden", "h-0");
     dropdownActive = false;
     updateHeader();
 });
@@ -190,6 +207,8 @@ function isHomepage() {
 }
 
 function applyScrolledHeaderStyles() {
+    whatsappBtn.classList.remove("hidden");
+    whatsappBtn.classList.add("fixed");
     header.classList.add(
         "bg-white",
         // "shadow-md",
@@ -204,17 +223,23 @@ function applyScrolledHeaderStyles() {
     );
     navLinks.classList.add("text-black");
     cta.classList.remove("border-white", "text-white");
+    ctaAccent.classList.remove("bg-white");
+    ctaAccent.classList.add("bg-yellow-500");
     cta.classList.add(
         "border-yellow-500",
-        "text-yellow-500",
+        "text-black",
         "hover:bg-yellow-500",
-        "hover:text-white"
+        "hover:text-black"
     );
+    // logoSize.classList.remove("h-[35px]", "md:h-[64px]", "xl:h-[96px]");
+    // logoSize.classList.add("h-[32px]", "md:h-[60px]", "xl:h-[64px]");
     logoLight.classList.add("hidden");
     logoDark.classList.remove("hidden");
 }
 
 function applyInitialHeaderStyles() {
+    whatsappBtn.classList.add("hidden");
+    whatsappBtn.classList.remove("fixed");
     header.classList.remove(
         "bg-white",
         // "shadow-md",
@@ -234,9 +259,25 @@ function applyInitialHeaderStyles() {
         "hover:text-white"
     );
     cta.classList.add("border-white", "text-white");
+    ctaAccent.classList.remove("bg-yellow-500");
+    ctaAccent.classList.add("bg-white");
     navLinks.classList.remove("text-black");
     logoLight.classList.remove("hidden");
     logoDark.classList.add("hidden");
+    // logoSize.classList.remove("h-[32px]", "md:h-[60px]", "xl:h-[64px]");
+    // logoSize.classList.add("h-[35px]", "md:h-[64px]", "xl:h-[96px]");
+}
+
+function changeLogoSize(str) {
+    if (str === 'decrease') {
+        logoSize.classList.remove("h-[35px]", "md:h-[64px]", "xl:h-[96px]");
+        logoSize.classList.add("h-[32px]", "md:h-[60px]", "xl:h-[64px]");
+
+    } else if (str === 'increase') {
+        logoSize.classList.remove("h-[32px]", "md:h-[60px]", "xl:h-[64px]");
+        logoSize.classList.add("h-[35px]", "md:h-[64px]", "xl:h-[96px]");
+        
+    }
 }
 
 if (isHomepage()) {
@@ -255,9 +296,11 @@ if (isHomepage()) {
 
     // Initial check
     updateHeader();
+
 } else {
     // Apply scrolled header styles by default for all other pages
     applyScrolledHeaderStyles();
+    // changeLogoSize('increase')
 
 
     
@@ -297,9 +340,9 @@ function createCounter(elementId, targetNumber, duration = 1000, onUpdate) {
         clearInterval(intervalId);
     };
 } // Update every 10 milliseconds
-createCounter('project-counter', 120, 150);
-createCounter('exp-counter', 16);
-createCounter('client-counter', 10, 1000);
+createCounter('project-counter', 200, 150);
+createCounter('exp-counter', 9);
+createCounter('client-counter', 100, 150);
 createCounter('flying-time-counter', 100000, 100);
 
 
