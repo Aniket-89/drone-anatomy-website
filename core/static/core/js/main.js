@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         focus: 'center',
         padding: {
-            left: '25%',
-            right: '25%',
+            left: '10%',
+            right: '10%',
         },
         breakpoints: {
             1024: {
@@ -310,40 +310,45 @@ if (isHomepage()) {
 
 // counter
 
-function createCounter(elementId, targetNumber, duration = 1000, onUpdate) {
+function createCounterIfInView(elementId, targetNumber, duration = 1000, onUpdate) {
     const counterElement = document.getElementById(elementId);
 
     if (!counterElement) {
         throw new Error(`Element with ID "${elementId}" not found!`);
     }
 
-    let currentCount = Number(counterElement.textContent) || 0; // Get initial count or set to 0
+    const observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+            let currentCount = Number(counterElement.textContent) || 0; // Get initial count or set to 0
 
-    const increment = Math.ceil((targetNumber - currentCount) / (duration / 10)); // Calculate increment per update
+            const increment = Math.ceil((targetNumber - currentCount) / (duration / 10)); // Calculate increment per update
 
-    const intervalId = setInterval(() => {
-        currentCount += increment;
+            const intervalId = setInterval(() => {
+                currentCount += increment;
 
-        if (currentCount >= targetNumber) {
-            currentCount = targetNumber;
-            clearInterval(intervalId); // Stop animation when target reached
+                if (currentCount >= targetNumber) {
+                    currentCount = targetNumber;
+                    clearInterval(intervalId); // Stop animation when target reached
+                }
+
+                counterElement.textContent = currentCount;
+
+                if (onUpdate) {
+                    onUpdate(currentCount); // Call optional update callback
+                }
+            }, 100); // Update every 10 milliseconds (adjust as needed)
+
+            observer.unobserve(counterElement);
         }
+    });
 
-        counterElement.textContent = currentCount;
+    observer.observe(counterElement);
+}
 
-        if (onUpdate) {
-            onUpdate(currentCount); // Call optional update callback
-        }
-    }, 100); // Update every 10 milliseconds (adjust as needed)
-
-    return function stopCounter() {
-        clearInterval(intervalId);
-    };
-} // Update every 10 milliseconds
-createCounter('project-counter', 200, 150);
-createCounter('exp-counter', 9);
-createCounter('client-counter', 100, 150);
-createCounter('flying-time-counter', 100000, 100);
-
+createCounterIfInView('project-counter', 200, 150);
+createCounterIfInView('exp-counter', 9);
+createCounterIfInView('client-counter', 100, 150);
+createCounterIfInView('flying-time-counter', 100000, 100);
 
 // agri-drone page

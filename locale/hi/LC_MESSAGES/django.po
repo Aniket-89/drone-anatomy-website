@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-02 14:25+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\config\settings.py:104
+msgid "English"
+msgstr "अंग्रेजी"
+
+#: .\config\settings.py:105
+msgid "Hindi"
+msgstr "हिन्दी"
+
+#: .\templates\components\header.html:39
+msgid "PRODUCTS"
+msgstr "प्रोडक्टस"
+
+#: .\templates\components\header.html:61
+msgid "SOLUTIONS"
+msgstr "सॉल्यूशन्स"
+
+#: .\templates\components\header.html:82
+msgid "TRAINING"
+msgstr "ट्रैनिंग"
+
+#: .\templates\components\header.html:89
+msgid "CAREER"
+msgstr "करिअर"
+
+#: .\templates\components\header.html:96
+msgid "BLOGS"
+msgstr "ब्लॉग्स"
+
+#: .\templates\components\header.html:103
+msgid "ABOUT"
+msgstr "अबाउट"
+
+#: .\templates\components\header.html:113
+msgid "Watch a Demo"
+msgstr "डेमो देखें"
+
+#: .\templates\components\header.html:119
+msgid "Contact Us"
+msgstr "संपर्क कारें"
+

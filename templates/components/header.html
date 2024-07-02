@@ -1,3 +1,4 @@
+{% load static i18n %}
 {% load static %}
 
 <header
@@ -36,7 +37,7 @@
           <a
             href=""
             class="nav-links transition-colors group duration-150 ease-in-out hover:text-yellow-400"
-            >PRODUCTS</a
+            >{% trans "PRODUCTS" %}</a
           >
           <div
             id="product-dropdown"
@@ -58,7 +59,7 @@
             <a
               href=""
               class="nav-links transition-colors group duration-150 ease-in-out hover:text-yellow-400"
-              >SOLUTIONS</a
+              >{% trans "SOLUTIONS" %}</a
             >
             <div
               id="industry-dropdown"
@@ -79,28 +80,28 @@
           <a
             href=""
             class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
-            >TRAINING</a
+            >{% trans "TRAINING" %}</a
           >
         </li>
         <li>
           <a
             href=""
             class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
-            >CAREER</a
+            >{% trans "CAREER" %}</a
           >
         </li>
         <li>
             <a
               href=""
               class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
-              >BLOGS</a
+              >{% trans "BLOGS" %}</a
             >
           </li>
         <li>
           <a
             href="{% url 'core:about' %}"
             class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
-            >ABOUT</a
+            >{% trans "ABOUT" %}</a
           >
         </li>
       </ul>
@@ -110,14 +111,20 @@
         id="cta-light"
         class="hidden border border-white bg-transparent px-4 leading-7 text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
       >
-        Watch a Demo
+        {% trans "Watch a Demo" %}
       </button>
       <button
       id="cta-white"
         class="cta-accent hidden bg-white font-medium px-4 leading-8 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-500 hover:text-white xl:inline"
       >
-        Contact Us
+        {% trans "Contact Us" %}
       </button>
+      <form action="{% url 'core:set-language' %}" method="get">
+        <select name="language" onchange="this.form.submit()">
+            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+            <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>Hindi</option>
+        </select>
+    </form>
       <button id="mobile-menu-btn" class="">
         <img
           id="closed-menu-icon"

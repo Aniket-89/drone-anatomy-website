@@ -1,4 +1,7 @@
 from django.shortcuts import redirect, render
+from django.utils import translation
+from django.http import HttpResponseRedirect
+from django.conf import settings
 import urllib.parse
 
 
@@ -22,3 +25,11 @@ def whatsapp_redirect(request):
     encoded_message = urllib.parse.quote(message)
     whatsapp_url += f"?text={encoded_message}"
     return redirect(whatsapp_url)
+
+
+def set_language(request):
+    user_language = request.GET.get('language', 'en')
+    translation.activate(user_language)
+    response = HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+    return response
