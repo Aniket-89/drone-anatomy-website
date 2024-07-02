@@ -2,7 +2,9 @@
     text-shadow: 0 2px 10px #000;
 }
 
-
+select {
+    background-image: none;
+}
 
 header {
     max-height: 93px;

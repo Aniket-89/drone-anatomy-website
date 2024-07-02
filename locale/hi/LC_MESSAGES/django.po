@@ -39,8 +39,7 @@ msgid "Learn more"
 msgstr "और जानें"
 
 #: .\core\templates\core\index.html:53
-#, fuzzy
-#| msgid "Watch a Demo"
+
 msgid "Watch the video"
 msgstr "वीडियो देखें"
 

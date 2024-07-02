@@ -8,20 +8,15 @@
   <div id="logo-container"
     class="container mx-auto h-full flex items-center justify-between w-10/12 xl:w-10/12"
   >
-    <a id="logoanchor" href="{% url 'core:home' %}" class="h-[64px] md:h-[72px] xl:h-[92px] transition-all duration-400 ease-linear">
+    <a id="logoanchor" href="{% url 'core:home' %}" class="h-[64px] xl:h-[80px] 2xl:h-[92px] transition-all duration-400 ease-linear overflow-hidden">
       <div class="logo items-center overflow-hidden flex h-full mt-1">
         <img
           id="logo-light"
           src="{% static 'core/img/da-logo-wht-outline1.png' %}"
           alt="drone anatomy"
-          class="object-cover h-full"
+          class="object-cover h-full object-center"
         />
-        <!-- <img
-          id="logo-dark"
-          src="{% static 'core/img/logo.png' %}"
-          alt="drone anatomy"
-          class="object-cover"
-        /> -->
+        
         <img
           id="logo-dark"
           src="{% static 'core/img/da-logo-blk-outline.png' %}"
@@ -31,7 +26,7 @@
       </div>
     </a>
     <nav class="navbar hidden xl:flex h-full">
-      <ul class="navlinks flex gap-6 h-[92px] flex-nowrap text-nowrap items-center">
+      <ul class="navlinks flex gap-6 h-[64px] xl:h-[80px] 2xl:h-[92px] flex-nowrap text-nowrap items-center">
         <li id="product-link" class="h-full flex items-center">
             
           <a
@@ -121,10 +116,10 @@
       </button>
 
       <form action="{% url 'core:set-language' %}" method="get" class="bg-transparent group flex items-center">
-            <img src="{% static 'core/icons-globe.png' %}" alt="" class="object-cover object-center size-4 peer">
+            <img src="{% static 'core/icons-globe.png' %}" alt="" class="object-cover object-center h-4 w-4 peer">
             <div class="lang-select">
                 <select name="language" onchange="this.form.submit()" class="bg-transparent border-none underline underline-offset-4 pl-2 pr-2 py-1 hover:cursor-pointer group-hover:text-yellow-500 transition-colors duration-300 ease-linear focus:border-none">
-                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} class="border-none p-1">English</option>
+                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} class="">EN</option>
                     <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>हिन्दी</option>
                 </select>
             </div>
@@ -218,39 +213,5 @@
     </div>
   </div>
     
-    <div
-            id="industry-dropdown"
-            class="hidden w-full justify-between bg-white px-8 py-4 text-black transition-all duration-500 ease-in-out hover:flex"
-          >
-          <ul class="flex justify-between w-10/12 mx-auto text-nowrap">
-            <li class="pr-6 w-1/4 h-2/3 text-center">
-              <a href="{% url 'core:agri-detail' %}" class="group">
-                  <div class="overflow-hidden h-44 ">
-
-                      <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
-                  </div>
-                  <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
-              </a>
-            </li>
-            <li class="pr-6 w-1/4 h-2/3 text-center">
-              <a href="{% url 'core:agri-detail' %}" class="group">
-                  <div class="overflow-hidden h-44 ">
-
-                      <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
-                  </div>
-                  <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
-              </a>
-            </li>
-            <li class="pr-6 w-1/4 h-2/3 text-center">
-              <a href="{% url 'core:agri-detail' %}" class="group">
-                  <div class="overflow-hidden h-44 ">
-
-                      <img src="{% static 'core/img/drone-card.png' %}" alt="" class="object-cover h-full w-full group-hover:scale-125 transition-transform duration-300 ease-in-out">
-                  </div>
-                  <h3 class="text-lg text-bold group-hover:text-yellow-500 transition-all duration-300 ease-in-out">Agriculture Drone</h3>
-              </a>
-            </li>
-            
-          </ul>
-          </div>
+    
 </header>

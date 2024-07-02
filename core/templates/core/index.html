@@ -12,12 +12,17 @@
       id="home-hero-video"
       src="{% static 'core/drone-teaser.mp4' %}"
       autoplay
+      preload="auto"
       loop
       muted
-      class="h-full w-full object-cover absolute top-0 left-0 -z-40"
+      loading="lazy"
+      class="h-full w-full object-cover absolute top-0 left-0 -z-30"
     >
       Your browser does not support the video tag.
     </video>
+    <div class="absolute h-full top-0 left-0 w-full -z-40 bg-black">
+
+    </div>
     
     <div
       class="container mx-auto mt-40 sm:mt-0 px-6 grid place-content-center gap-4"
