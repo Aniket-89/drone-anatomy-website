@@ -119,13 +119,19 @@
       >
         {% trans "Contact Us" %}
       </button>
-      <form action="{% url 'core:set-language' %}" method="get">
-        <select name="language" onchange="this.form.submit()">
-            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-            <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>Hindi</option>
-        </select>
+
+      <form action="{% url 'core:set-language' %}" method="get" class="bg-transparent group flex items-center">
+            <img src="{% static 'core/icons-globe.png' %}" alt="" class="object-cover object-center size-4 peer">
+            <div class="lang-select">
+                <select name="language" onchange="this.form.submit()" class="bg-transparent border-none underline underline-offset-4 pl-2 pr-2 py-1 hover:cursor-pointer group-hover:text-yellow-500 transition-colors duration-300 ease-linear focus:border-none">
+                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} class="border-none p-1">English</option>
+                    <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>हिन्दी</option>
+                </select>
+            </div>
     </form>
-      <button id="mobile-menu-btn" class="">
+    
+      
+    <button id="mobile-menu-btn" class="">
         <img
           id="closed-menu-icon"
           src="https://img.icons8.com/?size=100&id=S5biqohaDgd1&format=png&color=EBEBEB"
@@ -167,23 +173,7 @@
             >
           </li>
           <div id="mobile-product-dropdown" class="py-5 hidden">
-            <!-- <div class="grid w-8/12 gap-10">
-              <div class="grid gap-1">
-                <a href="" class="font-bold hover:text-yellow-400">DRONE</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-              </div>
-              <div class="flex-col space-y-4">
-                <div class="">PAYLOAD</div>
-                <div class="">CONTROLLER</div>
-                <div class="">SOFTWARE</div>
-              </div>
-              <div class=""></div>
-            </div> -->
+            
           </div>
           <li id="mobile-industry-link-wrapper">
             <a
@@ -193,25 +183,7 @@
               >SOLUTIONS</a
             >
           </li>
-          <!-- <div id="mobile-industry-dropdown" class="py-5 hidden">
-            <div class="grid w-8/12 gap-10">
-              <div class="grid gap-1">
-                <a href="" class="font-bold hover:text-yellow-400">DRONE</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-                <a href="" class="hover:text-yellow-500">CW-007</a>
-              </div>
-              <div class="flex-col space-y-4">
-                <div class="">PAYLOAD</div>
-                <div class="">CONTROLLER</div>
-                <div class="">SOFTWARE</div>
-              </div>
-              <div class=""></div>
-            </div>
-          </div> -->
+          
 
           <li>
             <a

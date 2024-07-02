@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load static %}
 <!-- {% load cache %} -->
  {% block title %}Drone Anatomy - Leading Drone Solutions for Agriculture, Surveillance, Payloads, and Aerial Mapping{% endblock title %}
 {% block body %}
@@ -25,14 +27,14 @@
         data-aos="fade-down"
         data-aos-duration="700"
       >
-        The Future of Mobility is Here.
+        {% trans "The Future of Mobility is Here." %}
       </h1>
       <p
         class="text-white text-center sm:text-2xl text-xl"
         data-aos="fade-down"
         data-aos-duration="700"
       >
-      The most advanced drones for mobility
+      {% trans "The most advanced drones for mobility"  %}
       </p>
       <div class="cta mx-auto my-[10px] grid grid-cols-1 md:grid-cols-2 gap-4">
         <button

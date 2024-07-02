@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 14:25+0530\n"
+"POT-Creation-Date: 2024-07-02 16:44+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,43 +18,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\config\settings.py:104
+#: .\config\settings.py:106
 msgid "English"
 msgstr "अंग्रेजी"
 
-#: .\config\settings.py:105
+#: .\config\settings.py:107
 msgid "Hindi"
 msgstr "हिन्दी"
 
-#: .\templates\components\header.html:39
+#: .\core\templates\core\index.html:30
+msgid "The Future of Mobility is Here."
+msgstr "द फ्यूचर ऑफ मोबिलिटी इज हियर"
+
+#: .\core\templates\core\index.html:37
+msgid "The most advanced drones for mobility"
+msgstr "द मोस्ट एडवांस्ड ड्रोन्स फॉर मोबिलिटी"
+
+#: .\templates\components\header.html:40
 msgid "PRODUCTS"
 msgstr "प्रोडक्टस"
 
-#: .\templates\components\header.html:61
+#: .\templates\components\header.html:62
 msgid "SOLUTIONS"
 msgstr "सॉल्यूशन्स"
 
-#: .\templates\components\header.html:82
+#: .\templates\components\header.html:83
 msgid "TRAINING"
 msgstr "ट्रैनिंग"
 
-#: .\templates\components\header.html:89
+#: .\templates\components\header.html:90
 msgid "CAREER"
 msgstr "करिअर"
 
-#: .\templates\components\header.html:96
+#: .\templates\components\header.html:97
 msgid "BLOGS"
 msgstr "ब्लॉग्स"
 
-#: .\templates\components\header.html:103
+#: .\templates\components\header.html:104
 msgid "ABOUT"
 msgstr "अबाउट"
 
-#: .\templates\components\header.html:113
+#: .\templates\components\header.html:114
 msgid "Watch a Demo"
 msgstr "डेमो देखें"
 
-#: .\templates\components\header.html:119
+#: .\templates\components\header.html:120
 msgid "Contact Us"
-msgstr "संपर्क कारें"
-
+msgstr "संपर्क करें"
