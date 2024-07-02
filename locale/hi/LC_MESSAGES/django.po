@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 16:44+0530\n"
+"POT-Creation-Date: 2024-07-02 16:54+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,6 +33,16 @@ msgstr "द फ्यूचर ऑफ मोबिलिटी इज हिय�
 #: .\core\templates\core\index.html:37
 msgid "The most advanced drones for mobility"
 msgstr "द मोस्ट एडवांस्ड ड्रोन्स फॉर मोबिलिटी"
+
+#: .\core\templates\core\index.html:45
+msgid "Learn more"
+msgstr "और जानें"
+
+#: .\core\templates\core\index.html:53
+#, fuzzy
+#| msgid "Watch a Demo"
+msgid "Watch the video"
+msgstr "वीडियो देखें"
 
 #: .\templates\components\header.html:40
 msgid "PRODUCTS"
