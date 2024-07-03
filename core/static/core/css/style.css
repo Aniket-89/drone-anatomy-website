@@ -15,9 +15,20 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 60vh
+    height: 50vh
+}
+#about-banner > div {
+    background-image: url('../img/airdrone.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* object-fit: cover; */
+    z-index: 2;
 }
 
+ section.management {
+    background-color: #5B5B5B;
+ }
 .spray-banner {
     background-image: url('../img/cloud-bg.jpg');
     background-repeat: no-repeat;
