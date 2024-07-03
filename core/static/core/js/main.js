@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         breakpoints: {
             1024: {
                 perPage: 1,
+                height: 800,
                 padding: {
                     left: '10%',
                     right: '10%',
