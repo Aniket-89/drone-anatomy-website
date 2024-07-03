@@ -243,7 +243,7 @@ function applyInitialHeaderStyles() {
     whatsappBtn.classList.remove("fixed");
     header.classList.remove(
         "bg-white",
-        // "shadow-md",
+        // "shadow-sm",
         // "shadow-shadow",
         // "lg:h-22"
     );
