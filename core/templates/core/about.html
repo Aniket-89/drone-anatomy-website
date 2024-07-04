@@ -1,48 +1,45 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block body %}
 
 <main>
     <div id="about-banner" class="pt-16">
 
         <div class="about-banner-content h-full w-full grid place-content-center text-center mx-auto">
-            <h1 class="text-5xl font-semibold">ABOUT US</h1>
-            <h3 class="text-xl">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h1 class="text-3xl lg:text-7xl font-semibold"><span class="text-yellow-500">O</span>UR JOURNEY</h1>
+            
         </div>
     </div>
 
     <section class="bg-gray-300">
-        <div class="w-10/12 lg:w-8/12 mx-auto py-16">
-            <div class="text-center">
-                <h3 class="text-2xl font-semibold leading-[1.5]">About Drone Anatomy</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="flex flex-col items-center lg:items-start xl:flex-row-reverse w-full my-8 justify-between">
-                <div class="h-full w-full md:w-1/2 py-4">
+        <div class="w-10/12 xl:w-8/12 mx-auto py-4 lg:py-12">
+            
+            <div class="flex flex-col items-center lg:items-start lg:flex-row w-full my-8 justify-between">
+                
+                <div class="w-full lg:w-1/2 text-start">
+                    <div class="text-start pb-5">
+                        <h3 class="text-2xl lg:text-3xl font-bold leading-[1.5]">About Drone Anatomy</h3>
+                    </div>
+                    <p class="text-start">At Drone Anatomy, we are dedicated to designing and manufacturing high-quality drones that meet the needs of a diverse range of industries. With a commitment to innovation and excellence, we leverage the latest technologies and materials to create drones that are both reliable and efficient.
+                    Based in India, our company is staffed by a team of experienced engineers, designers, and technicians who work together to deliver cutting-edge solutions that enable our customers to achieve their goals. Whether it's in the areas of agriculture, construction, security, or surveying, our drones are tailored to meet the unique needs of each industry.
+                    </p>                
+                </div>
+                <div class="h-full w-full lg:w-1/3 py-4">
                     <img src="{% static 'core/img/about1.jpg' %}" alt="" class="h-auto w-full object-cover rounded-md">
                 </div>
-                <div class="w-full xl:w-1/3 text-center md:text-start">
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, omnis? Libero, quasi neque sed quas ipsam beatae facere vero, officia adipisci asperiores atque provident? Repellat ratione quas nostrum sequi aliquid ducimus aliquam libero est culpa cum, fuga recusandae, unde eum? <br>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque eum iure quibusdam facere? Esse exercitationem natus nesciunt quos, odit voluptatibus ab quod veritatis ipsum facilis fugit iusto neque quo quasi est, ipsa tempore distinctio!
-                    </p>                
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sit itaque, modi facere mollitia officia accusantium dolore id tenetur in repudiandae rem earum omnis qui?</p>
-                </div>
-                    
             </div>
         </div>
     </section>
 
     <section class="">
-        <div class="flex flex-col justify-between lg:flex-row py-12 lg:w-8/12 w-10/12 mx-auto">
-            <div class="my-12 space-y-3 lg:w-1/2">
-                <h3 class="text-3xl font-bold">MISSION & VISION</h3>
-                <p class="mission"><span class="font-bold text-black">MISSION: </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, officia!</p>
-                <p class="vision"><span class="font-bold text-black">VISION: </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos provident tempora id, ab blanditiis praesentium.</p>
-            </div>
-            <div class="h-full w-full lg:w-1/3 py-4">
-                <img src="{% static 'core/img/about1.jpg' %}" alt="" class="h-auto w-full object-cover rounded-md">
+        <div class="flex flex-col items-center justify-between lg:flex-row pt-4 pb-10 xl:w-8/12 w-10/12 mx-auto">
+            <div class="space-y-3">
+                <h3 class="text-3xl lg:5xl font-bold leading-10 my-2">MISSION & VISION</h3>
+                <div class="space-y-4">
+
+                    <p class="mission italic"><span class="font-bold text-black">MISSION : </span>At Drone Anatomy, our mission is to deliver high-quality, innovative drones that empower our customers with cutting-edge technology for diverse applications. We are committed to excellence, ensuring each drone we produce meets the highest standards of performance,<span class="font-extrabold"> reliability, and customer satisfaction</span>.</p>
+                    <p class="vision italic"><span class="font-bold text-black">VISION : </span>Our vision is to establish Drone Anatomy as the leading pioneer in the aerial drone industry, setting the standard for <span class="font-extrabold">future mobility</span>. We aim to drive the evolution of drone technology in India and beyond, fostering advancements that transform the way industries operate and innovate.</p>
+                </div>
             </div>
         </div>
         
@@ -50,129 +47,245 @@
     
     <!-- Management -->
      <section class="management bg-gray-300">
-        <div class="w-10/12 lg:w-8/12 mx-auto text-center py-12">
-            <h1 class="text-3xl font-bold">Management</h1>
-            <div class="flex flex-col lg:flex-row my-16 gap-8 justify-between">
+        <div class="w-10/12 xl:w-8/12 mx-auto text-center py-12">
+            <h1 class="text-5xl font-bold">Meet The Team</h1>
+            <div class="flex flex-col lg:flex-row my-16 gap-8 justify-between items-start">
                 <div class="management-card flex flex-col gap-1 justify-center items-center w-full lg:w-1/4">
                     <div class="w-60 overflow-hidden rounded-full mx-auto">
-
                         <img src="{% static 'core/img/mayank-800.jpg' %}" alt="" loading="lazy" class="aspect-1 w-full object-cover object-center">
                     </div>
-                    <h3 class="text-2xl font-semibold">Mayank Sharma</h3>
-                    <h6 class="text-lg font-semibold">Founder & COO</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis.</p>
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-semibold">Mayank Sharma</h3>
+                        <h6 class="text-lg font-semibold">Founder & COO</h6>
+                    </div>
+                    <p class="italic">Mayank has been a dedicated professional in the field of UAVs for over nine years. With extensive experience in repairing and programming drones, he brings a wealth of technical expertise to every project. Mayank and Saurabh have collaborated on numerous innovative projects, leveraging their combined knowledge to push the boundaries of drone technology. Additionally, Mayank has cultivated a vast network within the global drone ecosystem, making him a well-connected and influential figure in the industry.</p>
                 </div>
                 <div class="management-card flex flex-col gap-1 justify-center items-center w-full lg:w-1/4">
                     <div class="w-60 overflow-hidden rounded-full mx-auto">
-
                         <img src="{% static 'core/img/saurabh-800.jpg' %}" alt="" loading="lazy" class="aspect-1 w-full object-cover object-center">
                     </div>
-                    <h3 class="text-2xl font-semibold">Saurabh Jha</h3>
-                    <h6 class="text-lg font-semibold">Founder & CEO</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis.</p>
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-semibold">Saurabh Jha</h3>
+                        <h6 class="text-lg font-semibold">Founder & CEO</h6>
+                    </div>
+                    <p class=" italic ">Saurabh is a growth hacker based in Delhi with a keen interest in unmanned aerial vehicles (UAVs). His passion for drones began at a young age, and he has since honed his skills and knowledge in this exciting field. At the age of 15, he created a drone that garnered recognition. Throughout his career, Saurabh has maintained a deep interest in the intersection of technology and industry. As he began to develop his skills in creating unmanned aerial vehicles (UAVs), he was driven by a vision to establish a company that could deliver superior UAV solutions.
+
+                    </p>
                 </div>
                 <div class="management-card flex flex-col gap-1 items-center justify-center w-full lg:w-1/4">
                     <div class="w-60 overflow-hidden rounded-full mx-auto">
-
                         <img src="{% static 'core/img/deepanshu-800.jpg' %}" alt="Deepanshu Purohit" loading="lazy" class="aspect-1 w-full object-cover object-center">
                     </div>
-                    <h3 class="text-2xl font-semibold">Deepanshu Purohit</h3>
-                    <h6 class="text-lg font-semibold">Founder & CMO</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis.</p>
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-semibold">Deepanshu Purohit</h3>
+                        <h6 class="text-lg font-semibold">Founder & CMO</h6>
+                    </div>
+                    <p class="italic">Dipanshu currently serves as the Chief Marketing Officer at Drone Anatomy. Prior to his role at Drone Anatomy, he has worked with celebrity coaches and consultants in the personal development space. He is an internet marketer, specialized in helping his clients streamline their sales processes and achieve significant results in a short period of time. Mentored by world's top marketers and coaches, his expertise will be utilized in creating more revenue by means of digital media and leveraging his strong network circle.</p>
                 </div>
             </div>
         </div>
      </section>
     <!-- Management end -->
+
     <!-- journey -->
-    <section class="journey py-16">
-        
-
-        <div class="lg:w-8/12 w-10/12 grid gap-8 mx-auto ">
-            <h3 class="text-3xl font-bold">Our Journey</h3>
-            <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
-
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+    <section class="relative journey py-16">
+            <!-- <svg id="mySVG" viewBox="0 0 2 100" class="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[2px]">
+                <line id="myLine" x1="1" y1="0" x2="1" y2="100" stroke="black" stroke-width="1" />
+            </svg> -->
+        <div class="xl:w-8/12 w-10/12 grid gap-8 mx-auto ">
+            <h3 class="text-5xl font-bold">OUR JOURNEY</h3>
+            
+            <div class="w-full">
+                <div class="flex lg:items-center flex-col-reverse flex-wrap gap-1 lg:flex-row w-full">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"Age is just a number when it comes to entrepreneurship - young minds bring fresh ideas, boundless energy, and a fearlessness to chase their dreams."</h3>
+                            <p class="text-lg">Saurabh started with Drones at the age of 15 and got Awarded in the National Science Exhibition.</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2015</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2015</span>
             </div>
-            <div class="flex xl:flex-row-reverse flex-col-reverse w-full lg:items-center">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+            <div class="w-full">
+                
+                <div class="flex lg:flex-row-reverse flex-col-reverse w-full lg:justify-start lg:items-center">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
+
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"When two minds with a shared passion come together, great things happen - let's make magic!"</h3>
+                            <p class="text-lg">Explored industry and met Mayank.</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2016</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2016</span>
             </div>
-            <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
+            <div class="w-full">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid  gap-4  items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
+
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"The feeling of making money together as a team is like rocket fuel for your business - let's keep the momentum going and reach for the stars!"</h3>
+                            <p class="text-lg">Excited from the business potential started with their first office.</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2017</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2015</span>
+                
             </div>
-            <div class="flex xl:flex-row-reverse flex-col-reverse w-full lg:items-center">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
+            <div class="w-full">
+                
+                <div class="flex lg:flex-row-reverse flex-col-reverse w-full lg:justify-start lg:items-center">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"Our first product delivery is just the beginning - we're paving the way for a future full of innovation and success!"</h3>
+                            <p class="text-lg">Started delivering Made in India drones to Indian Army & met Dipanshu.</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2018</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2016</span>
             </div>
-            <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
+            <div class="w-full">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
+
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"Smart entrepreneurs pivot with the market - by adapting to changing demands, we're not just surviving, we're thriving!"</h3>
+                            <p class="text-lg">Started making high pay load drones which market required.</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2019</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2015</span>
+                
             </div>
-            <div class="flex xl:flex-row-reverse flex-col-reverse w-full lg:items-center">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
+            <div class="w-full">
+                
+                <div class="flex lg:flex-row-reverse flex-col-reverse w-full lg:justify-start lg:items-center">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"Risk-taking meets innovation - using drones to sanitize in the time of COVID, we're not just adapting, we're changing the game!"</h3>
+                            <p class="text-lg">Actual implementation of high pay load drones during covid for santization purposes.</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2020</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2016</span>
             </div>
-            <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
+            <div class="w-full">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
+
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"Advancing in business is not just about reaching new heights - it's about pushing past boundaries, breaking through barriers, and achieving the impossible!"</h3>
+                            <p class="text-lg">Advancement of business growth</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2021</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2015</span>
+                
             </div>
-            <div class="flex xl:flex-row-reverse flex-col-reverse w-full lg:items-center">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
+            <div class="w-full">
+                
+                <div class="flex lg:flex-row-reverse flex-col-reverse w-full lg:justify-start lg:items-center">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"Building a team is not just about growing headcount - it's about cultivating a community of leaders, empowering individuals to reach their full potential, and achieving collective greatness!"  so founded DAstrionics technologies Pvt Ltd with a vison to make in India for the world.</h3>
+                            <p class="text-lg">THROTTLE UP :)</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2022</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2016</span>
             </div>
-            <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
+            <div class="w-full">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                <div class="flex lg:items-center flex-col-reverse flex-wrap lg:flex-row w-full">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
+
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"Age is just a number when it comes to entrepreneurship - young minds bring fresh ideas, boundless energy, and a fearlessness to chase their dreams."</h3>
+                            <p class="text-lg">Saurabh started with Drones at the age of 15 and got Awarded in the National Science Exhibition.</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2023</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2015</span>
+                
             </div>
-            <div class="flex xl:flex-row-reverse flex-col-reverse w-full lg:items-center">
-                <div class="journey-card h-96 w-full lg:min-w-96 lg:w-1/3 rounded-lg shadow-lg group overflow-hidden relative grid items-end text-center">
+            <div class="w-full">
+                
+                <div class="flex lg:flex-row-reverse flex-col-reverse w-full lg:justify-start lg:items-center">
+                    <div class="journey-card w-full lg:min-w-96 lg:w-1/3 group grid gap-4 items-end">
+                        <div class=" w-full rounded-md shadow-lg overflow-hidden">
 
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover h-full w-full absolute top-0 left-0 group-hover:scale-105 transition-transform duration-300 ease-in-out z-[-1]">
-                    <p class="text-xl text-bold text-black bg-transparent p-4">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+                            <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="journey-img object-cover w-full group-hover:scale-105 transition-transform duration-300 ease-in-out">
+                        </div>
+                        <div class="text-lg italic space-y-2">
+                            <h3 class="">"Age is just a number when it comes to entrepreneurship - young minds bring fresh ideas, boundless energy, and a fearlessness to chase their dreams."</h3>
+                            <p class="text-lg">Saurabh started with Drones at the age of 15 and got Awarded in the National Science Exhibition.</p>
+                        </div>
+                    </div>
+                    <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2024</span>
                 </div>
-                <span class="lg:mx-12 text-bold text-3xl text-yellow-500">2016</span>
-            </div>  
+            </div>
+
+              
         </div>
         
     <!-- journey end -->
 </main>
 
 {% endblock body %}
+{% block javascript %}
+<script>
+
+    // gsap.registerPlugin(ScrollTrigger);
+    // const line = document.querySelector('#myLine');
+    // const lineLength = line.getTotalLength();
+
+    // // Set up the initial stroke-dasharray and stroke-dashoffset
+    // line.style.strokeDasharray = lineLength;
+    // line.style.strokeDashoffset = lineLength;
+
+    // // Create the scroll-triggered animation
+    // gsap.to(line, {
+    //     strokeDashoffset: 0,
+    //     scrollTrigger: {
+    //         trigger: line,
+    //         start: 'top 80%', // Trigger the animation when the top of the SVG is 80% down the viewport
+    //         end: 'bottom 20%', // End the animation when the bottom of the SVG is 20% down the viewport
+    //         scrub: true // Smooth scrubbing, affects how the animation is tied to scroll progress
+    //     }
+    // });
+</script>
+{% endblock javascript %}
