@@ -1,107 +1,82 @@
 {% load static %}
-<footer class="bg-[#232526] text-white">
+<footer class="bg-black text-white">
   <div
-    class="container w-10/12 py-16 flex flex-col md:flex-row justify-between gap-4 mx-auto"
+    class="container w-10/12 lg:w-8/12 py-16 text-sm flex flex-col md:flex-row gap-4 mx-auto justify-between"
   >
-    <div class="grid gap-6 py-6 w-1/3">
-      <div id="footer-logo-container">
-        <div class="logo overflow-hidden flex w-28 lg:w-44">
-          <img
-            id="logo-light"
-            src="{% static 'core/img/logo-light.png' %}"
-            alt="drone anatomy"
-            class="object-center object-contain"
-          />
+    
+    <div class="flex gap-8 justify-between">
+
+
+      <div class="space-y-3">
+        <h6>PRODUCTS</h6>
+        <ul>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
+        </ul>
+      </div>
+      
+
+
+      <div class="space-y-3">
+        <h6>USEFUL LINKS</h6>
+        <ul>
+          <li>About</li>
+          <li>Blogs</li>
+          <li>Training</li>
+          <li>Contact Us</li>
+          <li>Career</li>
+        </ul>
+      </div>
+      
+
+
+        <div class="space-y-3">
+        <h6>SOLUTIONS</h6>
+        <ul>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
+            <li class="hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
+
+        </ul>
         </div>
-        <p id="slogan">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
-          sapiente recusandae consectetur obcaecati consequuntur non quisquam
-          iure.
-        </p>
-      </div>
-
-      <address id="footer-address" class="space-y-3">
-        <h6>CONTACT</h6>
-        <p id="company-email">info@droneanatomy.com</p>
-        <p id="address">
-          C-40, Durga Industrial Park, Sahibabad, Ghaziabad, UP, India
-        </p>
-      </address>
-      <ul id="social-icons-footer" class="flex gap-3">
-        <li>twitter</li>
-        <li>facebook</li>
-        <li>linkedin</li>
-        <li>instagram</li>
-      </ul>
+        
     </div>
-
-    <div class="grid gap-6 py-10">
-      <div class="space-y-3">
-        <h6>PRODUCTS</h6>
-        <ul>
-          <li>Agri</li>
-          <li>lafj</li>
-          <li>akslfj</li>
-          <li>fkejf</li>
-        </ul>
-      </div>
-      <div class="space-y-3">
-        <h6>PRODUCTS</h6>
-        <ul>
-          <li>Agri</li>
-          <li>lafj</li>
-          <li>akslfj</li>
-          <li>fkejf</li>
-        </ul>
-      </div>
-    </div>
-    <div class="grid gap-6 py-10">
-      <div class="space-y-3">
-        <h6>PRODUCTS</h6>
-        <ul>
-          <li>Agri</li>
-          <li>lafj</li>
-          <li>akslfj</li>
-          <li>fkejf</li>
-        </ul>
-      </div>
-      <div class="space-y-3">
-        <h6>PRODUCTS</h6>
-        <ul>
-          <li>Agri</li>
-          <li>lafj</li>
-          <li>akslfj</li>
-          <li>fkejf</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="space-y-3 py-10">
-      <h6>SOLUTIONS</h6>
-      <ul>
-        <li>aflksd</li>
-        <li>fajdl</li>
-        <li>fasljdf</li>
-        <li>jsdldkfjao</li>
-        <li>ksdfjoi</li>
-        <li>sajdfki</li>
-        <li>sajdfki</li>
-        <li>sajdfki</li>
-        <li>sajdfki</li>
-        <li>sajdfki</li>
-        <li>sajdfki</li>
-      </ul>
+    <div class="space-y-4">
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <h3>Stay in Touch</h3>
+        <form action="" method="post" class="flex flex-col flex-start gap-4">
+            <input type="email" placeholder="Email Address" class="border-none rounded-md">
+            <button type="submit" class="text-white bg-yellow-500 rounded-md py-2 font-semibold w-1/2">Subscribe</button>
+        </form>
+        <div class="h-[92px] overflow-hidden">
+            <img
+          id="logo-light"
+          src="{% static 'core/img/da-logo-wht-outline1.png' %}"
+          alt="drone anatomy"
+          class="object-cover h-full"
+        />
+        </div>
     </div>
   </div>
 
   <div class="w-full grid place-content-center">
-    <ul class="text-center flex">
+    <ul class="text-center flex text-xs">
       <li>Privacy Policy</li>
       <span class="mx-4">|</span>
       <li>Terms & Conditions</li>
 
-      <span class="mx-6"> Drone Anatomy All Rights Reserved</span>
-      <!-- <li></li> -->
+      <span class="mx-6">&copy; 2024 Drone Anatomy All Rights Reserved</span>
     </ul>
   </div>
 </footer>

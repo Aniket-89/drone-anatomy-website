@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 16:54+0530\n"
+"POT-Creation-Date: 2024-07-05 18:50+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,59 +18,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\config\settings.py:106
+#: .\config\settings.py:107
 msgid "English"
 msgstr "अंग्रेजी"
 
-#: .\config\settings.py:107
+#: .\config\settings.py:108
 msgid "Hindi"
 msgstr "हिन्दी"
 
-#: .\core\templates\core\index.html:30
+#: .\core\templates\core\agri-drone.html:17
+msgid "FIELD FALCON AGRICULTURE DRONE"
+msgstr "फ़ील्ड फैलकन कृषि ड्रोन"
+
+#: .\core\templates\core\agri-drone.html:18
+msgid "The future of farming."
+msgstr "कृषि का भविष्य।"
+
+#: .\core\templates\core\index.html:35
 msgid "The Future of Mobility is Here."
 msgstr "द फ्यूचर ऑफ मोबिलिटी इज हियर"
 
-#: .\core\templates\core\index.html:37
+#: .\core\templates\core\index.html:42
 msgid "The most advanced drones for mobility"
 msgstr "द मोस्ट एडवांस्ड ड्रोन्स फॉर मोबिलिटी"
 
-#: .\core\templates\core\index.html:45
+#: .\core\templates\core\index.html:50
 msgid "Learn more"
 msgstr "और जानें"
 
-#: .\core\templates\core\index.html:53
-
+#: .\core\templates\core\index.html:58
 msgid "Watch the video"
 msgstr "वीडियो देखें"
 
-#: .\templates\components\header.html:40
+#: .\templates\components\header.html:35 .\templates\components\header.html:167
 msgid "PRODUCTS"
 msgstr "प्रोडक्टस"
 
-#: .\templates\components\header.html:62
+#: .\templates\components\header.html:57 .\templates\components\header.html:185
 msgid "SOLUTIONS"
 msgstr "सॉल्यूशन्स"
 
-#: .\templates\components\header.html:83
+#: .\templates\components\header.html:78 .\templates\components\header.html:194
 msgid "TRAINING"
 msgstr "ट्रैनिंग"
 
-#: .\templates\components\header.html:90
+#: .\templates\components\header.html:85 .\templates\components\header.html:201
 msgid "CAREER"
 msgstr "करिअर"
 
-#: .\templates\components\header.html:97
+#: .\templates\components\header.html:92 .\templates\components\header.html:208
 msgid "BLOGS"
 msgstr "ब्लॉग्स"
 
-#: .\templates\components\header.html:104
+#: .\templates\components\header.html:99 .\templates\components\header.html:215
 msgid "ABOUT"
 msgstr "अबाउट"
 
-#: .\templates\components\header.html:114
+#: .\templates\components\header.html:109
+#: .\templates\components\header.html:152
 msgid "Watch a Demo"
 msgstr "डेमो देखें"
 
-#: .\templates\components\header.html:120
+#: .\templates\components\header.html:115
+#: .\templates\components\header.html:157
 msgid "Contact Us"
 msgstr "संपर्क करें"

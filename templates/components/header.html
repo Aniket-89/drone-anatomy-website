@@ -3,7 +3,7 @@
 
 <header
   id="header"
-  class="fixed top-0 z-10 w-full text-black flex-col items-center border-b-transparentgray drop-shadow-lg bg-white backdrop-blur-md saturate-100 transition-all duration-300 linear"
+  class="fixed top-0 z-10 w-full text-black flex-col items-center border-b-transparentgray drop-shadow-lg bg-transparent saturate-100 transition-all duration-300 linear"
 >
   <div id="logo-container"
     class="container mx-auto h-full flex items-center justify-between w-10/12 xl:w-10/12"
@@ -104,7 +104,7 @@
     <div class="cta space-x-4 flex flex-nowrap text-nowrap">
       <button
         id="cta-light"
-        class="hidden border border-white bg-transparent px-4 leading-7 text-white transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
+        class="hidden border border-black bg-transparent px-4 leading-7 text-black transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
       >
         {% trans "Watch a Demo" %}
       </button>
@@ -118,7 +118,7 @@
       <form action="{% url 'core:set-language' %}" method="get" class="bg-transparent group flex items-center">
             <img src="{% static 'core/icons-globe.png' %}" alt="" class="object-cover object-center h-4 w-4 peer">
             <div class="lang-select">
-                <select name="language" onchange="this.form.submit()" class="bg-transparent border-none underline underline-offset-4 pl-2 pr-1 py-1 hover:cursor-pointer group-hover:text-yellow-500 transition-colors duration-300 ease-linear focus:border-none">
+                <select id="lang-select" name="language" onchange="this.form.submit()" class="bg-transparent border-none underline underline-offset-4 pl-2 pr-1 py-1 hover:cursor-pointer group-hover:text-yellow-500 transition-colors duration-300 ease-linear focus:border-none">
                     <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} class="">EN</option>
                     <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>हिन्दी</option>
                 </select>

@@ -39,7 +39,7 @@ header {
 }
 
 #agri-hero-1 {
-    background-image: url('../img/agri-banner1.png');
+    background-image: url('../img/agri-drone-banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -52,7 +52,7 @@ header {
     }
 
     #agri-hero-1 {
-        background-image: url('../img/agri-drone-m.png');
+        background-image: url('../img/agri-drone-banner-m.png');
     }
     #about-banner {
         height: 30vh;
@@ -64,6 +64,19 @@ header {
     }
 
 }
+
+.path {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.path.animate {
+    stroke-dasharray: 5000; /* This should be set to the length of your path */
+    stroke-dashoffset: 0;
+}
+
+
 
 
 

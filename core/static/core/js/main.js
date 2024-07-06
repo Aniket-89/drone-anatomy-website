@@ -210,22 +210,22 @@ function isHomepage() {
 function applyScrolledHeaderStyles() {
     whatsappBtn.classList.remove("hidden");
     whatsappBtn.classList.add("fixed");
-    header.classList.add(
-        "bg-white",
-        // "shadow-md",
-        // "shadow-shadow",
-    );
-
     header.classList.remove(
         "bg-transparent",
         "text-white",
         "border-b",
         // "lg:h-18"
     );
+    header.classList.add(
+        "bg-white",
+        // "shadow-md",
+        // "shadow-shadow",
+    );
+
     navLinks.classList.add("text-black");
     cta.classList.remove("border-white", "text-white");
-    ctaAccent.classList.remove("bg-white");
-    ctaAccent.classList.add("bg-yellow-500");
+    ctaAccent.classList.remove("bg-white", "text-black");
+    ctaAccent.classList.add("bg-yellow-500", "text-white");
     cta.classList.add(
         "border-yellow-500",
         "text-black",
@@ -239,8 +239,34 @@ function applyScrolledHeaderStyles() {
 }
 
 function applyInitialHeaderStyles() {
-    whatsappBtn.classList.add("hidden");
-    whatsappBtn.classList.remove("fixed");
+    if (isHomepage()) {
+        header.classList.add("text-white", "backdrop-blur-md" )
+        logoLight.classList.remove("hidden");
+        logoDark.classList.add("hidden");
+        navLinks.classList.remove("text-black");
+
+        whatsappBtn.classList.add("hidden");
+        whatsappBtn.classList.remove("fixed");
+        cta.classList.remove(
+            "border-yellow-500",
+            "text-yellow-500",
+            "hover:bg-yellow-500",
+            "hover:text-white"
+        );
+        cta.classList.add("border-white", "text-white");
+    } else {
+        logoLight.classList.add("hidden");
+        logoDark.classList.remove("hidden");
+        cta.classList.remove(
+            "border-yellow-500",
+            "text-yellow-500",
+            "hover:bg-yellow-500",
+            "hover:text-white"
+        );
+        cta.classList.add("border-black", "text-black");
+        document.getElementById("lang-select").classList.add("text-black")
+    }
+    
     header.classList.remove(
         "bg-white",
         // "shadow-sm",
@@ -249,22 +275,14 @@ function applyInitialHeaderStyles() {
     );
     header.classList.add(
         "bg-transparent",
-        "text-white",
+        // "text-white",
         "border-b",
         // "lg:h-24"
     );
-    cta.classList.remove(
-        "border-yellow-500",
-        "text-yellow-500",
-        "hover:bg-yellow-500",
-        "hover:text-white"
-    );
-    cta.classList.add("border-white", "text-white");
-    ctaAccent.classList.remove("bg-yellow-500");
-    ctaAccent.classList.add("bg-white");
-    navLinks.classList.remove("text-black");
-    logoLight.classList.remove("hidden");
-    logoDark.classList.add("hidden");
+    
+    ctaAccent.classList.remove("bg-yellow-500", "text-white");
+    ctaAccent.classList.add("bg-white", "text-black");
+
     // logoSize.classList.remove("h-[32px]", "md:h-[60px]", "xl:h-[64px]");
     // logoSize.classList.add("h-[35px]", "md:h-[64px]", "xl:h-[96px]");
 }
@@ -281,7 +299,8 @@ function changeLogoSize(str) {
     }
 }
 
-if (isHomepage()) {
+
+    applyInitialHeaderStyles();
     // Update header on scroll
     window.addEventListener("scroll", updateHeader);
 
@@ -295,17 +314,6 @@ if (isHomepage()) {
         }
     }
 
-    // Initial check
-    updateHeader();
-
-} else {
-    // Apply scrolled header styles by default for all other pages
-    applyScrolledHeaderStyles();
-    // changeLogoSize('increase')
-
-
-    
-}
 
 
 

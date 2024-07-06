@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} 
+{% load static i18n %}
+{% load static %}
 {% block bodyclass %}agri-drone-page{% endblock bodyclass %}
 {% block body %}
 
@@ -8,13 +10,17 @@
     <div class="">
 
     <div id="agri-hero-1" class="panel relative w-full">
-      <div
+      <div class="relative w-full h-full">
+
+        <div
         id="hero-1-content"
-        class="absolute top-10 left-1/3 lg:left-1/3 h-1/4 text-black flex flex-col justify-end "
+        class="w-8/10 h-full absolute top-1/3 xl:top-1/4 left-1/2 mx-auto text-black flex flex-col"
       >
-        <h3 class="text-3xl">Lorem, ipsum dolor.</h3>
-        <h4 class="text-5xl font-normal">Lorem, ipsum dolor.</h4>
+        <h3 class="text-3xl">{% trans "FIELD FALCON AGRICULTURE DRONE" %}</h3>
+        <h4 class="text-5xl font-normal">{% trans "The future of farming." %}</h4>
       </div>
+    </div>
+
     </div>
     <div class="panel hidden lg:block">
 
@@ -644,6 +650,9 @@
       <img src="" alt="" />
       
     </div>
+  </section>
+  <section class="contact-form" class="w-full h-full">
+    <iframe class="mx-auto overflow-auto" src="https://docs.google.com/forms/d/e/1FAIpQLScixbNP2F95OTaB4qv7LHYhAxg51EHibVKH6nSCt8PeNbv6fA/viewform?embedded=true" width="948" height="1440" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
 </main>
 
