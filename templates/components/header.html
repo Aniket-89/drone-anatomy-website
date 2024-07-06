@@ -36,7 +36,7 @@
           >
           <div
             id="product-dropdown"
-            class="h-0 hidden w-fit absolute top-20 justify-between bg-white rounded-lg text-black transition-transform duration-500 ease-linear hover:flex"
+            class="h-0 hidden w-fit absolute top-20 justify-between bg-white rounded text-black transition-transform duration-500 ease-linear hover:flex"
             >
             <ul>
                 <li class="px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
@@ -58,7 +58,7 @@
             >
             <div
               id="industry-dropdown"
-              class="h-0 hidden w-fit absolute top-20 justify-between bg-white rounded-lg text-black transition-transform duration-500 ease-linear hover:flex"
+              class="h-0 hidden w-fit absolute top-20 justify-between bg-white rounded text-black transition-transform duration-500 ease-linear hover:flex"
               >
               <ul>
                 <li class="px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
@@ -104,7 +104,7 @@
     <div class="cta space-x-4 flex flex-nowrap text-nowrap">
       <button
         id="cta-light"
-        class="hidden border border-black bg-transparent px-4 leading-7 text-black transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
+        class="hidden border border-black bg-transparent px-4 leading-7 text-black transition-colors duration-300 ease-in-out hover:bg-white hover:border-none hover:text-black xl:inline"
       >
         {% trans "Watch a Demo" %}
       </button>
@@ -116,9 +116,9 @@
       </button>
 
       <form action="{% url 'core:set-language' %}" method="get" class="bg-transparent group flex items-center">
-            <img src="{% static 'core/icons-globe.png' %}" alt="" class="object-cover object-center h-4 w-4 peer">
+            <img src="{% static 'core/icons/icons-globe.png' %}" alt="" class="object-cover object-center h-4 w-4 peer">
             <div class="lang-select">
-                <select id="lang-select" name="language" onchange="this.form.submit()" class="bg-transparent border-none underline underline-offset-4 pl-2 pr-1 py-1 hover:cursor-pointer group-hover:text-yellow-500 transition-colors duration-300 ease-linear focus:border-none">
+                <select id="lang-select" name="language" onchange="this.form.submit()" class="bg-transparent text-yellow-500 border-none underline underline-offset-4 pl-2 pr-1 py-1 hover:cursor-pointer group-hover:text-black transition-colors duration-300 ease-linear focus:border-none">
                     <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} class="">EN</option>
                     <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>हिन्दी</option>
                 </select>

@@ -224,8 +224,8 @@ function applyScrolledHeaderStyles() {
 
     navLinks.classList.add("text-black");
     cta.classList.remove("border-white", "text-white");
-    ctaAccent.classList.remove("bg-white", "text-black");
-    ctaAccent.classList.add("bg-yellow-500", "text-white");
+    ctaAccent.classList.remove("bg-white", "text-black", "hover:bg-yellow-500", "hover:text-white");
+    ctaAccent.classList.add("bg-yellow-500", "text-white", "hover:bg-white", "hover:border-black", "hover:border", "hover:text-yellow-500");
     cta.classList.add(
         "border-yellow-500",
         "text-black",
@@ -280,7 +280,7 @@ function applyInitialHeaderStyles() {
         // "lg:h-24"
     );
     
-    ctaAccent.classList.remove("bg-yellow-500", "text-white");
+    ctaAccent.classList.remove("bg-yellow-500", "text-white", "hover:bg-white", "hover:border-black", "hover:border", "hover:text-yellow-500");
     ctaAccent.classList.add("bg-white", "text-black");
 
     // logoSize.classList.remove("h-[32px]", "md:h-[60px]", "xl:h-[64px]");

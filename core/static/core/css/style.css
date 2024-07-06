@@ -27,9 +27,7 @@ header {
     z-index: 2;
 }
 
- section.management {
-    /* background-color: #707070; */
- }
+
 .spray-banner {
     background-image: url('../img/cloud-bg.jpg');
     background-repeat: no-repeat;
@@ -65,19 +63,51 @@ header {
 
 }
 
-.path {
+/* .path {
     stroke-dasharray: 0;
     stroke-dashoffset: 0;
     transition: stroke-dashoffset 1s ease-in-out;
 }
 
 .path.animate {
-    stroke-dasharray: 5000; /* This should be set to the length of your path */
+    stroke-dasharray: 5000;
     stroke-dashoffset: 0;
+} */
+@media screen and (min-width:1200px) {
+
+    #journey-timeline::before{
+    
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        width: 0;
+        height: 90.4%;
+        border-left: 1px solid gray;
+    }
+    
+    .timeline_row::before {
+        content: '';
+        color: #FFCC00;
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: calc(50% - 13px);
+        width: 26px;
+        height: 26px;
+        border-radius: 13px;
+        border: 2px solid #FEFEFF;
+        transition: transform 1s;
+        
+    }
+    
+    .timeline_row.active::before {
+        transform: scale(1.2);
+        background: #ffcc00;
+        /* background: rgba(0, 0, 0, 0.1); */
+    }
 }
-
-
-
 
 
 #agri-hero-2 {
