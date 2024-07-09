@@ -1,6 +1,12 @@
 AOS.init({
     once: true
 });
+window.addEventListener("load", function() {
+    // Get the preloader element
+    var preloader = document.getElementById('preloader');
+    // Hide the preloader
+    preloader.style.display = 'none';
+});
 
 // function setupScrollTriggerAnimation() {
 //     if (window.innerWidth >= 1024) { // Change 1024 to your desired screen width
@@ -76,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const header = document.getElementById("header");
 const cta = document.getElementById("cta-light");
 const ctaAccent = document.getElementById("cta-white");
+const langSelector = document.getElementById("lang-select");
 
 const productsLink = document.getElementById("product-link");
 const productDropdown = document.getElementById("product-dropdown");
@@ -222,6 +229,9 @@ function applyScrolledHeaderStyles() {
         // "shadow-shadow",
     );
 
+    langSelector.classList.add("text-black");
+    langSelector.classList.remove("text-white");
+
     navLinks.classList.add("text-black");
     cta.classList.remove("border-white", "text-white");
     ctaAccent.classList.remove("bg-white", "text-black", "hover:bg-yellow-500", "hover:text-white");
@@ -254,6 +264,8 @@ function applyInitialHeaderStyles() {
             "hover:text-white"
         );
         cta.classList.add("border-white", "text-white");
+        langSelector.classList.remove("text-black");
+        langSelector.classList.add("text-white");
     } else {
         logoLight.classList.add("hidden");
         logoDark.classList.remove("hidden");
@@ -313,6 +325,58 @@ function changeLogoSize(str) {
             applyInitialHeaderStyles();
         }
     }
+
+// newsletter 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newsletter-form');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken,
+                },
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Parsed data:', data); // Log the parsed data
+                const messagesDiv = form.querySelector('.form-messages');
+                if (messagesDiv) {
+                    if (data.success) {
+                        messagesDiv.innerHTML = '<p>' + data.message + '</p>';
+                        form.reset();
+                    } else {
+                        let errorMessage = '<p>Error: Unknown error</p>';
+                        if (data.errors && data.errors.email && data.errors.email.length > 0) {
+                            errorMessage = '<p>Error: ' + data.errors.email[0].message + '</p>';
+                        }
+                        messagesDiv.innerHTML = errorMessage;
+                    }
+                } else {
+                    console.error('Element with class .form-messages not found in the form.');
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                const messagesDiv = form.querySelector('.form-messages');
+                if (messagesDiv) {
+                    messagesDiv.innerHTML = '<p>Error: ' + error.message + '</p>';
+                }
+            });
+        });
+    } else {
+        console.error('Form with id newsletter-form not found.');
+    }
+});
+
+
+
+//contact form
 
 
 

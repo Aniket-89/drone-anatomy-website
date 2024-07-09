@@ -21,6 +21,9 @@
     color: rgb(108, 117, 125);
     font-size: 1rem;
   }
+  body {
+    min-height: 100vh;
+  }
 
 @media screen and (max-width:1100px) {
     p {

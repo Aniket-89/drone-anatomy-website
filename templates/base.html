@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     {% tailwind_css %}
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -50,7 +50,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <script defer src="{% static 'core/js/main.js' %}"></script>
     
   </head>
-  <body class="{% block bodyclass %}{% endblock bodyclass %}">
+  <body class="{% block bodyclass %}{% endblock bodyclass %} flex flex-col">
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
     <div id="whatsapp-btn" class="fixed bottom-10 right-10 z-50">
         <a href="{% url 'core:whatsapp-redirect' %}"
         target="_blank">

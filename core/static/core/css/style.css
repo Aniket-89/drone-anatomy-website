@@ -1,7 +1,50 @@
 .text-shadow {
     text-shadow: 0 2px 10px #000;
 }
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Preloader background color */
+    z-index: 9999; /* Ensure it appears on top of other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #0000;
+    border-right-color: #ffcc00;
+    position: relative;
+    animation: l24 1s infinite linear;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: inherit;
+    animation: inherit;
+    animation-duration: 2s;
+  }
+  .loader:after {
+    animation-duration: 4s;
+  }
+  @keyframes l24 {
+    100% {transform: rotate(1turn)}
+  }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 select {
     background-image: none;
     padding-right: 0;
@@ -27,6 +70,87 @@ header {
     z-index: 2;
 }
 
+.contact-banner {
+    position: relative;
+    background-image: url('../img/map-mask.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60%;
+
+}
+
+.contact-banner::before {
+    content: '';
+    background-image: linear-gradient(to right, #FFCC00 50%, rgb(255, 204, 0, 0.4));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.throttle {
+    font-size: 124px;
+}
+
+@media screen and (max-width:1100px) {
+    .throttle {
+        font-size: 60px;
+    }
+}
+
+.card {
+    background-color: #fff;
+    /* border-radius: 8px; */
+    box-shadow: 0 0 60px 7px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    /* width: 100%; */
+    padding: 50px 30px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.card h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    /* font-weight: bold; */
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    /* border-radius: 4px; */
+}
+.form-group textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+}
+.btn {
+    display: inline-block;
+    background-color: #FFCC00;
+    color: #fff;
+    padding: 10px 44px;
+    text-align: center;
+    border: none;
+    /* border-radius: 4px; */
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #E1B133;
+}
+
+#newsletter-form label {
+    content: '';
+}
 
 .spray-banner {
     background-image: url('../img/cloud-bg.jpg');
@@ -42,6 +166,13 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
+}
+
+#hero-1-content {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    transform: rotate(-5deg);
 }
 
 @media screen and (max-width:798px) {
@@ -89,21 +220,22 @@ header {
     
     .timeline_row::before {
         content: '';
-        color: #FFCC00;
         display: block;
         position: absolute;
         top: 10px;
         left: calc(50% - 13px);
-        width: 26px;
-        height: 26px;
+        width: 0;
+        height: 0;
         border-radius: 13px;
         border: 2px solid #FEFEFF;
-        transition: transform 1s;
+        transition: transform 0.5s;
         
     }
     
     .timeline_row.active::before {
         transform: scale(1.2);
+        width: 26px;
+        height: 26px;
         background: #ffcc00;
         /* background: rgba(0, 0, 0, 0.1); */
     }
