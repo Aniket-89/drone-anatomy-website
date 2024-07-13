@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<main class="flex-1 bg-gray-100">
+    <div class="lg:w-8/12 mx-auto py-24">
+        
+        <div class="blog-detail max-w-5xl mx-auto py-16 lg:px-12 px-4 space-y-4 bg-white">
+            <div class="flex justify-between mb-4 border-b">
+                <p class="text-md text-gray-500">{{ obj.author }}</p>
+                <span class="text-sm text-yellow-500">{{ obj.updated_at|date:"d F Y" }}</span>
+            </div>
+            <h1 class="text-3xl lg:text-5xl font-medium lg:text-start text-center">{{ obj.title }}</h1><span>{{ obj.published_at }}</span>
+            <div class="h-400px overflow-hidden rounded-sm">
+                <img data-src="{{ obj.get_thumbnail }}" alt="blog image" class="lazy object-cover w-full h-full object-center">
+            </div>
+            {{ obj.content | safe }}
+        </div>
+    </div>
+    
+</main>
+
+{% endblock body %}

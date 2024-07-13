@@ -12,16 +12,16 @@
       <div class="logo items-center overflow-hidden flex h-full mt-1">
         <img
           id="logo-light"
-          src="{% static 'core/img/da-logo-wht-outline1.png' %}"
+          data-src="{% static 'core/img/da-logo-wht-outline1.png' %}"
           alt="drone anatomy"
-          class="object-cover h-full"
+          class="lazy object-cover h-full"
         />
         
         <img
           id="logo-dark"
-          src="{% static 'core/img/da-logo-blk-outline.png' %}"
+          data-src="{% static 'core/img/da-logo-blk-outline.png' %}"
           alt="drone anatomy"
-          class="hidden object-cover h-full"
+          class="lazy hidden object-cover h-full"
         />
       </div>
     </a>
@@ -87,7 +87,7 @@
         </li>
         <li>
             <a
-              href=""
+              href="{% url 'blog:bloglist' %}"
               class="nav-links transition-colors duration-150 ease-in-out hover:text-yellow-400"
               >{% trans "BLOGS" %}</a
             >
@@ -116,11 +116,11 @@
     </a>
 
       <form action="{% url 'core:set-language' %}" method="get" class="bg-transparent group flex items-center">
-            <img src="{% static 'core/icons/icons-globe.png' %}" alt="" class="object-cover object-center h-4 w-4 peer">
+            <img data-src="{% static 'core/icons/icons-globe.png' %}" alt="" class="lazy object-cover object-center h-4 w-4 peer">
             <div class="lang-select">
-                <select id="lang-select" name="language" onchange="this.form.submit()" class="bg-transparent text-black border-none underline underline-offset-4 pl-2 pr-1 py-1 hover:cursor-pointer group-hover:text-black transition-colors duration-300 ease-linear focus:border-none">
-                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} class="">EN</option>
-                    <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>हिन्दी</option>
+                <select id="lang-select" name="language" onchange="this.form.submit()" class="bg-transparent text-black border-none underline underline-offset-4 pl-2 pr-1 py-1 hover:cursor-pointer group-hover:text-yellow-500 transition-colors duration-300 ease-linear focus:border-none">
+                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} class="bg-white text-black">EN</option>
+                    <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %} class="bg-white text-black">हिन्दी</option>
                 </select>
             </div>
     </form>
@@ -129,15 +129,15 @@
     <button id="mobile-menu-btn" class="">
         <img
           id="closed-menu-icon"
-          src="https://img.icons8.com/?size=100&id=S5biqohaDgd1&format=png&color=EBEBEB"
+          data-src="https://img.icons8.com/?size=100&id=S5biqohaDgd1&format=png&color=EBEBEB"
           alt=""
-          class="h-8 lg:h-10 xl:hidden"
+          class="lazy h-8 lg:h-10 xl:hidden"
         />
         <img
           id="open-menu-icon"
-          src="https://img.icons8.com/?size=100&id=9433&format=png&color=EBEBEB"
+          data-src="https://img.icons8.com/?size=100&id=9433&format=png&color=EBEBEB"
           alt=""
-          class="h-8 hidden lg:h-10 xl:hidden"
+          class="lazy h-8 hidden lg:h-10 xl:hidden"
         />
       </button>
     </div>
@@ -151,17 +151,17 @@
         >
           {% trans "Watch a Demo" %}
         </button>
-        <button
+        <a href="{% url 'core:contact' %}"
           class="cta-accent bg-yellow-500 px-4 leading-8 text-white transition-colors duration-300 ease-in-out hover:bg-yellow-600"
         >
           {% trans "Contact Us" %}
-        </button>
+    </a>
       </div>
       <nav id="mobile-nav" class="">
         <ul class="navlinks space-y-5 flex-col">
           <li id="mobile-product-link-wrapper" class="">
             <a
-              href="#"
+              href="{% url 'core:agri-detail' %}"
               id="mobile-product-link"
               class="nav-links block transition-colors duration-300 ease-in-out w-full hover:text-yellow-400 peer"
               >{% trans "PRODUCTS" %}</a
@@ -203,7 +203,7 @@
           </li>
           <li>
             <a
-              href=""
+              href="{% url 'blog:bloglist' %}"
               class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
               >{% trans "BLOGS" %}</a
             >

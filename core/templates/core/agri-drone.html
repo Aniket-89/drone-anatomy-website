@@ -25,7 +25,7 @@
     <div class="panel hidden lg:block">
 
         <div class="w-full h-lvh relative">
-            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay muted loop class="absolute top-0 left-0 -z-10 object-cover h-full w-full"></video>
+            <video data-src="{% static 'core/Drone_Clip.mp4' %}" autoplay muted loop class="lazy absolute top-0 left-0 -z-10 object-cover h-full w-full"></video>
             
         </div>
         
@@ -53,15 +53,16 @@
       </div>
     </div>
   </section>
+
     <div class="w-full lg:h-[90vh] bg-white lg:grid lg:place-content-center lg:pt-44">
         <div id="agri-drone-video" class="overflow-hidden lg:rounded-lg h-[27vh] lg:h-full w-full lg:w-2/3  mx-auto relative">
             <div class="play-btn"></div>
             <video
             id="drone-video"
-            src="{% static 'core/Drone_clip.mp4' %}"
+            data-src="{% static 'core/Drone_clip.mp4' %}"
             loop
             controls="nodownload"
-            class=""
+            class="lazy"
             ></video>
             
             <!-- <iframe height="520px" width="734px" class="absolute top-1/2 left-1/2" src="https://www.youtube.com/embed/gZaBwdru_bk"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen ></iframe> -->
@@ -167,7 +168,7 @@
     <div class="w-full h-svh hidden relative lg:block">
 
         <div class="scale-up-video absolute scale-50 w-full h-full grid overflow-hidden">
-            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="object-cover h-auto w-full"></video>
+            <video data-src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="lazy object-cover h-auto w-full"></video>
             
         </div>
         <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
@@ -230,7 +231,7 @@
     <div id="agri-application-list-container" class="w-full lg:h-dvh p-8 lg:p-16 bg-white">
       <ul id="agri-application-list" class="mx-auto text-center grid lg:grid-cols-2 gap-4 lg:w-8/12 lg:h-[75vh] max-w">
         <li class="flex lg:relative justify-center items-start rounded-sm">
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
+          <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
           <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
             <h5 class="text-sm">Lorem, ipsum dolor.</h5>
             <div class="flex flex-col lg:flex-row">
@@ -242,7 +243,7 @@
           </div>
         </li>
         <li class="flex lg:relative justify-center items-start">
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
+          <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
           <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
             <h5 class="text-sm">Lorem, ipsum dolor.</h5>
             <div class="flex flex-col lg:flex-row">
@@ -254,7 +255,7 @@
           </div>
         </li>
         <li class="flex lg:relative justify-center items-start">
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
+          <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
           <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
             <h5 class="text-sm">Lorem, ipsum dolor.</h5>
             <div class="flex flex-col lg:flex-row">
@@ -266,7 +267,7 @@
           </div>
         </li>
         <li class="flex lg:relative justify-center items-start">
-          <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
+          <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
           <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
             <h5 class="text-sm">Lorem, ipsum dolor.</h5>
             <div class="flex flex-col lg:flex-row">
@@ -335,7 +336,7 @@
         <div class="w-full h-[94vh] hidden relative lg:block">
             
             <div class="scale-up-video absolute w-full h-full scale-50 grid overflow-hidden">
-            <video src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="object-cover h-full w-full"></video>
+            <video data-src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="lazy object-cover h-full w-full"></video>
             
             </div>
             <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
@@ -383,11 +384,11 @@
 
             <div class="flex w-full gap-2 text-center">
                 <div class="w-1/2">
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="w-full h-full object-cover"/>
+                    <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy w-full h-full object-cover"/>
                     <p class="text-white text-xs">Lorem, ipsum.</p>
                 </div>
                 <div class="w-1/2">
-                    <img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="w-full h-full object-cover"/>
+                    <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy w-full h-full object-cover"/>
                     <p class="text-white text-xs">Lorem, ipsum.</p>
                 </div>
             </div>
@@ -411,7 +412,7 @@
                 doloremque reiciendis quasi quo quae? Nihil numquam autem
                 consectetur consequuntur esse!
               </p>
-              <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
+              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy"/>
             </li>
             <li class="text-white space-y-3 ">
               <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
@@ -420,7 +421,7 @@
                 doloremque reiciendis quasi quo quae? Nihil numquam autem
                 consectetur consequuntur esse!
               </p>
-              <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
+              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt=""  class="lazy"/>
             </li>
             <li class="text-white space-y-3 ">
               <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
@@ -429,7 +430,7 @@
                 doloremque reiciendis quasi quo quae? Nihil numquam autem
                 consectetur consequuntur esse!
               </p>
-              <img src="{% static 'core/img/drone-white.jpg' %}" alt="" />
+              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt=""  class="lazy"/>
             </li>
             
           </ul>
@@ -451,19 +452,19 @@
             </div>
             
             <div class="w-1/2">
-              <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 1" class="selector-image active h-full w-full object-cover" id="image-0">
-              <img src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 2" class="selector-image  h-full w-full object-cover" id="image-1">
-              <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 3" class="selector-image h-full w-full object-cover" id="image-2">
+              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 1" class="lazy selector-image active h-full w-full object-cover" id="image-0">
+              <img data-src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 2" class="lazy selector-image  h-full w-full object-cover" id="image-1">
+              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 3" class="lazy selector-image h-full w-full object-cover" id="image-2">
             </div>
         </div>
         
         <div class="my-16">
 
             <ul class="grid grid-cols-2 lg:grid-cols-4 w-full gap-1">
-                <li class="rounded-md overflow-hidden"><img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="size-48 lg:size-72 object-cover"></li>
-                <li class="rounded-md overflow-hidden"><img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="size-48 lg:size-72 object-cover"></li>
-                <li class="rounded-md overflow-hidden"><img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="size-48 lg:size-72 object-cover"></li>
-                <li class="rounded-md overflow-hidden"><img src="{% static 'core/img/drone-white.jpg' %}" alt="" class="size-48 lg:size-72 object-cover"></li>
+                <li class="rounded-md overflow-hidden"><img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy size-48 lg:size-72 object-cover"></li>
+                <li class="rounded-md overflow-hidden"><img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy size-48 lg:size-72 object-cover"></li>
+                <li class="rounded-md overflow-hidden"><img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy size-48 lg:size-72 object-cover"></li>
+                <li class="rounded-md overflow-hidden"><img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy size-48 lg:size-72 object-cover"></li>
                 
                 
             </ul>
@@ -479,7 +480,7 @@
       
     </div>
     <div class="h-[80vh] hidden lg:block w-full">
-        <img src="https://static.xag.cn/img/product2022/p100-pro/feature-ruitu-top-img.png" alt="" class="object-cover w-full h-full">
+        <img data-src="https://static.xag.cn/img/product2022/p100-pro/feature-ruitu-top-img.png" alt="" class="lazy object-cover w-full h-full">
     </div>
     <div class="bg-white py-12">
         <div class="lg:w-8/12 w-10/12 mx-auto py-10">
@@ -506,9 +507,9 @@
                     </div>
                     
                     <div class="w-1/2">
-                      <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 1" class="selector-image1 active h-full w-full object-cover" id="image-3">
-                      <img src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 2" class="selector-image1 h-full w-full object-cover" id="image-4">
-                      <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 3" class="selector-image1 h-full w-full object-cover" id="image-5">
+                      <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 1" class="lazy selector-image1 active h-full w-full object-cover" id="image-3">
+                      <img data-src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 2" class="lazy selector-image1 h-full w-full object-cover" id="image-4">
+                      <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 3" class="lazy selector-image1 h-full w-full object-cover" id="image-5">
                     </div>
                 </div>
             </div>
@@ -518,7 +519,7 @@
             <h5 class="text-xl lg:text-2xl text-yellow-500">Lorem ipsum dolor sit amet consectetur.</h5>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eveniet totam, voluptatibus rem neque sunt!</p>
             <div class="h-80 lg:w-10/12 mx-auto rounded-md overflow-hidden">
-                <img src="{% static 'core/img/cloud-bg.jpg' %}" alt="" class="object-cover w-full h-full">
+                <img data-src="{% static 'core/img/cloud-bg.jpg' %}" alt="" class="lazy object-cover w-full h-full">
             </div>
             
         </div>
@@ -541,9 +542,9 @@
             </div>
             
             <div class="w-1/2 h-full flex items-center justify-center overflow-hidden">
-              <img height="400px"  src="https://static.xag.cn/img/product2022/p100-pro/en/nongfu-img2.png" alt="Image 0" class="selector-image2 active object-cover h-10/12" id="image-6">
-              <img src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 1" class="selector-image2" id="image-7">
-              <img src="{% static 'core/img/drone-white.jpg' %}" alt="Image 8" class="selector-image2" id="image-8">
+              <img height="400px"  src="https://static.xag.cn/img/product2022/p100-pro/en/nongfu-img2.png" alt="Image 0" class="lazy selector-image2 active object-cover h-10/12" id="image-6">
+              <img data-src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 1" class="lazy selector-image2" id="image-7">
+              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 8" class="lazy selector-image2" id="image-8">
             </div>
         </div>
     </div>
@@ -574,7 +575,7 @@
               delectus aspernatur cupiditate nihil vero possimus et totam neque
               tenetur.
             </p>
-            <img src="{% static 'core/img/drone-white.jpg' %}" alt=""  class="w-full h-1/3"/>
+            <img data-src="{% static 'core/img/drone-white.jpg' %}" alt=""  class="lazy w-full h-1/3"/>
         </div>
     
         
@@ -634,25 +635,47 @@
             explicabo tenetur necessitatibus!
           </p>
         </div>
-        <img src="" alt="" />
+        <img data-src="" alt="" class="lazy"/>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab facilis
           nesciunt debitis ut, perspiciatis distinctio ducimus nam!
         </p>
       </div>
-      <img src="" alt="" />
+      <img data-src="" alt="" class="lazy"/>
       <div class="">
-        <img src="" alt="" />
+        <img data-src="" alt="" class="lazy"/>
       </div>
       
     </div>
     <div class="">
-      <img src="" alt="" />
+      <img data-src="" alt="" class="lazy"/>
       
     </div>
   </section>
-  <section class="contact-form" class="w-full h-full">
-    <iframe class="mx-auto overflow-auto" src="https://docs.google.com/forms/d/e/1FAIpQLScixbNP2F95OTaB4qv7LHYhAxg51EHibVKH6nSCt8PeNbv6fA/viewform?embedded=true" width="948" height="1440" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+  <section id="" class="w-full h-[100vh] bg-yellow-500">
+    <div class="w-8/12 h-full mx-auto flex items-center justify-center flex-1">
+
+        <div class="card">
+            <form method="post" id="contact-form" action="">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="id_name">Name:</label>
+                {{ form.name }}
+              </div>
+              <div class="form-group">
+                <label for="id_email">Email:</label>
+                {{ form.email }}
+              </div>
+              <div class="form-group">
+                <label for="id_message">Message:</label>
+                {{ form.message }}
+              </div>
+              <button type="submit" class="btn">Send</button>
+              <div class="form-messages"></div>
+            </form>
+          </div>
+    </div>
   </section>
 </main>
 
@@ -661,7 +684,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
-    
+document.addEventListener('DOMContentLoaded', function() {
 function setupScrollTriggerAnimation() {
     if (window.innerWidth >= 1024) { // Change 1024 to your desired screen width
         gsap.registerPlugin(ScrollTrigger);
@@ -797,19 +820,53 @@ function toggleContent2(index) {
       });
     }
 
-    const agriBanner = document.querySelector('.agribanner');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      agriBanner.classList.add('in-view');
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(contactForm);
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken,
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: formData,
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Parsed data:', data);
+                const messagesDiv = contactForm.querySelector('.form-messages');
+                if (messagesDiv) {
+                    if (data.success) {
+                        messagesDiv.innerHTML = '<p>' + data.message + '</p>';
+                        contactForm.reset();
+                    } else {
+                        messagesDiv.innerHTML = '<p>Error: ' + data.error + '</p>';
+                    }
+                } else {
+                    console.error('Element with id form-messages not found.');
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                const messagesDiv = contactForm.querySelector('.form-messages');
+                if (messagesDiv) {
+                    messagesDiv.innerHTML = '<p>Error: ' + error.message + '</p>';
+                }
+            });
+        });
     } else {
-      agriBanner.classList.remove('in-view');
+        console.error('Form with id contact-form not found.');
     }
-  });
 });
-
-observer.observe(agriBanner);
-
 </script>
 
 

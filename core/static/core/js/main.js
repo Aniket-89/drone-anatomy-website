@@ -372,6 +372,52 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Form with id newsletter-form not found.');
     }
+
+    // lazy loading
+    const lazyLoadMedia = document.querySelectorAll('.lazy');
+
+            if ('IntersectionObserver' in window) {
+                let lazyMediaObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyMedia = entry.target;
+
+                            if (lazyMedia.tagName === 'IMG') {
+                                lazyMedia.src = lazyMedia.dataset.src;
+                                lazyMedia.onload = function() {
+                                    lazyMedia.classList.add('loaded');
+                                };
+                            } else if (lazyMedia.tagName === 'VIDEO') {
+                                lazyMedia.src = lazyMedia.dataset.src;
+                                lazyMedia.onloadeddata = function() {
+                                    lazyMedia.classList.add('loaded');
+                                };
+                            }
+
+                            lazyMediaObserver.unobserve(lazyMedia);
+                        }
+                    });
+                });
+
+                lazyLoadMedia.forEach(function(lazyMedia) {
+                    lazyMediaObserver.observe(lazyMedia);
+                });
+            } else {
+                // Fallback for older browsers
+                lazyLoadMedia.forEach(function(lazyMedia) {
+                    if (lazyMedia.tagName === 'IMG') {
+                        lazyMedia.src = lazyMedia.dataset.src;
+                        lazyMedia.onload = function() {
+                            lazyMedia.classList.add('loaded');
+                        };
+                    } else if (lazyMedia.tagName === 'VIDEO') {
+                        lazyMedia.src = lazyMedia.dataset.src;
+                        lazyMedia.onloadeddata = function() {
+                            lazyMedia.classList.add('loaded');
+                        };
+                    }
+                });
+            }
 });
 
 

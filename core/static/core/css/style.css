@@ -1,14 +1,29 @@
+img, video {
+    /* width: 100%; */
+    /* height: auto; */
+    /* display: block; */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.loaded {
+    opacity: 1;
+}
+
 .text-shadow {
     text-shadow: 0 2px 10px #000;
 }
+
 #preloader {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff; /* Preloader background color */
-    z-index: 9999; /* Ensure it appears on top of other content */
+    background-color: #fff;
+    /* Preloader background color */
+    z-index: 9999;
+    /* Ensure it appears on top of other content */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,9 +38,10 @@
     border-right-color: #ffcc00;
     position: relative;
     animation: l24 1s infinite linear;
-  }
-  .loader:before,
-  .loader:after {
+}
+
+.loader:before,
+.loader:after {
     content: "";
     position: absolute;
     inset: -8px;
@@ -33,18 +49,28 @@
     border: inherit;
     animation: inherit;
     animation-duration: 2s;
-  }
-  .loader:after {
+}
+
+.loader:after {
     animation-duration: 4s;
-  }
-  @keyframes l24 {
-    100% {transform: rotate(1turn)}
-  }
+}
+
+@keyframes l24 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 select {
     background-image: none;
     padding-right: 0;
@@ -52,7 +78,7 @@ select {
 
 header {
     max-height: 93px;
-} 
+}
 
 #about-banner {
     background-image: url('../img/cloud-bg.jpg');
@@ -61,7 +87,8 @@ header {
     background-position: center;
     height: 50vh
 }
-#about-banner > div {
+
+#about-banner>div {
     background-image: url('../img/airdrone.png');
     background-position: right center;
     background-repeat: no-repeat;
@@ -109,19 +136,23 @@ header {
     box-sizing: border-box;
     z-index: 1;
 }
+
 .card h1 {
     margin-top: 0;
     font-size: 24px;
     color: #333;
 }
+
 .form-group {
     margin-bottom: 15px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
     /* font-weight: bold; */
 }
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -129,11 +160,13 @@ header {
     border: 1px solid #ddd;
     /* border-radius: 4px; */
 }
+
 .form-group textarea {
     resize: none;
     width: 100%;
     height: 150px;
 }
+
 .btn {
     display: inline-block;
     background-color: #FFCC00;
@@ -144,6 +177,7 @@ header {
     /* border-radius: 4px; */
     cursor: pointer;
 }
+
 .btn:hover {
     background-color: #E1B133;
 }
@@ -183,11 +217,13 @@ header {
     #agri-hero-1 {
         background-image: url('../img/agri-drone-banner-m.png');
     }
+
     #about-banner {
         height: 30vh;
-        
+
     }
-    #about-banner > div {
+
+    #about-banner>div {
         background-size: 30%;
         padding: 0 1rem;
     }
@@ -206,8 +242,8 @@ header {
 } */
 @media screen and (min-width:1200px) {
 
-    #journey-timeline::before{
-    
+    #journey-timeline::before {
+
         content: '';
         display: block;
         position: absolute;
@@ -217,7 +253,7 @@ header {
         height: 90.4%;
         border-left: 1px solid gray;
     }
-    
+
     .timeline_row::before {
         content: '';
         display: block;
@@ -229,9 +265,9 @@ header {
         border-radius: 13px;
         border: 2px solid #FEFEFF;
         transition: transform 0.5s;
-        
+
     }
-    
+
     .timeline_row.active::before {
         transform: scale(1.2);
         width: 26px;
@@ -359,15 +395,24 @@ header {
     z-index: 0;
 }
 
+
 #product-list::after {
     background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .5) 50%, #fff);
     bottom: 0;
     content: "";
-    height: 50%;
+    height: 20%;
     left: 0;
     position: absolute;
     width: 100%;
     z-index: 0;
+}
+
+@media screen and (min-width:980px) {
+    #product-list::after {
+        background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .5) 50%, #fff);
+        height: 50%;
+    }
+
 }
 
 footer p {
@@ -543,13 +588,17 @@ footer h6 {
     /* Initial scroll position */
 }
 
-.selector-list, .selector-list-1, .selector-list-2 {
+.selector-list,
+.selector-list-1,
+.selector-list-2 {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
 
-.selector, .selector1, .selector2 {
+.selector,
+.selector1,
+.selector2 {
     cursor: pointer;
     padding: 10px 10px 10px 0;
     margin-bottom: 5px;
@@ -557,26 +606,34 @@ footer h6 {
     color: gray;
 }
 
-.selector.active, .selector1.active, .selector2.active {
+.selector.active,
+.selector1.active,
+.selector2.active {
     border-left: 2px solid #ccc;
     color: #FFFEFE;
     font-weight: 500;
 
 }
+
 .selector1.active {
     color: #0B0C0C;
 }
 
-.selector-content, .selector-content1, .selector-content2 {
+.selector-content,
+.selector-content1,
+.selector-content2 {
     display: none;
     padding-left: 1rem;
 }
 
-.selector-content.active, .selector-content1.active, .selector-content2.active {
+.selector-content.active,
+.selector-content1.active,
+.selector-content2.active {
     display: block;
 }
 
-.selector-image, .selector-image1 {
+.selector-image,
+.selector-image1 {
     height: auto;
     width: 100%;
     object-fit: cover;
@@ -592,62 +649,71 @@ footer h6 {
     margin-left: 20px;
 }
 
-.selector-image.active, .selector-image1.active, .selector-image2.active {
+.selector-image.active,
+.selector-image1.active,
+.selector-image2.active {
     display: block;
 }
 
 @keyframes autoBlurAnimation {
     0% {
-      filter: blur(40px);
-      font-size: 2rem;
-      transform: scale(0.5);
+        filter: blur(40px);
+        font-size: 2rem;
+        transform: scale(0.5);
     }
-    45%, 55% {
-      filter: blur(0px);
-      font-size: 6rem;
-      transform: scale(1);
-        
+
+    45%,
+    55% {
+        filter: blur(0px);
+        font-size: 6rem;
+        transform: scale(1);
+
     }
+
     100% {
-      filter: blur(40px);
-      font-size: 2rem;
+        filter: blur(40px);
+        font-size: 2rem;
 
-      transform: scale(0.5);
+        transform: scale(0.5);
 
     }
-  }
-  
-  .auto-blur {
+}
+
+.auto-blur {
     animation: autoBlurAnimation both;
     animation-timeline: view();
     /* transition: transform 0.5s; */
-  }
+}
 
-  .bg-image-1 {
+.bg-image-1 {
     background-image: url("https://static.xag.cn/img/product2022/p100-pro/industry-leader-fly-image1.png");
     background-size: cover;
     background-position: center;
-    transition: background-image 1s ease-in-out; /* Animation for transition */
-  }
-  
-  .bg-image-2 {
+    transition: background-image 1s ease-in-out;
+    /* Animation for transition */
+}
+
+.bg-image-2 {
     background-image: url("https://static.xag.cn/img/product2022/p100-pro/industry-leader-fly-image2.png");
     background-size: cover;
     background-position: center;
-    position: absolute; /* Overlap the initial image */
+    position: absolute;
+    /* Overlap the initial image */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease-in-out; /* Animation for transition */
-  }
-  
-  /* Change background image on scroll */
-  .agribanner.in-view .bg-image-1 {
     opacity: 0;
-  }
-  
-  .agribanner.in-view .bg-image-2 {
+    /* Initially hidden */
+    transition: opacity 1s ease-in-out;
+    /* Animation for transition */
+}
+
+/* Change background image on scroll */
+.agribanner.in-view .bg-image-1 {
+    opacity: 0;
+}
+
+.agribanner.in-view .bg-image-2 {
     opacity: 1;
-  }
+}
