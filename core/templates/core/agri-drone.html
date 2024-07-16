@@ -10,19 +10,19 @@
     <div class="">
 
     <div id="agri-hero-1" class="panel relative w-full">
-      <div class="grid  w-full h-full">
+      <div class="grid w-full h-full">
 
         <div
         id="hero-1-content"
-        class="text-black"
+        class="text-gray-600 lg:space-y-2"
       >
-        <h3 class="text-3xl font-medium"><span class="italic">P10</span><sup class="text-yellow-500 text-xl italic">PRO</sup>Agriculture Drone</h3>
-        <h4 class="text-5xl font-normal"></h4>
+        <h3 class="relative text-2xl xl:text-3xl text-black"><span class="italic text-3xl lg:text-7xl font-semibold ">P10</span><sup class="text-yellow-500 text-lg xl:text-2xl top-[-1em] lg:top-[-1.5em] lg:mb-2 italic">PRO</sup></h3>
+        <h4 class="text-md xl:text-3xl font-semibold italic">Made for <span class="">Indian</span> conditions.</h4>
       </div>
     </div>
 
     </div>
-    <div class="panel hidden lg:block">
+    <div class="panel hidden xl:block">
 
         <div class="w-full h-lvh relative">
             <video data-src="{% static 'core/Drone_Clip.mp4' %}" autoplay muted loop class="lazy absolute top-0 left-0 -z-10 object-cover h-full w-full"></video>
@@ -30,7 +30,7 @@
         </div>
         
     </div>
-    <div class="mx-auto h-[90vh] hidden lg:grid place-content-center z-50 text-white">
+    <div class="mx-auto h-[90vh] hidden xl:grid place-content-center z-50 text-white">
         <ul class="flex flex-col h-1/4 justify-center items-center gap-4">
             <li class="auto-blur text-bold">aksdjfkw</li>
             <li class="auto-blur text-bold">asgw</li>
@@ -686,7 +686,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 function setupScrollTriggerAnimation() {
-    if (window.innerWidth >= 1024) { // Change 1024 to your desired screen width
+    if (window.innerWidth >= 1280) { // Change 1024 to your desired screen width
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.utils.toArray(".panel").forEach((panel, i) => {

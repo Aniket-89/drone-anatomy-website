@@ -1,10 +1,12 @@
-img, video {
+img,
+video {
     /* width: 100%; */
     /* height: auto; */
     /* display: block; */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
 
 .loaded {
     opacity: 1;
@@ -101,14 +103,14 @@ header {
     position: relative;
     background-image: url('../img/map-mask.png');
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 60%;
+    background-position: top right;
+    background-size: 60%/cover;
 
 }
 
 .contact-banner::before {
     content: '';
-    background-image: linear-gradient(to right, #FFCC00 50%, rgb(255, 204, 0, 0.4));
+    background-image: linear-gradient(to right, #FFCC00 40%, rgb(255, 204, 0, 0.4));
     position: absolute;
     top: 0;
     left: 0;
@@ -116,14 +118,19 @@ header {
     height: 100%;
 }
 
-.throttle {
-    font-size: 124px;
+@media screen and (max-width: 981px) {
+    .contact-banner::before {
+        background-image: linear-gradient(to right, #FFCC00 20%, rgb(255, 204, 0, 0.4));
+        height: 100%;
+    }
+
+
 }
 
-@media screen and (max-width:1100px) {
-    .throttle {
-        font-size: 60px;
-    }
+.throttle {
+    font-size: 46px;
+    line-height: 1;
+
 }
 
 .card {
@@ -131,8 +138,9 @@ header {
     /* border-radius: 8px; */
     box-shadow: 0 0 60px 7px rgba(0, 0, 0, 0.1);
     max-width: 500px;
-    /* width: 100%; */
-    padding: 50px 30px;
+    width: 50%;
+    margin: 1rem 0;
+    padding: 1.75rem 30px;
     box-sizing: border-box;
     z-index: 1;
 }
@@ -142,6 +150,21 @@ header {
     font-size: 24px;
     color: #333;
 }
+
+@media screen and (max-width:1100px) {
+    .throttle {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 1.5rem 1.5rem;
+        width: 100%;
+    }
+}
+
+
+
+
 
 .form-group {
     margin-bottom: 15px;
@@ -205,17 +228,56 @@ header {
 #hero-1-content {
     position: absolute;
     top: 30%;
-    left: 45%;
-    transform: rotate(-5deg);
+    left: 10%;
 }
 
-@media screen and (max-width:798px) {
+#hero-1-content h3::after {
+    content: 'Agricultural Drone';
+    position: absolute;
+    bottom: 4px;
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+    left: 30%;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    #hero-1-content {
+        top: 15%;
+        left: 5%;
+    }
+    
+    #hero-1-content h3::after {
+        bottom: 2px;
+        font-size: 1.1rem;
+        left: 27%;
+        width: fit-content;
+
+    }
+}
+
+@media screen and (min-width:791px) and (max-width:1400px) {
+    #hero-1-content {
+        top: 10%;
+        left: 20%;
+    }
+    #hero-1-content h3::after {
+        font-size: 1.25rem;
+        left: 45%;
+    }
+}
+
+@media screen and (max-width:1100px) {
     header {
         max-height: 62px;
     }
 
     #agri-hero-1 {
-        background-image: url('../img/agri-drone-banner-m.png');
+        width: 100%;
+        background-image: url('../img/agri-hero1-m.png');
+        background-position: center;
+        background-size: cover;
     }
 
     #about-banner {

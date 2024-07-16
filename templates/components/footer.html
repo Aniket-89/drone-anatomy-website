@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="grid">
-        <ul class="text-start flex text-xs">
+        <ul class="text-start flex text-[8px] lg:text-xs">
           <li>Privacy Policy</li>
           <span class="mx-2">|</span>
           <li>Terms & Conditions</li>
@@ -273,7 +273,7 @@
       <h3 class="text-white text-2xl font-semibold">Stay in Touch</h3>
       <form id="newsletter-form" method="post" action="{% url 'core:subscribe_newsletter' %}" class="grid gap-1">
         {% csrf_token %}
-        <input type="email" name="email" id="id_email" placeholder="Your Email">
+        <input type="email" name="email" id="id_email" placeholder="Your Email" class="w-full">
         <button type="submit" class="w-1/2 text-white bg-yellow-500 py-2 px-4 hover:bg-yellow-600">Subscribe</button>
         <div class="form-messages"></div>
     </form>
