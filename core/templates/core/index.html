@@ -8,6 +8,7 @@ Surveillance, Payloads, and Aerial Mapping
 <!-- banner -->
 
 <main id="home-page" class="">
+    <!-- hero section -->
   <section class="hero h-[100vh] w-full grid place-items-center">
     <video
       id="home-hero-video"
@@ -77,8 +78,10 @@ Surveillance, Payloads, and Aerial Mapping
     </div>
   </section>
 
+  <!-- counter section -->
   {% include 'core/counter.html' %}
 
+  <!-- featured section -->
   <section
     id="featured-section"
     class="my-10 py-10 border-y md:border-y-0 border-gray-300"
@@ -235,6 +238,7 @@ Surveillance, Payloads, and Aerial Mapping
     </div>
   </section>
 
+  <!-- partner section -->
   <section id="partner-section" class="my-28" data-aos="fade-up">
     <div class="container text-center mx-auto space-y-3">
       <h2 class="text-3xl lg:text-5xl font-semibold">Our Partners</h2>
@@ -275,6 +279,7 @@ Surveillance, Payloads, and Aerial Mapping
     </div>
   </section>
 
+  <!-- blog section -->
   <section id="blog-section" class="" data-aos="fade-up">
     <div class="text-center my-10 mx-auto space-y-3">
       <h2 class="text-3xl lg:text-5xl font-semibold">Our Blogs</h2>
@@ -335,12 +340,12 @@ Surveillance, Payloads, and Aerial Mapping
     </div>
   </section>
 
+  <!-- project section -->
   <section id="project-section" class="my-28">
-    <div class="text-center my-10 mx-auto space-y-3" data-aos="zoom-in">
+    <div class="text-center my-24 mx-auto space-y-3" data-aos="zoom-in">
       <h2 class="text-3xl lg:text-5xl font-semibold">Our Projects</h2>
       <p class="text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor.
-        Nobis, illum cumque?
+        Explore our cutting-edge projects harnessing drone technology to innovate in industries from agriculture to infrastructure.
       </p>
     </div>
 
@@ -353,25 +358,35 @@ Surveillance, Payloads, and Aerial Mapping
       <div class="splide__track">
         <ul class="splide__list h-[75vh]">
           <li class="splide__slide">
-            <img
-              class="lazy"
-              data-src="{% static 'core/img/drone-white.jpg' %}"
-              alt="Image 1"
-            />
+            <div class="project-card h-full relative border border-black bg-accentLight">
+                <img
+                  class="lazy absolute object-contain h-full top-0 left-0"
+                  data-src="{% static 'core/img/sri_muktsar_sahib_popup.png' %}"
+                  alt="Image 2"
+                />
+                <p class="desc absolute bottom-0 p-4 font-semibold text-black bg-gradient-to-b from-transparentgray to-accentDark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                </div>
           </li>
-          <li class="splide__slide">
+          <li class="splide__slide shadow-lg">
+            <div class="project-card h-full relative border border-black bg-accentLight">
             <img
-              class="lazy h-full"
+              class="lazy absolute object-contain h-full  top-0 left-0"
               data-src="{% static 'core/img/sri_muktsar_sahib_popup.png' %}"
               alt="Image 2"
             />
+            <p class="desc absolute bottom-0 p-4 bg-gradient-to-b text-white font-semibold from-transparentgray from-20% to-yellow-light to-100%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+            </div>
+
           </li>
           <li class="splide__slide">
-            <img
-              class="lazy"
-              data-src="{% static 'core/img/drone-white.jpg' %}"
-              alt="Image 3"
-            />
+            <div class="project-card h-full relative border border-black bg-accentLight">
+                <img
+                  class="lazy absolute object-contain h-full  top-0 left-0"
+                  data-src="{% static 'core/img/sri_muktsar_sahib_popup.png' %}"
+                  alt="Image 2"
+                />
+                <p class="desc absolute bottom-[5%] p-4 font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                </div>
           </li>
           <!-- Add more slides as needed -->
         </ul>

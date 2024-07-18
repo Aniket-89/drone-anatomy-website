@@ -46,14 +46,14 @@ window.addEventListener("load", function() {
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('#image-slider', {
         type: 'loop',
-        perPage: 1,
+        perPage: 3,
         perMove: 1,
         gap: '1rem',
 
         focus: 'center',
         padding: {
-            left: '10%',
-            right: '10%',
+            left: '5%',
+            right: '5%',
         },
         breakpoints: {
             1024: {
