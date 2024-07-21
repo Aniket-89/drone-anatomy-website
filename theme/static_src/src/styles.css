@@ -21,8 +21,30 @@
     color: rgb(108, 117, 125);
     font-size: 1rem;
   }
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0px;
+    z-index: 10;
+
+  }
+  
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #f5c000;
+    width: 5px;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    transform: scale(1.2);
+  }
   body {
     min-height: 100vh;
+    scroll-behavior: smooth;
   }
 
 @media screen and (max-width:1100px) {

@@ -27,12 +27,9 @@ class Post(models.Model):
         
     @property
     def summary(self):
-        # Strip HTML tags and get the first paragraph
-        stripped_content = strip_tags(self.content)
-        first_paragraph = stripped_content.split('\n')[1]
-        # Truncate the first paragraph to 30 words
-        truncated_summary = Truncator(first_paragraph).words(20, truncate=' ...')
-        return truncated_summary
+        # Assuming you want to return the first 200 characters of the content
+        # and strip HTML tags for a concise summary
+        return strip_tags(self.content)[:200] + ('...' if len(self.content) > 200 else '')
 
     class Meta:
         ordering = ['-updated_at']

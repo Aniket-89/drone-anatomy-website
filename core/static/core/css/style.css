@@ -6,6 +6,9 @@ video {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+label{
+    font-weight: 500;
+}
 
 
 .loaded {
@@ -37,7 +40,7 @@ video {
     aspect-ratio: 1;
     border-radius: 50%;
     border: 8px solid #0000;
-    border-right-color: #ffcc00;
+    border-right-color: #f5c000;
     position: relative;
     animation: l24 1s infinite linear;
 }
@@ -90,6 +93,7 @@ header {
     height: 50vh
 }
 
+
 #about-banner>div {
     background-image: url('../img/airdrone.png');
     background-position: right center;
@@ -99,18 +103,36 @@ header {
     z-index: 2;
 }
 
+
 .contact-banner {
     position: relative;
     background-image: url('../img/map-mask.png');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 60%/cover;
+    
+}
 
+.career-banner {
+    position: relative;
+    background: url('../img/career-mask.jpg');
+    background-size: 60%/cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.career-banner::before {
+    content: '';
+    background-image: linear-gradient(to right, #f5c000 25%, rgb(255, 204, 0, 0.4));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .contact-banner::before {
     content: '';
-    background-image: linear-gradient(to right, #FFCC00 40%, rgb(255, 204, 0, 0.4));
+    background-image: linear-gradient(to right, #f5c000 40%, rgb(255, 204, 0, 0.4));
     position: absolute;
     top: 0;
     left: 0;
@@ -120,7 +142,7 @@ header {
 
 @media screen and (max-width: 981px) {
     .contact-banner::before {
-        background-image: linear-gradient(to right, #FFCC00 20%, rgb(255, 204, 0, 0.4));
+        background-image: linear-gradient(to right, #f5c000 20%, rgb(255, 204, 0, 0.4));
         height: 100%;
     }
 
@@ -192,7 +214,7 @@ header {
 
 .btn {
     display: inline-block;
-    background-color: #FFCC00;
+    background-color: #f5c000;
     color: #fff;
     padding: 10px 44px;
     text-align: center;
@@ -207,6 +229,91 @@ header {
 
 #newsletter-form label {
     content: '';
+}
+
+
+@keyframes scrollLeft {
+    to {
+        left: -96px;
+    }
+}
+@keyframes scrollRight {
+    to {
+        right: -96px;
+    }
+}
+
+
+.partner-list-l > li {
+    position: absolute;
+    left: 100%;
+    width: 180px;
+    height: 100px;
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.partner-list-r > li {
+    position: absolute;
+    right: 100%;
+    width: 180px;
+    height: 100px;
+    animation-name: scrollRight;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.partner-list-l img, .partner-list-l img {
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.partner-logo1 {
+    animation-delay: calc(30s / 7 * (7 - 1) * -1);
+}
+.partner-logo2 {
+    animation-delay: calc(30s / 7 * (7 - 2) * -1);
+}
+.partner-logo3 {
+    animation-delay: calc(30s / 7 * (7 - 3) * -1);
+}
+.partner-logo4 {
+    animation-delay: calc(30s / 7 * (7 - 4) * -1);
+}
+.partner-logo5 {
+    animation-delay: calc(30s / 7 * (7 - 5) * -1);
+}
+.partner-logo6 {
+    animation-delay: calc(30s / 7 * (7 - 6) * -1);
+}
+.partner-logo7 {
+    animation-delay: calc(30s / 7 * (7 - 7) * -1);
+}
+.partner-logo8 {
+    animation-delay: calc(30s / 7 * (7 - 1) * -1);
+}
+.partner-logo9 {
+    animation-delay: calc(30s / 7 * (7 - 2) * -1);
+}
+.partner-logo10 {
+    animation-delay: calc(30s / 7 * (7 - 3) * -1);
+}
+.partner-logo11 {
+    animation-delay: calc(30s / 7 * (7 - 4) * -1);
+}
+.partner-logo12 {
+    animation-delay: calc(30s / 7 * (7 - 5) * -1);
+}
+.partner-logo13 {
+    animation-delay: calc(30s / 7 * (7 - 6) * -1);
+}
+.partner-logo14 {
+    animation-delay: calc(30s / 7 * (7 - 7) * -1);
+}
+.partner-logo15 {
+    animation-delay: calc(30s / 7 * (7 - 8) * -1);
 }
 
 .spray-banner {
@@ -334,7 +441,7 @@ header {
         transform: scale(1.2);
         width: 26px;
         height: 26px;
-        background: #ffcc00;
+        background: #f5c000;
         /* background: rgba(0, 0, 0, 0.1); */
     }
 }
@@ -427,7 +534,7 @@ header {
     right: -2rem;
     top: -60px;
     transition: clip-path .3s ease, background-color .3s ease;
-    z-index: -1;
+    z-index: -2;
 }
 
 #featured-section .product-img {
@@ -436,7 +543,7 @@ header {
 }
 
 #featured-section .product-item:hover img {
-    transform: rotateY(5deg) scale(1.35);
+    transform: rotateY(8deg) scale(1.35);
 }
 
 #product-list {
@@ -471,8 +578,8 @@ header {
 
 @media screen and (min-width:980px) {
     #product-list::after {
-        background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .5) 50%, #fff);
-        height: 50%;
+        background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
+        height: 20%;
     }
 
 }
@@ -482,19 +589,21 @@ footer p {
 }
 
 footer h6 {
-    color: #FFCC00;
+    color: #f5c000;
     font-size: 18px;
     font-weight: 500;
 }
 
 #image-slider {
     max-width: 100%;
+    /* padding: 0.5rem 0; */
     height: 65dvh;
     margin: auto;
 }
 
 .splide__track {
     height: 100%;
+    padding: 0.5rem 0;
 }
 
 /* Ensure images fit within the slider */
@@ -679,7 +788,7 @@ footer h6 {
 }
 
 .selector1.active {
-    color: #0B0C0C;
+    color: #262322;
 }
 
 .selector-content,

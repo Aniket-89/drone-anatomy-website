@@ -47,7 +47,8 @@ module.exports = {
             colors: {
                 shadow: 'hsla(0, 0%, 100%)',
                 white: '#FFFEFE',
-                black: '#0B0C0C',
+                // black: '#0B0C0C',
+                black: '#262322',
                 'yellow-500': '#f5c000',
                 'yellow-light': '#FFFFA7',
                 accentLight: 'hsl(183.94deg 100% 98.42%)',

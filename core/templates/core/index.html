@@ -100,12 +100,12 @@ Surveillance, Payloads, and Aerial Mapping
       </div>
 
       <!-- featured products -->
-      <div class="w-10/12 mx-auto">
+      <div class="w-10/12 mx-auto z-100">
         <div
-          class="container flex flex-col lg:flex-row gap-10 lg:mt-40 mt-8 mb-20 justify-center mx-auto"
+          class="container flex flex-col lg:flex-row gap-10 lg:mt-40 mt-8 mb-20 justify-center mx-auto z-[1]"
         >
           <div
-            class="w-11/12 lg:w-4/12 flex mx-auto px-3"
+            class="w-11/12 lg:w-4/12 flex mx-auto px-3 group"
             data-aos="fade-up"
             data-aos-delay="300"
           >
@@ -117,30 +117,21 @@ Surveillance, Payloads, and Aerial Mapping
               >
                 <a href="{% url 'core:agri-detail' %}"
                   ><img
-                    data-src="{% static 'core/img/drone-card-16.png' %}"
+                    data-src="{% static 'core/img/p10.png' %}"
                     class="lazy w-full scale-125 transition-all duration-300 ease-in-out drop-shadow-2xl"
                     alt="drone-img"
                 /></a>
               </div>
-              <div class="product-detail mt-16 relative">
-                <div class="text-xl font-semibold product-model">CW-15</div>
+              <div class="group product-detail mt-16 -mx-2 -mb-8">
+                <!-- <div class="w-full h-[0px] -m-8 group-hover:h-full transition-all duration-300 ease-in-out absolute top-0 right-0 bg-yellow-500"></div> -->
+                <a href="{% url 'core:agri-detail' %}" class="text-2xl my-2 group-hover:text-yellow-500 hover:scale-105 font-semibold product-model">P10 pro</a>
                 <div class="text-base font-semibold product-description">
-                  Multi-purpose intelligent VTOL drone
+                    Portable, Efficient Agriculture Drone
                 </div>
-                <div class="text-sm py-6 product-info">
-                  The new generation of JOUAV CW-15 UAV has a brand new upgrade
-                  of flight safety, avionics system, overall machine
-                  performance, and operating experience.
+                <div class="text-sm py-2 product-info">
+                    India's first portable agriculture drone with a 10-liter tank payload, optimized for local conditions with a drastic size reduction for easy transportation.
                 </div>
-                <div class="text-start product-learn-more">
-                  <a
-                    class="arrow-btn flex dark-style"
-                    href="/products/cw-15.html"
-                  >
-                    <span class="d-inline-block text-center rounded-circle">
-                    </span>
-                  </a>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -152,22 +143,20 @@ Surveillance, Payloads, and Aerial Mapping
               <div
                 class="product-img w-full relative overflow-hidden bg-gradient-to-b from-red-300 from-30% to-white"
               >
-                <a href="/products/cw-15.html"
+                <a href="#"
                   ><img
-                    data-src="https://www.jouav.com/wp-content/uploads/2023/01/cw-15-home.png"
+                    data-src="{% static 'core/img/p16.png' %}"
                     class="lazy w-full scale-125 transition-all duration-300 ease-in-out drop-shadow-2xl"
                     alt="drone-img"
                 /></a>
               </div>
               <div class="product-detail mt-16 relative">
-                <div class="text-xl font-semibold product-model">CW-15</div>
+                <div class="text-xl font-semibold product-model">P16 pro</div>
                 <div class="text-base font-semibold product-description">
-                  Multi-purpose intelligent VTOL drone
+                    Reliable Coaxial RTK agriculture drone
                 </div>
                 <div class="text-sm py-6 product-info">
-                  The new generation of JOUAV CW-15 UAV has a brand new upgrade
-                  of flight safety, avionics system, overall machine
-                  performance, and operating experience.
+                    India's first coaxial agriculture drone with RTK, designed for unparalleled reliability and efficiency with significant local modifications.
                 </div>
                 <div class="text-start product-learn-more">
                   <a
@@ -192,22 +181,21 @@ Surveillance, Payloads, and Aerial Mapping
               <div
                 class="product-img w-full relative overflow-hidden bg-gradient-to-b from-blue-300 from-30% to-white"
               >
-                <a href="/products/cw-15.html"
+                <a href="#"
                   ><img
-                    data-src="https://www.jouav.com/wp-content/uploads/2023/01/cw-15-home.png"
+                    data-src="{% static 'core/img/dropper.png' %}"
                     class="lazy w-full scale-125 transition-all duration-300 ease-in-out drop-shadow-2xl"
                     alt="drone-img"
                 /></a>
               </div>
               <div class="product-detail mt-16 relative">
-                <div class="text-xl font-semibold product-model">CW-15</div>
+                <div class="text-xl font-semibold product-model">DropForce10</div>
                 <div class="text-base font-semibold product-description">
-                  Multi-purpose intelligent VTOL drone
+                    High-Altitude, 10kg Payload Drone
                 </div>
                 <div class="text-sm py-6 product-info">
-                  The new generation of JOUAV CW-15 UAV has a brand new upgrade
-                  of flight safety, avionics system, overall machine
-                  performance, and operating experience.
+                    An Indian drone designed for high-altitude
+                     operations with a 10kg payload, offering unmatched reliability for army missions.
                 </div>
                 <div class="text-start product-learn-more">
                   <a
@@ -246,35 +234,77 @@ Surveillance, Payloads, and Aerial Mapping
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, ducimus.
       </p>
     </div>
-    <div id="partner-list-container" class="mx-auto my-10 w-10/12">
+    <div id="partner-list-container" class="mx-auto my-10 w-full">
       <ul
         id="partner-list"
-        class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mx-auto w-full"
+        class=" relative overflow-hidden h-44 items-center mx-auto w-full partner-list-l"
       >
-        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
-          ABC
+        <li class="partner-logo1">
+          <img data-src="{% static 'core/img/logo1.jpg' %}" alt="" class="lazy h-full">
         </li>
-        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
-          XYZ
+        <li class="partner-logo2">
+            <img data-src="{% static 'core/img/logo2.png' %}" alt="" class="lazy h-full">
+          
         </li>
-        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
-          ABC
+        <li class="partner-logo3">
+            <img data-src="{% static 'core/img/logo3.png' %}" alt="" class="lazy h-full">
+          
         </li>
-        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
-          XYZ
+        <li class="partner-logo4">
+            <img data-src="{% static 'core/img/logo4.jpg' %}" alt="" class="lazy h-full">
+          
         </li>
-        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
-          ABC
+        <li class="partner-logo5">
+            <img data-src="{% static 'core/img/logo5.jpg' %}" alt="" class="lazy h-full">
+          
         </li>
-        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
-          XYZ
+        <li class="partner-logo6">
+            <img data-src="{% static 'core/img/logo11.jpg' %}" alt=""  class="lazy h-full">
+          
         </li>
-        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
-          ABC
+        <li class="partner-logo7">
+            <img data-src="{% static 'core/img/logo7.png' %}" alt="" class="lazy h-full">
+          
         </li>
-        <li class="hover:shadow-md transition-shadow duration-200 ease-in-out">
-          XYZ
+        </ul>
+        </div>
+        <div id="partner-list-r-container" class="mx-auto my-10 w-full">
+
+        <ul
+            
+            class=" relative overflow-hidden h-44 items-center mx-auto w-full partner-list-r">
+        <li class="partner-logo8">
+            <img data-src="{% static 'core/img/logo8.png' %}" alt="" class="lazy w-full object-center">
+          
         </li>
+        <li class="partner-logo9">
+            <img data-src="{% static 'core/img/logo9.png' %}" alt="" class="lazy w-full object-center">
+          
+        </li>
+        <li class="partner-logo10">
+            <img data-src="{% static 'core/img/logo10.png' %}" alt="" class="lazy w-full object-center">
+          
+        </li>
+        <li class="partner-logo11">
+            <img data-src="{% static 'core/img/logo6.png' %}" alt="" class="lazy w-full object-center">
+          
+        </li>
+        <li class="partner-logo12">
+            <img data-src="{% static 'core/img/logo12.png' %}" alt="" class="lazy w-full object-center">
+          
+        </li>
+        <li class="partner-logo13">
+            <img data-src="{% static 'core/img/logo13.png' %}" alt="" class="lazy w-full object-center">
+          
+        </li>
+        <li class="partner-logo14">
+            <img data-src="{% static 'core/img/logo14.png' %}" alt="" class="lazy w-full object-center">
+          
+        </li>
+        <!-- <li class="partner-logo15">
+            <img data-src="{% static 'core/img/logo15.jpg' %}" alt="" class="lazy h-full object-center">
+          
+        </li> -->
       </ul>
     </div>
   </section>
@@ -356,38 +386,78 @@ Surveillance, Payloads, and Aerial Mapping
       data-aos="zoom-in"
     >
       <div class="splide__track">
-        <ul class="splide__list h-[75vh]">
-          <li class="splide__slide">
-            <div class="project-card h-full relative border border-black bg-accentLight">
-                <img
-                  class="lazy absolute object-contain h-full top-0 left-0"
-                  data-src="{% static 'core/img/sri_muktsar_sahib_popup.png' %}"
-                  alt="Image 2"
-                />
-                <p class="desc absolute bottom-0 p-4 font-semibold text-black bg-gradient-to-b from-transparentgray to-accentDark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
-                </div>
-          </li>
-          <li class="splide__slide shadow-lg">
-            <div class="project-card h-full relative border border-black bg-accentLight">
-            <img
-              class="lazy absolute object-contain h-full  top-0 left-0"
-              data-src="{% static 'core/img/sri_muktsar_sahib_popup.png' %}"
-              alt="Image 2"
-            />
-            <p class="desc absolute bottom-0 p-4 bg-gradient-to-b text-white font-semibold from-transparentgray from-20% to-yellow-light to-100%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
-            </div>
-
-          </li>
-          <li class="splide__slide">
-            <div class="project-card h-full relative border border-black bg-accentLight">
-                <img
-                  class="lazy absolute object-contain h-full  top-0 left-0"
-                  data-src="{% static 'core/img/sri_muktsar_sahib_popup.png' %}"
-                  alt="Image 2"
-                />
-                <p class="desc absolute bottom-[5%] p-4 font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
-                </div>
-          </li>
+        <ul class="splide__list h-[75vh] py-2">
+            <li class="splide__slide shadow-md shadow-accentDark">
+                <div class="project-card h-full relative bg-accentLight">
+                    <img
+                      class="lazy absolute object-contain h-full  top-0 left-0"
+                      data-src="{% static 'core/img/sri_muktsar_sahib.png' %}"
+                      alt="Image 2"
+                    />
+                    <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                    </div>
+              </li>
+            <li class="splide__slide shadow-md shadow-accentDark">
+                <div class="project-card h-full relative bg-accentLight">
+                    <img
+                      class="lazy absolute object-contain h-full  top-0 left-0"
+                      data-src="{% static 'core/img/dankour.png' %}"
+                      alt="Image 2"
+                    />
+                    <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                    </div>
+              </li>
+                <li class="splide__slide shadow-md shadow-accentDark">
+                    <div class="project-card h-full relative bg-accentLight">
+                        <img
+                        class="lazy absolute object-contain h-full  top-0 left-0"
+                        data-src="{% static 'core/img/dorpuri.png' %}"
+                        alt="Dorpuri"
+                        />
+                        <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                    </div>
+              </li>
+                <li class="splide__slide shadow-md shadow-accentDark">
+                    <div class="project-card h-full relative bg-accentLight">
+                        <img
+                        class="lazy absolute object-contain h-full  top-0 left-0"
+                        data-src="{% static 'core/img/newTehri.png' %}"
+                        alt="Dorpuri"
+                        />
+                        <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                    </div>
+              </li>
+                <li class="splide__slide shadow-md shadow-accentDark">
+                    <div class="project-card h-full relative bg-accentLight">
+                        <img
+                        class="lazy absolute object-contain h-full  top-0 left-0"
+                        data-src="{% static 'core/img/patoudi.png' %}"
+                        alt="Dorpuri"
+                        />
+                        <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                    </div>
+              </li>
+                <li class="splide__slide shadow-md shadow-accentDark">
+                    <div class="project-card h-full relative bg-accentLight">
+                        <img
+                        class="lazy absolute object-contain h-full  top-0 left-0"
+                        data-src="{% static 'core/img/sakipurVillage.png' %}"
+                        alt="Dorpuri"
+                        />
+                        <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                    </div>
+              </li>
+                <li class="splide__slide shadow-md shadow-accentDark">
+                    <div class="project-card h-full relative bg-accentLight">
+                        <img
+                        class="lazy absolute object-contain h-full  top-0 left-0"
+                        data-src="{% static 'core/img/sarol.png' %}"
+                        alt="Dorpuri"
+                        />
+                        <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
+                    </div>
+              </li>
+              
           <!-- Add more slides as needed -->
         </ul>
       </div>

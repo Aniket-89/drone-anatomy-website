@@ -1,10 +1,12 @@
+import os
 from django.shortcuts import redirect, render
 from django.utils import translation
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
+from .pdf_utils import generate_pdf
 from django.http import HttpResponseRedirect, JsonResponse
 from .models import Subscriber
 from blog.models import Post
-from .forms import ContactForm, SubscriberForm
+from .forms import ContactForm, SubscriberForm, CareerForm
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 import urllib.parse
@@ -102,6 +104,77 @@ def about_view(request):
     # Render the about page
     return render(request, "core/about.html", context={})
 
+
+def career_view(request):
+    """
+    Renders the career page.
+
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The rendered career page.
+    """
+    if request.method == 'POST':
+        # Create a form instance with the POST data
+        form = CareerForm(request.POST, files=request.FILES)
+
+        # Validate the form data
+        if form.is_valid():
+            # Get the cleaned form data
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+            position = request.POST.get('position')
+            message = request.POST.get('message')
+            resume = form.cleaned_data.get('resume')
+            
+            # Generate PDF
+            pdf_path = generate_pdf(name, email, message)
+
+            # Send email to the admin
+            try:
+                send_career_form_email(name, email, position, message, pdf_path, resume)
+        
+        # Remove the temporary PDF file
+                os.remove(pdf_path)
+
+                # Check if the request is an AJAX request
+                if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                    return JsonResponse({'success': True, 'message': 'Message sent successfully!'})
+                # Ensure the name here matches your URL pattern name
+
+            # Handle exceptions while sending the email
+            except Exception as e:
+                error_message = f'Error: {e}'
+
+                # Check if the request is an AJAX request
+                if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                    return JsonResponse({'success': False, 'error': error_message})
+                else:
+                    # Render the contact page with the form and error message
+                    return render(request, 'core/career.html', {'form': form, 'error': error_message})
+
+        else:
+            # Get the form errors as JSON
+            errors = form.errors.as_json()
+
+            # Check if the request is an AJAX request
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                # Return JSON response with the form errors
+                return JsonResponse({'success': False, 'errors': errors})
+            else:
+                # Render the contact page with the form and errors
+                return render(request, 'core/career.html', {'form': form, 'errors': form.errors})
+
+    else:
+        # Create an empty form instance
+        form = CareerForm()
+
+        # Get the success query parameter from the request
+        success = request.GET.get('success')
+
+        # Render the contact page with the form and success message (if any)
+        return render(request, 'core/career.html', {'form': form, 'success': success})
 
 # Add comments and docstrings to the code for better readability and understanding
 
@@ -276,3 +349,25 @@ def set_language(request):
 
     # Return the response object
     return response
+
+
+def send_career_form_email(name, email, position, message, pdf_path, resume):
+    email_subject = 'Career Form'
+    email_body = f'Name: {name}\nEmail: {email}\nApplying for Position: {position}\n\nMessage:\n{message}'
+    recipient_list = ['admin@droneanatomy.com']
+    
+    email_message = EmailMessage(
+        subject=email_subject,
+        body=email_body,
+        from_email=settings.DEFAULT_FROM_EMAIL,
+        to=recipient_list,
+    )
+    
+    if os.path.exists(pdf_path):
+        with open(pdf_path, 'rb') as pdf_file:
+            email_message.attach('CareerForm.pdf', pdf_file.read(), 'application/pdf')
+
+    if resume:
+        email_message.attach(resume.name, resume.read(), resume.content_type)
+
+    email_message.send(fail_silently=True)
