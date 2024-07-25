@@ -27,7 +27,7 @@ Surveillance, Payloads, and Aerial Mapping
       class="container mx-auto mt-40 sm:mt-0 px-6 grid place-content-center gap-4"
     >
       <h1
-        class="text-white sm:text-6xl text-3xl font-semibold text-center"
+        class="text-white shadow-text sm:text-6xl text-3xl font-semibold text-center"
         data-aos="fade-down"
         data-aos-duration="700"
         data-aos-delay="1"
@@ -42,13 +42,14 @@ Surveillance, Payloads, and Aerial Mapping
         {% trans "The most advanced drones for mobility" %}
       </p>
       <div class="cta mx-auto my-[10px] grid grid-cols-1 md:grid-cols-2 gap-4">
-        <button
-          class="cta-accent bg-yellow-500 opacity-5 w-56 sm:h-[53px] h-9 text-white text-sm sm:text-lg transition-all duration-400 ease-in-out hover:bg-yellow-400 hover:text-black xl:inline"
+        <a
+            href="{% url 'core:about' %}" 
+          class="cta-accent bg-yellow-500 opacity-5 w-56 sm:h-[53px] h-9 items-center justify-center text-white text-sm sm:text-lg transition-all duration-400 ease-in-out hover:bg-yellow-400 hover:text-black flex"
           data-aos="zoom-in"
           data-aos-duration="700"
         >
           {% trans "Learn more" %}
-        </button>
+      </a>
         <button
           id="watch-video-btn"
           class="cta-light-hero bg-transparent saturate-100 backdrop-blur-sm w-56 sm:h-[53px] h-9 border-white border text-white text-sm sm:text-lg transition-colors duration-300 ease-in-out hover:bg-white hover:text-black xl:inline"
@@ -122,15 +123,15 @@ Surveillance, Payloads, and Aerial Mapping
                     alt="drone-img"
                 /></a>
               </div>
-              <div class="group product-detail mt-16 -mx-2 -mb-8">
-                <!-- <div class="w-full h-[0px] -m-8 group-hover:h-full transition-all duration-300 ease-in-out absolute top-0 right-0 bg-yellow-500"></div> -->
+              <div class="group product-detail mt-16 -mx-2 -mb-4">
+                
                 <a href="{% url 'core:agri-detail' %}" class="text-2xl my-2 group-hover:text-yellow-500 hover:scale-105 font-semibold product-model">P10 pro</a>
-                <div class="text-base font-semibold product-description">
+                <h3 class="text-base font-semibold product-description">
                     Portable, Efficient Agriculture Drone
-                </div>
-                <div class="text-sm py-2 product-info">
+                </h3>
+                <p class="text-sm py-2 product-info">
                     India's first portable agriculture drone with a 10-liter tank payload, optimized for local conditions with a drastic size reduction for easy transportation.
-                </div>
+                </p>
                 
               </div>
             </div>
@@ -150,23 +151,16 @@ Surveillance, Payloads, and Aerial Mapping
                     alt="drone-img"
                 /></a>
               </div>
-              <div class="product-detail mt-16 relative">
-                <div class="text-xl font-semibold product-model">P16 pro</div>
-                <div class="text-base font-semibold product-description">
+              <div class="group product-detail mt-16 -mx-2 -mb-4">
+                
+                <a href="{% url 'core:agri-detail' %}" class="text-2xl my-2 group-hover:text-yellow-500 hover:scale-105 font-semibold product-model">P16 pro</a>
+                <h3 class="text-base font-semibold product-description">
                     Reliable Coaxial RTK agriculture drone
-                </div>
-                <div class="text-sm py-6 product-info">
-                    India's first coaxial agriculture drone with RTK, designed for unparalleled reliability and efficiency with significant local modifications.
-                </div>
-                <div class="text-start product-learn-more">
-                  <a
-                    class="arrow-btn flex dark-style"
-                    href="/products/cw-15.html"
-                  >
-                    <span class="d-inline-block text-center rounded-circle">
-                    </span>
-                  </a>
-                </div>
+                </h3>
+                <p class="text-sm py-2 product-info">
+                    India's first coaxial agriculture drone with RTK, designed for unparalleled reliability and efficiency with significant local modifications
+                </p>
+                
               </div>
             </div>
           </div>
@@ -188,24 +182,19 @@ Surveillance, Payloads, and Aerial Mapping
                     alt="drone-img"
                 /></a>
               </div>
-              <div class="product-detail mt-16 relative">
-                <div class="text-xl font-semibold product-model">DropForce10</div>
-                <div class="text-base font-semibold product-description">
+              <div class="group product-detail mt-16 -mx-2 -mb-4">
+                
+                <a 
+                    href="{% url 'core:agri-detail' %}" 
+                    class="text-2xl my-2 group-hover:text-yellow-500 hover:scale-105 font-semibold product-model"
+                >DropForce10</a>
+                <h3 class="text-base font-semibold product-description">
                     High-Altitude, 10kg Payload Drone
-                </div>
-                <div class="text-sm py-6 product-info">
-                    An Indian drone designed for high-altitude
-                     operations with a 10kg payload, offering unmatched reliability for army missions.
-                </div>
-                <div class="text-start product-learn-more">
-                  <a
-                    class="arrow-btn flex dark-style"
-                    href="/products/cw-15.html"
-                  >
-                    <span class="d-inline-block text-center rounded-circle">
-                    </span>
-                  </a>
-                </div>
+                </h3>
+                <p class="text-sm py-2 product-info">
+                    An Indian drone designed for high-altitude operations with a 10kg payload, offering unmatched reliability for army missions.
+                </p>
+                
               </div>
             </div>
           </div>
@@ -215,11 +204,12 @@ Surveillance, Payloads, and Aerial Mapping
             class="container h-28 relative w-28 mx-auto text-center z-[6]"
             data-aos="zoom-in"
           >
-            <button
+            <a
+                href="{% url 'core:agri-detail' %}"
               class="mx-auto h-full bg-transparent text-center items-center flex font-semibold border-2 border-black rounded-[50%] hover:border-none hover:text-yellow-500 hover:shadow-lg hover:shadow-gray-400 hover:bg-white transition-all duration-300 ease-in-out hover:scale-105"
             >
               See all Products
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -231,74 +221,77 @@ Surveillance, Payloads, and Aerial Mapping
     <div class="container text-center mx-auto space-y-3">
       <h2 class="text-3xl lg:text-5xl font-semibold">Our Partners</h2>
       <p class="text-base">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, ducimus.
+        <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, ducimus. -->
       </p>
     </div>
-    <div id="partner-list-container" class="mx-auto my-10 w-full">
+    <div id="partner-list-container" class="overflow-hidden mx-auto my-10">
       <ul
+        --width="100%"
         id="partner-list"
-        class=" relative overflow-hidden h-44 items-center mx-auto w-full partner-list-l"
+        class=" relative overflow-hidden h-44 items-center mx-auto partner-list-l"
       >
         <li class="partner-logo1">
-          <img data-src="{% static 'core/img/logo1.jpg' %}" alt="" class="lazy h-full">
+          <img data-src="{% static 'core/img/partners/logo1.png' %}" alt="" class="lazy">
         </li>
         <li class="partner-logo2">
-            <img data-src="{% static 'core/img/logo2.png' %}" alt="" class="lazy h-full">
+            <img data-src="{% static 'core/img/partners/logo2.png' %}" alt="" class="lazy">
           
         </li>
         <li class="partner-logo3">
-            <img data-src="{% static 'core/img/logo3.png' %}" alt="" class="lazy h-full">
+            <img data-src="{% static 'core/img/partners/logo14.png' %}" alt="" class="lazy">
+
           
         </li>
         <li class="partner-logo4">
-            <img data-src="{% static 'core/img/logo4.jpg' %}" alt="" class="lazy h-full">
+            <img data-src="{% static 'core/img/partners/logo4.jpg' %}" alt="" class="lazy">
           
         </li>
         <li class="partner-logo5">
-            <img data-src="{% static 'core/img/logo5.jpg' %}" alt="" class="lazy h-full">
+            <img data-src="{% static 'core/img/partners/logo5.png' %}" alt="" class="lazy">
           
         </li>
         <li class="partner-logo6">
-            <img data-src="{% static 'core/img/logo11.jpg' %}" alt=""  class="lazy h-full">
+            <img data-src="{% static 'core/img/partners/logo11.png' %}" alt=""  class="lazy">
           
         </li>
         <li class="partner-logo7">
-            <img data-src="{% static 'core/img/logo7.png' %}" alt="" class="lazy h-full">
+            <img data-src="{% static 'core/img/partners/logo7.png' %}" alt="" class="lazy ">
           
         </li>
         </ul>
         </div>
-        <div id="partner-list-r-container" class="mx-auto my-10 w-full">
+        <div id="partner-list-r-container" class="overflow-hidden mx-auto my-10 w-full">
 
         <ul
             
             class=" relative overflow-hidden h-44 items-center mx-auto w-full partner-list-r">
         <li class="partner-logo8">
-            <img data-src="{% static 'core/img/logo8.png' %}" alt="" class="lazy w-full object-center">
+            <img data-src="{% static 'core/img/partners/logo8.png' %}" alt="" class="lazy ">
           
         </li>
         <li class="partner-logo9">
-            <img data-src="{% static 'core/img/logo9.png' %}" alt="" class="lazy w-full object-center">
+            <img data-src="{% static 'core/img/partners/logo9.png' %}" alt="" class="lazy">
           
         </li>
         <li class="partner-logo10">
-            <img data-src="{% static 'core/img/logo10.png' %}" alt="" class="lazy w-full object-center">
+            <img data-src="{% static 'core/img/partners/logo10.png' %}" alt="" class="lazy">
           
         </li>
         <li class="partner-logo11">
-            <img data-src="{% static 'core/img/logo6.png' %}" alt="" class="lazy w-full object-center">
+            <img data-src="{% static 'core/img/partners/logo6.png' %}" alt="" class="lazy">
           
         </li>
         <li class="partner-logo12">
-            <img data-src="{% static 'core/img/logo12.png' %}" alt="" class="lazy w-full object-center">
+            <img data-src="{% static 'core/img/partners/logo12.png' %}" alt="" class="lazy">
           
         </li>
         <li class="partner-logo13">
-            <img data-src="{% static 'core/img/logo13.png' %}" alt="" class="lazy w-full object-center">
+            <img data-src="{% static 'core/img/partners/logo13.png' %}" alt="" class="lazy">
           
         </li>
         <li class="partner-logo14">
-            <img data-src="{% static 'core/img/logo14.png' %}" alt="" class="lazy w-full object-center">
+            <img data-src="{% static 'core/img/partners/logo3.png' %}" alt="" class="lazy">
+
           
         </li>
         <!-- <li class="partner-logo15">
@@ -371,7 +364,7 @@ Surveillance, Payloads, and Aerial Mapping
   </section>
 
   <!-- project section -->
-  <section id="project-section" class="my-28">
+  <section id="project-section" class="my-18">
     <div class="text-center my-24 mx-auto space-y-3" data-aos="zoom-in">
       <h2 class="text-3xl lg:text-5xl font-semibold">Our Projects</h2>
       <p class="text-base">
@@ -388,10 +381,10 @@ Surveillance, Payloads, and Aerial Mapping
       <div class="splide__track">
         <ul class="splide__list h-[75vh] py-2">
             <li class="splide__slide shadow-md shadow-accentDark">
-                <div class="project-card h-full relative bg-accentLight">
+                <div class="project-card h-full relative bg-accentLight ">
                     <img
                       class="lazy absolute object-contain h-full  top-0 left-0"
-                      data-src="{% static 'core/img/sri_muktsar_sahib.png' %}"
+                      data-src="{% static 'core/img/projects/sri_muktsar_sahib.png' %}"
                       alt="Image 2"
                     />
                     <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
@@ -401,7 +394,7 @@ Surveillance, Payloads, and Aerial Mapping
                 <div class="project-card h-full relative bg-accentLight">
                     <img
                       class="lazy absolute object-contain h-full  top-0 left-0"
-                      data-src="{% static 'core/img/dankour.png' %}"
+                      data-src="{% static 'core/img/projects/dankour.png' %}"
                       alt="Image 2"
                     />
                     <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
@@ -411,7 +404,7 @@ Surveillance, Payloads, and Aerial Mapping
                     <div class="project-card h-full relative bg-accentLight">
                         <img
                         class="lazy absolute object-contain h-full  top-0 left-0"
-                        data-src="{% static 'core/img/dorpuri.png' %}"
+                        data-src="{% static 'core/img/projects/dorpuri.png' %}"
                         alt="Dorpuri"
                         />
                         <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
@@ -421,7 +414,7 @@ Surveillance, Payloads, and Aerial Mapping
                     <div class="project-card h-full relative bg-accentLight">
                         <img
                         class="lazy absolute object-contain h-full  top-0 left-0"
-                        data-src="{% static 'core/img/newTehri.png' %}"
+                        data-src="{% static 'core/img/projects/newTehri.png' %}"
                         alt="Dorpuri"
                         />
                         <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
@@ -431,7 +424,7 @@ Surveillance, Payloads, and Aerial Mapping
                     <div class="project-card h-full relative bg-accentLight">
                         <img
                         class="lazy absolute object-contain h-full  top-0 left-0"
-                        data-src="{% static 'core/img/patoudi.png' %}"
+                        data-src="{% static 'core/img/projects/patoudi.png' %}"
                         alt="Dorpuri"
                         />
                         <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
@@ -441,7 +434,7 @@ Surveillance, Payloads, and Aerial Mapping
                     <div class="project-card h-full relative bg-accentLight">
                         <img
                         class="lazy absolute object-contain h-full  top-0 left-0"
-                        data-src="{% static 'core/img/sakipurVillage.png' %}"
+                        data-src="{% static 'core/img/projects/sakipurVillage.png' %}"
                         alt="Dorpuri"
                         />
                         <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
@@ -451,7 +444,7 @@ Surveillance, Payloads, and Aerial Mapping
                     <div class="project-card h-full relative bg-accentLight">
                         <img
                         class="lazy absolute object-contain h-full  top-0 left-0"
-                        data-src="{% static 'core/img/sarol.png' %}"
+                        data-src="{% static 'core/img/projects/sarol.png' %}"
                         alt="Dorpuri"
                         />
                         <p class="desc absolute bottom-[5%] p-4 text-white font-semibold bg-accentDarkOverlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, cupiditate. Tenetur a molestiae officia. Iste amet necessitatibus deleniti! Molestias aliquam aut exercitationem similique vitae?</p>
@@ -463,11 +456,11 @@ Surveillance, Payloads, and Aerial Mapping
       </div>
     </div>
     <div class="grid place-content-center my-16">
-      <button
-        class="px-14 leading-10 font-semibold text-black bg-yellow-500 hover:bg-yellow-600 transition-colors duration-150"
+      <!-- <a href="#"
+        class="px-14 leading-10 font-semibold text-white bg-yellow-500 hover:bg-yellow-600 transition-colors duration-150"
       >
         Read More
-      </button>
+    </a> -->
     </div>
   </section>
 </main>
@@ -483,5 +476,51 @@ Surveillance, Payloads, and Aerial Mapping
   muteToggleBtn.addEventListener("click", function () {
     video.muted = !video.muted; // Toggle muted state
   });
+
+
+  
+// counter
+
+function createCounterIfInView(elementId, targetNumber, duration = 1000, onUpdate) {
+    const counterElement = document.getElementById(elementId);
+
+    if (!counterElement) {
+        throw new Error(`Element with ID "${elementId}" not found!`);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+            let currentCount = Number(counterElement.textContent) || 0; // Get initial count or set to 0
+
+            const increment = Math.ceil((targetNumber - currentCount) / (duration / 10)); // Calculate increment per update
+
+            const intervalId = setInterval(() => {
+                currentCount += increment;
+
+                if (currentCount >= targetNumber) {
+                    currentCount = targetNumber;
+                    clearInterval(intervalId); // Stop animation when target reached
+                }
+
+                counterElement.textContent = currentCount;
+
+                if (onUpdate) {
+                    onUpdate(currentCount); // Call optional update callback
+                }
+            }, 100); // Update every 10 milliseconds (adjust as needed)
+
+            observer.unobserve(counterElement);
+        }
+    });
+
+    observer.observe(counterElement);
+}
+
+createCounterIfInView('project-counter', 200, 150);
+createCounterIfInView('exp-counter', 9);
+createCounterIfInView('client-counter', 100, 150);
+createCounterIfInView('flying-time-counter', 100000, 100);
+
 </script>
 {% endblock javascript %}

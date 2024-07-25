@@ -1,8 +1,6 @@
 img,
 video {
-    /* width: 100%; */
-    /* height: auto; */
-    /* display: block; */
+
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -10,6 +8,47 @@ label{
     font-weight: 500;
 }
 
+.shadow-text {
+    text-shadow: 1px 1px 2px #676463bd;
+}
+
+.underline-text::after {
+    content: '';
+    position: absolute;
+    top: 86%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2%;
+    z-index: -1;
+    border-radius: 2px;
+    border-bottom: 4px solid #0c0c0c;
+    
+}
+
+@keyframes underlineAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+
+}
+
+.animate-underline::after {
+    animation: underlineAnimation 0.8s ease-in-out;
+}
+
+
+.tick-icon::before {
+    content: url('../img/tick-square.png');
+    margin-right: 8px;
+    /* margin-top: 8px; */
+    
+}
 
 .loaded {
     opacity: 1;
@@ -95,7 +134,7 @@ header {
 
 
 #about-banner>div {
-    background-image: url('../img/airdrone.png');
+    background-image: url('../img/about/airdrone.png');
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 14%;
@@ -185,9 +224,6 @@ header {
 }
 
 
-
-
-
 .form-group {
     margin-bottom: 15px;
 }
@@ -234,21 +270,28 @@ header {
 
 @keyframes scrollLeft {
     to {
-        left: -96px;
+        left: -132px;
     }
 }
 @keyframes scrollRight {
     to {
-        right: -96px;
+        right: -132px;
     }
+}
+
+.partner-list-l, .partner-list-r {
+    position: relative;
+    width: 100%;
+    min-width: calc(132px * 7);
+    height: 110px;
 }
 
 
 .partner-list-l > li {
     position: absolute;
     left: 100%;
-    width: 180px;
-    height: 100px;
+    width: 132px;
+    height: 100%;
     animation-name: scrollLeft;
     animation-duration: 30s;
     animation-timing-function: linear;
@@ -257,8 +300,8 @@ header {
 .partner-list-r > li {
     position: absolute;
     right: 100%;
-    width: 180px;
-    height: 100px;
+    width: 132px;
+    height: 100%;
     animation-name: scrollRight;
     animation-duration: 30s;
     animation-timing-function: linear;
@@ -267,7 +310,9 @@ header {
 
 .partner-list-l img, .partner-list-l img {
     object-fit: contain;
-    object-position: bottom;
+    aspect-ratio: 3/2;
+    height: 100%;
+    /* width: calc(924 / 7); */
 }
 
 .partner-logo1 {
@@ -317,7 +362,7 @@ header {
 }
 
 .spray-banner {
-    background-image: url('../img/cloud-bg.jpg');
+    background-image: url('../img/agri/spray-banner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -325,7 +370,7 @@ header {
 }
 
 #agri-hero-1 {
-    background-image: url('../img/agri-drone-banner.png');
+    background-image: url('../img/agri/agri-drone-banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -367,7 +412,7 @@ header {
 @media screen and (min-width:791px) and (max-width:1400px) {
     #hero-1-content {
         top: 10%;
-        left: 20%;
+        left: 25%;
     }
     #hero-1-content h3::after {
         font-size: 1.25rem;
@@ -382,7 +427,7 @@ header {
 
     #agri-hero-1 {
         width: 100%;
-        background-image: url('../img/agri-hero1-m.png');
+        background-image: url('../img/agri/agri-hero1-m.png');
         background-position: center;
         background-size: cover;
     }
@@ -441,6 +486,7 @@ header {
         transform: scale(1.2);
         width: 26px;
         height: 26px;
+        background: #fdf9e8;
         background: #f5c000;
         /* background: rgba(0, 0, 0, 0.1); */
     }
@@ -448,7 +494,7 @@ header {
 
 
 #agri-hero-2 {
-    background-image: url('../img/agri-drone-m.png');
+    background-image: url('../img/agri/agri-drone-m.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -467,7 +513,7 @@ header {
 }
 
 #agri-spray-feature-container {
-    background-image: url('../img/drone-white.jpg');
+    background-image: url('../img/agri/night-drone.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -483,11 +529,19 @@ header {
 }
 
 #agri-mapping-feature-container {
-    background-image: url('../img/drone-white.jpg');
+    background-image: url('../img/agri/agri-banner4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 94vh;
+    background-position: bottom;
+    height: 100lvh;
+}
+
+@media screen and (max-width: 900px) {
+    #agri-mapping-feature-container {
+        background-size: contain;
+        background-position: bottom;
+        height: 30vh;
+    }
 }
 
 /* #featured-section {
@@ -548,7 +602,7 @@ header {
 
 #product-list {
     background-color: #bcd4e8;
-    background-image: url(//www.jouav.com/wp-content/themes/jouav-theme-dist/assets/css/../img/theme/product-list-bg.jpg);
+    background-image: url(../img/cloud-bg.jpg);
     background-position: 50%;
     background-size: cover;
 }
@@ -597,7 +651,7 @@ footer h6 {
 #image-slider {
     max-width: 100%;
     /* padding: 0.5rem 0; */
-    height: 65dvh;
+    height: 65vh;
     margin: auto;
 }
 
@@ -620,6 +674,9 @@ footer h6 {
     .splide__slide img {
         height: 440px;
         width: auto;
+    }
+    #image-slider {
+        height: 45vh;
     }
 }
 
@@ -660,12 +717,6 @@ footer h6 {
 
 /*  */
 
-#drone-feature-section .spray-detail {
-    background-image: url('../img/ruipen-detail-bg-v2.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
 .drone-application-card {
     background-image: url('../img/atomized-spary-image1.png');
@@ -788,7 +839,7 @@ footer h6 {
 }
 
 .selector1.active {
-    color: #262322;
+    color: #0B0C0C;
 }
 
 .selector-content,
@@ -857,35 +908,11 @@ footer h6 {
     /* transition: transform 0.5s; */
 }
 
-.bg-image-1 {
-    background-image: url("https://static.xag.cn/img/product2022/p100-pro/industry-leader-fly-image1.png");
-    background-size: cover;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-    /* Animation for transition */
-}
 
-.bg-image-2 {
-    background-image: url("https://static.xag.cn/img/product2022/p100-pro/industry-leader-fly-image2.png");
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    /* Overlap the initial image */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    /* Initially hidden */
-    transition: opacity 1s ease-in-out;
-    /* Animation for transition */
-}
 
-/* Change background image on scroll */
-.agribanner.in-view .bg-image-1 {
-    opacity: 0;
-}
-
-.agribanner.in-view .bg-image-2 {
-    opacity: 1;
+/* training page */
+.training-banner-container {
+    background-image: url('https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951407.jpg?t=st=1721651320~exp=1721654920~hmac=98784ba017cee4cec786c7f48dec5d0d910b1bc4ebfdb614356a2ac4ca6692c8&w=1060');
+    height: 30vh;
+    max-height: 500px;
 }

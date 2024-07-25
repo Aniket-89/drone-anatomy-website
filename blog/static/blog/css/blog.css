@@ -1,5 +1,6 @@
 .blog-banner {
-    background-image: url('https://img.freepik.com/free-photo/fresh-green-yellow-leaves-garden_23-2148058684.jpg?t=st=1720781933~exp=1720785533~hmac=5ddcbbf1384fd44e41b0b3ca6c12341a1a870ea840101b11c896461d9027722e&w=1380');
+    background-image: url('../img/blog-banner1.jpg');
+    /* background-image: url('../img/blog-banner.jpg'); */
     background-color: black;
     background-repeat: no-repeat;
     background-position: center;

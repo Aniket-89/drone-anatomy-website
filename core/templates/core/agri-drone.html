@@ -1,6 +1,8 @@
 {% extends 'base.html' %} 
 {% load static i18n %}
 {% load static %}
+{% block title %}P10 pro Agriculture Drone | Drone Anatomy{% endblock title %} 
+
 {% block bodyclass %}agri-drone-page{% endblock bodyclass %}
 {% block body %}
 
@@ -15,274 +17,165 @@
         <div
         id="hero-1-content"
         class="text-gray-600 lg:space-y-2"
-      >
-        <h3 class="relative text-2xl xl:text-3xl text-black"><span class="italic text-3xl lg:text-7xl font-semibold ">P10</span><sup class="text-yellow-500 text-lg xl:text-2xl top-[-1em] lg:top-[-1.5em] lg:mb-2 italic">PRO</sup></h3>
-        <h4 class="text-md xl:text-3xl font-semibold italic">Made for <span class="">Indian</span> conditions.</h4>
-      </div>
+        data-aos="fade-right"
+        >
+            <h3 class="relative text-2xl xl:text-3xl text-black"><span class="italic text-3xl lg:text-5xl xl:text-7xl font-semibold ">P10</span><sup class="text-yellow-500 text-lg xl:text-2xl top-[-1em] lg:top-[-1.5em] lg:mb-2 italic">PRO</sup></h3>
+            <h4 class="text-md xl:text-3xl font-semibold italic">Made for <span class="">Indian</span> conditions.</h4>
+        </div>
     </div>
 
     </div>
-    <div class="panel hidden xl:block">
+    <div class="w-full h-lvh hidden relative lg:block">
 
-        <div class="w-full h-lvh relative">
-            <video data-src="{% static 'core/Drone_Clip.mp4' %}" autoplay muted loop class="lazy absolute top-0 left-0 -z-10 object-cover h-full w-full"></video>
-            
+        <video data-src="{% static 'core/spray.mp4' %}" autoplay loop muted class="lazy object-cover h-full w-full"></video>
+        
+            <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
+                <ul class="flex justify-between w-8/12 mx-auto">
+                    <li>
+                        <p class="text-white">Max. Flow Rate</p>
+                        <p class="text-white"><span>22</span> L/min</p>
+                    </li>
+                    <li>
+                        <p class="text-white">Max. Flow Rate</p>
+                        <p class="text-white"><span>22</span> L/min</p>
+                    </li>
+                    <li>
+                        <p class="text-white">Max. Flow Rate</p>
+                        <p class="text-white"><span>22</span> L/min</p>
+                    </li>
+                    <li>
+                        <p class="text-white">Max. Flow Rate</p>
+                        <p class="text-white"><span>22</span> L/min</p>
+                    </li>
+                </ul>
+            </div>
         </div>
         
-    </div>
-    <div class="mx-auto h-[90vh] hidden xl:grid place-content-center z-50 text-white">
-        <ul class="flex flex-col h-1/4 justify-center items-center gap-4">
-            <li class="auto-blur text-bold">aksdjfkw</li>
-            <li class="auto-blur text-bold">asgw</li>
-            <li class="auto-blur text-bold">zsdgWe</li>
-            <li class="auto-blur text-bold">sedfsef</li>
-        </ul>
-    </div>
-</div>
-
+    </div>   
+    </section>
     
-    
-    <div id="agri-hero-2" class="lg:hidden w-full">
-      <div id="hero-2-content" class="mx-auto">
-        <ul class="flex flex-col items-center">
-          <li><p>Lorem, ipsum dolor.</p></li>
-          <li><p>Lorem, ipsum dolor.</p></li>
-          <li><p>Lorem, ipsum dolor.</p></li>
-          <li><p>Lorem, ipsum dolor.</p></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <section class="h-[90vh] lg:h-[100vh] flex-col flex gap-10 py-32 lg:py-12 bg-white">
 
-    <div class="w-full lg:h-[90vh] bg-white lg:grid lg:place-content-center lg:pt-44">
-        <div id="agri-drone-video" class="overflow-hidden lg:rounded-lg h-[27vh] lg:h-full w-full lg:w-2/3  mx-auto relative">
-            <div class="play-btn"></div>
-            <video
-            id="drone-video"
-            data-src="{% static 'core/Drone_clip.mp4' %}"
-            loop
-            controls="nodownload"
-            class="lazy"
-            ></video>
+        <div class="bg-white mx-auto pt-12 lg:pt-24 flex flex-col items-center gap-8">
+            <h2 
+            class="lg:text-[68px] text-3xl text-center font-semibold text-black leading-[0.9]" 
+            data-aos="fade-up" 
+            data-aos-duration="600"
+            >India's First Ultra-Compact <br>
+            10-Litre <span class="text-[#5cea55] underline-text relative">Agricultural</span> Drone.</h2>
             
-            <!-- <iframe height="520px" width="734px" class="absolute top-1/2 left-1/2" src="https://www.youtube.com/embed/gZaBwdru_bk"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen ></iframe> -->
         </div>
-    </div>
+        <div class="w-full lg:h-[700px] py-8 bg-white lg:grid lg:place-content-center px-2">
+            <div id="agri-drone-video" class="overflow-hidden rounded-lg h-max lg:h-full lg:w-[800px] mx-auto relative" data-aos="zoom-in">
+                <iframe id="ytplayer" type="text/html"
+                    src="https://www.youtube.com/embed/RTzzgJ4ZjzE"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="aspect-ratio: 16/9; width: 100%;">
+                </iframe>
+                
+            </div>
+        </div>
+        <div class="text-center bg-white">
+            <a href="tel:+919810513518" class=" bg-yellow-500 text-white px-4 py-2 text-2xl font-medium hover:shadow-lg hover:bg-white hover:text-yellow-500 hover:border-2 border-yellow-500 hover:scale-110 transition-all duration-300 linear"  data-aos="zoom-out" data-aos-duration="400">Pre-Order Now</a>
+        </div>
+    </section>
 
-  <section id="agri-drone-features">
-    <div id="agri-flow-cards-container" class="lg:h-[90vh] py-16 w-full flex flex-col items-center justify-center gap-4 bg-white">
+  <section id="agri-drone-features overflow-hidden h-[70vh]">
+    <div id="agri-flow-cards-container" class="lg:h-[700px] pb-12 pt-6 w-full overflow-hidden flex flex-col items-center justify-center gap-4 bg-white">
         <div class="flex flex-col lg:flex-row justify-center gap-6 w-10/12 lg:w-9/12 mx-auto">
 
             <div
             class="p-6 lg:p-10 bg-gray-300 lg:w-[40%] w-full mx-auto rounded-md flex flex-col gap-3"
+            data-aos="fade-left"
             >
-                <h6 class="text-xl lg:text-2xl ">Max Flow Rate</h6>
+                <h6 class="text-xl lg:text-2xl ">Payload capacity & Endurance</h6>
                 <div class="">
 
-                    <p class="text-base">Lorem ipsum dolor sit. <span>lorem</span></p>
+                    <p class="text-base">10kg of spraying payload</p>
                     <div class="flex gap-3 items-center">
                         
                         <span class="progress-bar-accent text-right h-2 w-9/12 bg-gradient-to-r from-white to-yellow-500 rounded-lg"></span><span class="-mr-10 -mt10 text-yellow-500"><span class=" text-2xl">1.2 </span>x</span>
                     </div>
                 </div>
-                <p>Lorem, ipsum dolor. <span>lorem</span></p>
+                <p>27 Minutes Flight Time</p>
                 <div class="flex gap-3 items-center">
 
                     <span class="progress-bar-gray  text-right h-2 w-1/2 bg-slate-300 rounded-lg"></span>
                 </div>
                 <div class="divider bg-gray-600 w-11/12 border-gray-600 border border-bottom my-12"></div>
-                <h6 class="text-xl lg:text-2xl italic">Lorem <span class="text-yellow-500"> ipsum dolor sit amet.</span></h6>
+                <h6 class="text-xl lg:text-2xl italic"><span class="text-yellow-500">Control & Transmission</span></h6>
                 <div class="flex flex-col gap-4">
-                    <p>Open Field <span class="mx-4"> | </span><span class="text-yellow-500"><span class="text-3xl">19 </span>ha/hr</span></p>
-                    <p>Open Field <span class="mx-4"> | </span><span class="text-yellow-500"><span class="text-3xl">19 </span>ha/hr</span></p>
+                    <p>DA-GCS Mobile App</p>
+                    <p>Remote Controller for precision and reliable control</p>
                 </div>
             </div>
             <div
             class="p-6 lg:p-10 bg-gray-300 lg:w-[40%] w-full  mx-auto rounded-md flex flex-col gap-3"
+            data-aos="fade-right"
             >
-                <h6 class="text-xl lg:text-2xl">Max Flow Rate</h6>
+                <h6 class="text-xl lg:text-2xl">Type & Material</h6>
                 <div class="">
 
-                    <p class="text-base">Lorem ipsum dolor sit. <span>lorem</span></p>
+                    <p class="text-base">Frame Quadcopter</p>
                     <div class="flex gap-3 items-center">
                         
                         <span class="progress-bar-accent  text-right h-2 w-9/12 bg-gradient-to-r from-white to-yellow-500 rounded-lg"></span><span class="-mr-10 -mt10 text-yellow-500"><span class=" text-2xl">1.2 </span>x</span>
                     </div>
                 </div>
-                <p>Lorem, ipsum dolor. <span>lorem</span></p>
+                <p>Aluminium and Carbon fiber</p>
                 <div class="flex gap-3 items-center">
 
                     <span class="progress-bar-gray  text-right h-2 w-1/2 bg-slate-300 rounded-lg"></span>
                 </div>
                 <div class="divider bg-gray-600 w-11/12 border-gray-600 border border-bottom my-12"></div>
-                <h6 class="text-xl lg:text-2xl italic">Lorem <span class="text-yellow-500"> ipsum dolor sit amet.</span></h6>
+                <h6 class="text-xl lg:text-2xl italic"><span class="text-yellow-500"> Safety features and sensors</span></h6>
                 <div class="flex flex-col gap-4">
-                    <p>Open Field <span class="mx-4"> | </span><span class="text-yellow-500"><span class="text-3xl">19 </span>ha/hr</span></p>
-                    <p>Open Field <span class="mx-4"> | </span><span class="text-yellow-500"><span class="text-3xl">19 </span>ha/hr</span></p>
+                    <p>Return-to-home (RTH) on low battery</p>
+                    <p>Terrain and obstacle detection</p>
                 </div>
             </div>    
         </div>
-        <p class="mx-auto text-center text-xs leading-[1.2]">
-            Lorem ipsum dolor sit amet consectetur adipisicing.
-        </p>
+        <div class="lg:w-8/12 mx-auto">
+
+            <p class="text-end text-xs leading-[1.2]">
+                Actual performance depends on real-life conditions.
+            </p>
+        </div>
     </div>
 
-    <div id="agri-payload-container-m" class="lg:hidden px-8 py-12 flex flex-col gap-6">
-      <p>Lorem ipsum dolor sit amet.</p>
-      <h2 class="text-white">Lorem ipsum dolor sit amet consectetur.</h2>
-      <div class="space-y-1">
-        <img
-          src="{% static 'core/img/drone-white.jpg' %}"
-          alt="drone-unfolded"
-        />
-        <h3 class="text-white">Lorem, ipsum.</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, illo.
-        </p>
-      </div>
-      <div class="space-y-1">
-        <img
-          src="{% static 'core/img/drone-white.jpg' %}"
-          alt="drone-unfolded"
-        />
-        <h3 class="text-white">Lorem, ipsum.</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, illo.
+    <div class="w-full spray-banner relative">
+        <div class="space-y-2 lg:w-8/12 absolute lg:top-[10%] top-[4%] left-[5%] lg:left-[15%] text-white mx-auto">
+            <h3 class="relative text-xl xl:text-3xl text-black shadow-text" data-aos="slide-down"><span class="italic text-3xl lg:text-3xl font-semibold ">P10</span><sup class="text-yellow-500 text-base top-[-1em] lg:top-[-1.2em] lg:mb-2 italic">PRO</sup></h3>
+            <p class="text-base lg:text-3xl " data-aos="fade-up" >5 Minutes = 1 Acre</p>
+            <h3 class="lg:text-5xl text-3xl text-white font-semibold shadow-text leading-[1.4]" data-aos="fade-up" data-aos-delay="300">25% <span class="text-[#5cea55]">Reduction</span> in Agriculture input</h3>
+            <p class="lg:text-3xl text-lg"  data-aos="fade-up" data-aos-delay="350">Experience an 8-15% increase in agricultural productivity<span class="text-[#5cea55]">.</span></p>
+        </div>
+    </div>
+
+    
+
+    <div id="agri-spray-feature-container" class="px-8 py-12 text-white relative">
+      <div class="absolute top-[6%] left-[5%] lg:top-[20%] lg:left-[15%] flex flex-col gap-2 lg:w-10/12 mx-auto">
+        
+        <h3 class="lg:text-3xl text-xl" data-aos="fade-up">Night Flying Capability - Equipped with bright <span class="text-[#00F491]">LED </span>lights.</h3>
+        <p class="lg:text-2xl text-lg text-white" data-aos="fade-up" data-aos-delay="200">
+          Enhanced visibility and safety during nighttime operations.
         </p>
       </div>
 
       
     </div>
 
-    <div class="w-full spray-banner flex items-center">
-        <div class="space-y-6 w-8/12 text-white mx-auto">
-            <h6 class="text-sm">Lorem, ipsum.</h6>
-            <p>Lorem ipsum dolor sit amet consectetur <br>
-            adipisicing elit. Neque laboriosam eum voluptas.</p>
-            <h3 class="text-3xl">Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut unde nisi reprehenderit voluptatum <br>
-            architecto dolor, obcaecati ut nam eaque dicta.</p>
-        </div>
-    </div>
-
+    
     <div class="w-full h-svh hidden relative lg:block">
 
         <div class="scale-up-video absolute scale-50 w-full h-full grid overflow-hidden">
-            <video data-src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="lazy object-cover h-auto w-full"></video>
+            <video data-src="{% static 'core/night-video.mp4' %}" autoplay loop muted class="lazy object-cover h-auto w-full"></video>
             
         </div>
-        <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
-            <ul class="flex justify-between w-8/12 mx-auto">
-                <li>
-                    <p class="text-white">Max. Flow Rate</p>
-                    <p class="text-white"><span>22</span> L/min</p>
-                </li>
-                <li>
-                    <p class="text-white">Max. Flow Rate</p>
-                    <p class="text-white"><span>22</span> L/min</p>
-                </li>
-                <li>
-                    <p class="text-white">Max. Flow Rate</p>
-                    <p class="text-white"><span>22</span> L/min</p>
-                </li>
-                <li>
-                    <p class="text-white">Max. Flow Rate</p>
-                    <p class="text-white"><span>22</span> L/min</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="agri-spray-feature-container" class="px-8 py-12 text-white flex flex-col justify-between">
-      <div class="flex flex-col gap-2 lg:w-10/12 mx-auto">
-        <h6 class="text-sm font-normal">Lorem, ipsum.</h6>
-        <p class="text-xs text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          explicabo tenetur necessitatibus!
-        </p>
-        <h class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-        <p class="text-xs text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor
-          eius nihil magni, magnam suscipit.
-        </p>
-      </div>
-
-      <ul id="agri-spray-feature-list" class="grid grid-cols-2 gap-2 text-white lg:w-10/12 mx-auto">
-        <li class="">
-          <p class="text-xs text-white">Lorem, ipsum dolor.</p>
-          <p class="text-white"><span class="text-lg">22</span> L/min</p>
-        </li>
-        <li>
-          <p class="text-xs text-white">Lorem, ipsum dolor.</p>
-          <p class="text-white"><span class="text-lg">22</span> L/min</p>
-        </li>
-        <li>
-          <p class="text-xs text-white">Lorem, ipsum dolor.</p>
-          <p class="text-white"><span class="text-lg">22</span> L/min</p>
-        </li>
-        <li>
-          <p class="text-xs text-white">Lorem, ipsum dolor.</p>
-          <p class="text-white"><span class="text-lg">22</span> L/min</p>
-        </li>
-        
-      </ul>
-    </div>
-
-    <div id="agri-application-list-container" class="w-full lg:h-dvh p-8 lg:p-16 bg-white">
-      <ul id="agri-application-list" class="mx-auto text-center grid lg:grid-cols-2 gap-4 lg:w-8/12 lg:h-[75vh] max-w">
-        <li class="flex lg:relative justify-center items-start rounded-sm">
-          <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
-          <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
-            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
-            <div class="flex flex-col lg:flex-row">
-
-                <p class="text-xs">Lorem, ipsum.</p>
-                <p class="text-xs">Lorem, ipsum.</p>
-                <p class="text-xs">Lorem, ipsum.</p>
-            </div>
-          </div>
-        </li>
-        <li class="flex lg:relative justify-center items-start">
-          <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
-          <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
-            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
-            <div class="flex flex-col lg:flex-row">
-
-                <p class="text-xs">Lorem, ipsum.</p>
-                <p class="text-xs">Lorem, ipsum.</p>
-                <p class="text-xs">Lorem, ipsum.</p>
-            </div>
-          </div>
-        </li>
-        <li class="flex lg:relative justify-center items-start">
-          <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
-          <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
-            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
-            <div class="flex flex-col lg:flex-row">
-
-                <p class="text-xs">Lorem, ipsum.</p>
-                <p class="text-xs">Lorem, ipsum.</p>
-                <p class="text-xs">Lorem, ipsum.</p>
-            </div>
-          </div>
-        </li>
-        <li class="flex lg:relative justify-center items-start">
-          <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy lg:absolute top-0 left-0 lg:w-full lg:h-full h-28 w-44"/>
-          <div class="flex flex-col p-2 text-start lg:mt-12 lg:text-center z-[1]">
-            <h5 class="text-sm">Lorem, ipsum dolor.</h5>
-            <div class="flex flex-col lg:flex-row">
-
-                <p class="text-xs">Lorem, ipsum.</p>
-                <p class="text-xs">Lorem, ipsum.</p>
-                <p class="text-xs">Lorem, ipsum.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
 
     </div>
 
-    <div id="agri-speed-feature-container" class="px-8 py-12 text-white lg:hidden flex flex-col justify-between">
+    <!-- <div id="agri-speed-feature-container" class="px-8 py-12 text-white lg:hidden flex flex-col justify-between">
         <div class="flex flex-col gap-2">
           <h6 class="text-sm font-normal">Lorem, ipsum.</h6>
           <p class="text-xs text-white">
@@ -315,47 +208,46 @@
           </li>
           
         </ul>
-    </div>
+    </div> -->
     <div class="">
 
-        <div class="hidden lg:flex h-lvh w-9/12 mx-auto items-center justify-between gap-8">
-            <div class="w-1/2">
-                <p class="text-xl text-white">Lorem, ipsum.</p>
-                <h2 class="text-7xl text-white">Spread a bag of fertilizer in just 20 seconds.</h2>
+        <div class="flex flex-col lg:flex-row h-dvh pt-24 px-2 lg:w-9/12 mx-auto items-center justify-center lg:justify-between gap-8">
+            <div class="lg:w-1/2">
+                <!-- <p class="text-xl text-white" data-aos="fade-up" data-aos-delay="200">Lorem, ipsum.</p> -->
+                <h2 class="text-5xl lg:text-7xl text-white lg:leading-[1.2]" data-aos="fade-up" data-aos-duration="800">Exceptional water resistance keeps you flying in any weather.</h2>
             </div>
-            <div class="space-y-8 w-1/2">
-                <p class="text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil libero iusto dolorum dolore ut sunt atque modi mollitia voluptatem dolor! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis.</p>
-                <div class="space-y-3">
-                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <h3 class="text-yellow-500 text-5xl">Lorem ipsum dolor sit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="space-y-8 lg:w-1/2 overflow-x-hidden">
+                <div class="lg:space-y-3">
+                    <h3 class="text-yellow-500 lg:text-5xl text-3xl" data-aos="fade-up" data-aos-duration="500">Unmatched Protection.</h3>
+                    <p class="text-white lg:text-2xl text-xl" data-aos="fade-up" data-aos-delay="50">Conquer Any Weather.</p>
                 </div>
+                <p class="lg:text-xl text-base text-white" data-aos="fade-left">Our drone's exceptional water resistance ensures unstoppable performance, rain or shine. Get ready to boost your productivity with confidence, knowing your drone is built to withstand the elements.</p>
             </div>
         </div>
 
         <div class="w-full h-[94vh] hidden relative lg:block">
             
             <div class="scale-up-video absolute w-full h-full scale-50 grid overflow-hidden">
-            <video data-src="{% static 'core/Drone_Clip.mp4' %}" autoplay loop muted class="lazy object-cover h-full w-full"></video>
+            <video data-src="{% static 'core/water-proof.mp4' %}" autoplay loop muted class="lazy object-cover h-full w-full"></video>
             
             </div>
             <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
                 <ul class="flex justify-between w-8/12 mx-auto">
                     <li>
-                        <p class="text-white">Max. Flow Rate</p>
-                        <p class="text-white"><span>22</span> L/min</p>
+                        <p class="text-white text-3xl leading-[1.6] mb-2 shadow-text">Max. Flow Rate</p>
+                        <p class="text-white text-xl"><span class="text-5xl shadow-text font-semibold">5</span> L/min</p>
                     </li>
                     <li>
-                        <p class="text-white">Max. Flow Rate</p>
-                        <p class="text-white"><span>22</span> L/min</p>
+                        <p class="text-white text-3xl leading-[1.6] mb-2 shadow-text">Droplet Size Range</p>
+                        <p class="text-white text-xl"><span class="text-5xl shadow-text font-semibold">60-400</span> &mu;m</p>
                     </li>
                     <li>
-                        <p class="text-white">Max. Flow Rate</p>
-                        <p class="text-white"><span>22</span> L/min</p>
+                        <p class="text-white text-3xl leading-[1.6] mb-2 shadow-text">Spray Width</p>
+                        <p class="text-white text-xl"><span class="text-5xl shadow-text font-semibold">5-10</span> L/min</p>
                     </li>
                     <li>
-                        <p class="text-white">Max. Flow Rate</p>
-                        <p class="text-white"><span>22</span> L/min</p>
+                        <p class="text-white text-3xl leading-[1.6] mb-2 shadow-text">More Durable Peristaltic Pump</p>
+                        <p class="text-white text-xl"><span class="text-5xl shadow-text font-semibold">3</span> x higher (compared with P100)</p>
                     </li>
                 </ul>
             </div>
@@ -363,33 +255,29 @@
     </div>
 
 
-    <div id="agri-more-features-container" class=" w-full">
+    <div id="agri-more-features-container" class=" w-full overflow-x-hidden mb-8">
         <div class="px-8 py-12 grid gap-8 h-full w-full">
 
-            <div class=" text-center lg:h-[75vh] flex flex-col lg:gap-8 gap-4 justify-center">
+            <!-- <div class=" text-center lg:h-[75vh] flex flex-col lg:gap-8 gap-4 justify-center">
                 
-                <h3 class="text-white lg:text-3xl text-2xl">What else besides efficient?</h3>
-                <h2 class="text-yellow-500 lg:text-5xl text-3xl font-semibold">Highly Precision</h2>
-            </div>
+                <h3 class="text-white lg:text-3xl text-2xl" data-aos="zoom-in" data-aos-duration="600">What else besides efficient?</h3>
+                <h2 class="text-yellow-500 lg:text-7xl text-3xl font-semibold" data-aos="zoom-out-up" data-aos-duration="800" >Highly Precision</h2>
+            </div> -->
         
         
-            <div class="flex lg:flex-row flex-col gap-4 lg:h-[75vh] lg:w-9/12 mx-auto items-center" data-aos="fade-in" >
+            <div class="flex lg:flex-row flex-col gap-6 lg:h-[75vh] lg:w-9/12 w-full mx-auto items-center py-36" >
             
 
-            <p class="text-start lg:text-xl lg:w-1/3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
-                doloribus dolorem ut optio perferendis harum in cupiditate id neque
-                explicabo!
-            </p>
+                <div class="text-5xl lg:text-7xl text-white leading-[1.2]" data-aos="fade-up" data-aos-duration="800">Fly Fearlessly.</div>
 
-            <div class="flex w-full gap-2 text-center">
-                <div class="w-1/2">
-                    <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy w-full h-full object-cover"/>
-                    <p class="text-white text-xs">Lorem, ipsum.</p>
+            <div class="flex flex-col lg:flex-row w-full lg:w-2/3 lg:gap-2 gap-12 text-center">
+                <div class="lg:w-1/2 w-full space-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <img data-src="{% static 'core/img/agri/waterproof4.png' %}" alt="" class="lazy w-full h-full object-cover"/>
+                    <p class="text-white lg:text-base text-sm">Durable Rugged Frame.</p>
                 </div>
-                <div class="w-1/2">
-                    <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy w-full h-full object-cover"/>
-                    <p class="text-white text-xs">Lorem, ipsum.</p>
+                <div class="lg:w-1/2 space-y-2" data-aos="fade-up" data-aos-delay="250">
+                    <img data-src="{% static 'core/img/agri/waterproof3.png' %}" alt="" class="lazy w-full h-full object-cover"/>
+                    <p class="text-white lg:text-base text-sm">Exceptionally Water Resistance.</p>
                 </div>
             </div>
             
@@ -398,191 +286,110 @@
 
       
 
-      <div class="agri-more-feature-list flex flex-col lg:w-8/12 w-10/12 lg:gap-16 gap-8 mx-auto mt-12">
-        <h3 class="text-white lg:text-2xl text-base font-semibold">How to balance efficiency and precision? <br>
-            We address this issue through 3 aspects:
-        </h3>
+      <div class="agri-more-feature-list flex flex-col lg:w-8/12 w-full lg:gap-16 gap-8 mx-auto mt-12 overflow-hidden">
+        <div class="flex flex-col-reverse lg:flex-row justify-between lg:h-[45vh] items-center gap-2 w-full px-4">
+            <div class="portablity_content lg:w-1/2 h-full flex flex-col justify-between my-18" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
+                <div class="mt-10 space-y-4">
 
-        <ul id="agri-more-feature-list-m" class="flex lg:hidden flex-col gap-10">
-    
-            <li class="text-white space-y-3">
-              <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                doloremque reiciendis quasi quo quae? Nihil numquam autem
-                consectetur consequuntur esse!
-              </p>
-              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy"/>
-            </li>
-            <li class="text-white space-y-3 ">
-              <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                doloremque reiciendis quasi quo quae? Nihil numquam autem
-                consectetur consequuntur esse!
-              </p>
-              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt=""  class="lazy"/>
-            </li>
-            <li class="text-white space-y-3 ">
-              <h6 class="text-sm">Lorem ipsum dolor sit.</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                doloremque reiciendis quasi quo quae? Nihil numquam autem
-                consectetur consequuntur esse!
-              </p>
-              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt=""  class="lazy"/>
-            </li>
-            
-          </ul>
+                    <h3 class="text-white text-3xl lg:text-5xl font-semibold leading-[1.2]" data-aos="slide-up" data-aos-duration="400">Introducing India's First Ultra-Compact Agricultural Drone!</h3>
+                    <div class="space-y-1">
 
-        <div class="hidden selector-container h-1/3 lg:flex w-full justify-between mx-auto my-8">
-            <div class="selector-list border-l w-1/3">
-              <div class="selector text-2xl active active:text-white" onclick="toggleContent(0)">Vertical spread from the air</div>
-              <div class="selector-content pb-8 active" id="content-0">
-                <p>Vertical centrifugal spreading discs provide fast vertically downward acceleration, strong wind resistant. Spread width precisely adjusts according to the flight height, blanket spreading without misses or overlaps.</p>
-              </div>
-              <div class="selector text-2xl active:text-white" onclick="toggleContent(1)">Variable-rate application</div>
-              <div class="selector-content pb-8" id="content-1">
-                <p>Intelligent screw feeder automatically adjusts the discharge speed according to the flight speed, spreading is more uniform.</p>
-              </div>
-              <div class="selector text-2xl active:text-white" onclick="toggleContent(2)">Real-time volume sensing</div>
-              <div class="selector-content pb-8" id="content-2">
-                <p>Intelligent container adopts non-contact volume sensor to detect level of remaining granules in real time. Resistant to corrosion and adhesion, more precise and reliable. Screw feeder idling and misses are prevented.</p>
-              </div>
+                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="100">Light enough to carry anywhere.</p>
+                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="200">Made for Indian conditions.</p>
+                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="300">Saves transportation costs.</p>
+                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="400">Covers 1 Acre in 5 Minutes.</p>
+                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="500">Ultra Fast battery charging.</p>
+                    </div>
+                </div>    
+                <div class="my-8"  data-aos="slide-up" data-aos-duration="400">
+                    <a href="tel:+919810513518" class=" bg-yellow-500 text-white px-4 py-2 text-2xl font-medium  hover:shadow-lg hover:bg-transparent hover:border-2 border-yellow-500 hover:text-white hover:scale-110 transition-all duration-300 linear">Questions? Contact Today!</a>
+                </div>
             </div>
-            
-            <div class="w-1/2">
-              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 1" class="lazy selector-image active h-full w-full object-cover" id="image-0">
-              <img data-src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 2" class="lazy selector-image  h-full w-full object-cover" id="image-1">
-              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 3" class="lazy selector-image h-full w-full object-cover" id="image-2">
+            <div class="portablity-image-container lg:w-1/2 " data-aos="fade-left" data-aos-delay="200">
+                <img data-src="{% static 'core/img/agri/farmer1.png' %}" alt="farmer taking out drone from the bag" class="lazy object-cover w-full">
             </div>
         </div>
         
-        <div class="my-16">
+            <div class="my-16 px-2 ">
 
-            <ul class="grid grid-cols-2 lg:grid-cols-4 w-full gap-1">
-                <li class="rounded-md overflow-hidden"><img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy size-48 lg:size-72 object-cover"></li>
-                <li class="rounded-md overflow-hidden"><img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy size-48 lg:size-72 object-cover"></li>
-                <li class="rounded-md overflow-hidden"><img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy size-48 lg:size-72 object-cover"></li>
-                <li class="rounded-md overflow-hidden"><img data-src="{% static 'core/img/drone-white.jpg' %}" alt="" class="lazy size-48 lg:size-72 object-cover"></li>
+                <ul class="flex flex-wrap justify-between w-full">
+                    <li class="rounded-md overflow-hidden w-[49%] mb-1 lg:w-[24%]"><img data-src="{% static 'core/img/agri/portable1.png' %}" alt="" class="lazy w-full object-cover aspect-1"></li>
+                    <li class="rounded-md overflow-hidden w-[49%] mb-1 lg:w-[24%]"><img data-src="{% static 'core/img/agri/portable2_5-4.png' %}" alt="" class="lazy w-full object-cover aspect-1"></li>
+                    <li class="rounded-md overflow-hidden w-[49%] mb-1 lg:w-[24%]"><img data-src="{% static 'core/img/agri/portable3.png' %}" alt="" class="lazy w-full object-cover aspect-1"></li>
+                    <li class="rounded-md overflow-hidden w-[49%] mb-1 lg:w-[24%]"><img data-src="{% static 'core/img/agri/portable4.png' %}" alt="" class="lazy w-full object-cover aspect-1"></li>
+                    
+                    
+                </ul>
                 
-                
-            </ul>
-            <div class="flex flex-col lg:flex-row justify-between mt-4 gap-8 text-center lg:text-start">
-                <span class="text-white">Don't worry, they all pour smoothly!</span>
-                <a href="#" class="text-white text-end text-sm lg:text-base lg:w-1/3 mx-auto">Learn more about how RevoCast 3 is
-                    adaptable to different fertilizers. <span>arrow</span>
-                </a>
             </div>
-        </div>
       </div>
 
       
     </div>
-    <div class="h-[80vh] hidden lg:block w-full">
-        <img data-src="https://static.xag.cn/img/product2022/p100-pro/feature-ruitu-top-img.png" alt="" class="lazy object-cover w-full h-full">
+    <div class="lg:h-[90vh] h-[25vh] flex bg-white justify-center items-center w-full relative">
+        <div class="absolute top-0 left-0 w-full h-auto">
+            <img data-src="{% static 'core/img/agri/comparison-drone.png' %}" alt="" class="lazy object-cover w-full h-full">
+        </div>
+        <div class=" absolute top-1/2 left-[calc( 50% - width / 2) flex flex-col items-center justify-center z-[1]">
+
+            <div class="lg:ml-40 ml-8" data-aos="flip-up"><span class="lg:text-[140px] text-3xl font-semibold">40</span><span class="lg:text-[100px] font-semibold">% </span><span class="lg:text-5xl  text-base italic font-semibold">SMALLER</span>
+            </div>
+        </div>
     </div>
-    <div class="bg-white py-12">
-        <div class="lg:w-8/12 w-10/12 mx-auto py-10">
+    <div class="bg-white lg:h-lvh lg:pt-44">
+        <div class="lg:w-8/12 w-10/12 space-y-8 mx-auto py-10">
             <div class="heading">
-                <h6>XAG RealTerra 2</h6>
-                <h3 class="text-3xl lg:text-5xl">Need farmland and orchard mapping? Take it easy.</h3>
+                <h3 class="relative text-xl xl:text-3xl text-black shadow-text"><span class="italic text-3xl lg:text-3xl font-semibold ">P10</span><sup class="text-yellow-500 text-base top-[-1em] lg:top-[-1.2em] lg:mb-2 italic">PRO</sup></h3>
+                <h3 class="text-3xl lg:text-5xl" data-aos="fade-right">Bharat's First Compact Agricultural Drone.</h3>
             </div>
 
-            <div class="app-slider">
-                <div class="hidden selector-container lg:flex h-1/3 w-full justify-between mx-auto my-8">
-                    <div class="selector-list-1 border-l w-1/3">
-                      <div class="selector1 text-2xl active active:text-black" onclick="toggleContent1(0)">Vertical spread from the air</div>
-                      <div class="selector-content1 active pb-8" id="content-0">
-                        <p>Vertical centrifugal spreading discs provide fast vertically downward acceleration, strong wind resistant. Spread width precisely adjusts according to the flight height, blanket spreading without misses or overlaps.</p>
-                      </div>
-                      <div class="selector1 text-2xl active:text-white" onclick="toggleContent1(1)">Variable-rate application</div>
-                      <div class="selector-content1 pb-8" id="content-1">
-                        <p>Intelligent screw feeder automatically adjusts the discharge speed according to the flight speed, spreading is more uniform.</p>
-                      </div>
-                      <div class="selector1 text-2xl active:text-white" onclick="toggleContent1(2)">Real-time volume sensing</div>
-                      <div class="selector-content1 pb-8" id="content-2">
-                        <p>Intelligent container adopts non-contact volume sensor to detect level of remaining granules in real time. Resistant to corrosion and adhesion, more precise and reliable. Screw feeder idling and misses are prevented.</p>
-                      </div>
-                    </div>
+            <div class="flex flex-col-reverse lg:flex-row justify-between items-center gap-2 w-full">
+                <div class="portablity_content lg:w-1/2 space-y-2" data-aos="slide-up" data-aos-delay="100" data-aos-duration="400" >
+                    <h2 class="text-3xl font-medium leading-[1.4]">Introducing India's First Compact Agricultural Drone</h2>
+                    <p class="text-lg">Designed specifically for Indian conditions, our rugged and compact agricultural drone is easy to carry and use. Featuring a 10-litre water tank and high-performance capabilities, it can cover up to 25 acres per day. Water Resistance and built to last, this drone is the perfect solution for efficient and effective agricultural operations.
+                    </p>
+                    <p class="text-lg"><span class="font-semibold">Warranty:</span> Enjoy peace of mind with our comprehensive 3-year warranty on all parts and services.</p>
+                </div>
+                <div class="portablity-image-container lg:w-[600px] lg:h-[450px] overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img 
+                    data-src="{% static 'core/img/agri/drone-with-bag.png' %}" 
                     
-                    <div class="w-1/2">
-                      <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 1" class="lazy selector-image1 active h-full w-full object-cover" id="image-3">
-                      <img data-src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 2" class="lazy selector-image1 h-full w-full object-cover" id="image-4">
-                      <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 3" class="lazy selector-image1 h-full w-full object-cover" id="image-5">
-                    </div>
+                    alt="drone with the bag" class="lazy object-cover h-full w-full">
                 </div>
             </div>
 
         </div>
-        <div class="w-10/12 mx-auto text-center space-y-4 my-10">
-            <h5 class="text-xl lg:text-2xl text-yellow-500">Lorem ipsum dolor sit amet consectetur.</h5>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eveniet totam, voluptatibus rem neque sunt!</p>
-            <div class="h-80 lg:w-10/12 mx-auto rounded-md overflow-hidden">
-                <img data-src="{% static 'core/img/cloud-bg.jpg' %}" alt="" class="lazy object-cover w-full h-full">
+        <!-- <div class="w-10/12 mx-auto text-center space-y-4 my-10">
+            <h5 class="text-xl lg:text-2xl text-yellow-500" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur.</h5>
+            <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eveniet totam, voluptatibus rem neque sunt!</p>
+            <div class="h-80 lg:w-10/12 mx-auto rounded-md overflow-hidden" data-aos="zoom-in">
+                <img data-src="{% static 'core/img/agri/cloud-bg.jpg' %}" alt="" class="lazy object-cover w-full h-full">
             </div>
             
-        </div>
+        </div> -->
     </div>
-    <div class="app-slider2 h-svh w-9/12 mx-auto py-12">
-        <div class="hidden selector-container align-middle h-full lg:flex w-full items-center justify-between mx-auto my-8">
-            <div class="selector-list-2 border-l w-1/3">
-              <div class="selector2 text-2xl active " onclick="toggleContent2(0)">Vertical spread from the air</div>
-              <div class="selector-content2 active pb-8" id="content-0">
-                <p>Vertical centrifugal spreading discs provide fast vertically downward acceleration, strong wind resistant. Spread width precisely adjusts according to the flight height, blanket spreading without misses or overlaps.</p>
-              </div>
-              <div class="selector2 text-2xl " onclick="toggleContent2(1)">Variable-rate application</div>
-              <div class="selector-content2 pb-8" id="content-1">
-                <p>Intelligent screw feeder automatically adjusts the discharge speed according to the flight speed, spreading is more uniform.</p>
-              </div>
-              <div class="selector2 text-2xl " onclick="toggleContent2(2)">Real-time volume sensing</div>
-              <div class="selector-content2 pb-8" id="content-2">
-                <p>Intelligent container adopts non-contact volume sensor to detect level of remaining granules in real time. Resistant to corrosion and adhesion, more precise and reliable. Screw feeder idling and misses are prevented.</p>
-              </div>
+    <div class="bg-[#0C0C0C] lg:h-[60vh] overflow-hidden py-8">
+        <div class="flex flex-col-reverse lg:flex-row justify-between items-center gap-2 w-full h-full lg:w-9/12 mx-auto">
+            <div class="portablity_content lg:w-1/2" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
+                <h2 class="text-white lg:text-5xl text-3xl leading-[1.2]">DA-GCS App</h2>
+                <p class="lg:text-2xl text-xl">Agri specific mobile application</p>
             </div>
-            
-            <div class="w-1/2 h-full flex items-center justify-center overflow-hidden">
-              <img height="400px"  src="https://static.xag.cn/img/product2022/p100-pro/en/nongfu-img2.png" alt="Image 0" class="lazy selector-image2 active object-cover h-10/12" id="image-6">
-              <img data-src="{% static 'core/img/cloud-bg.jpg' %}" alt="Image 1" class="lazy selector-image2" id="image-7">
-              <img data-src="{% static 'core/img/drone-white.jpg' %}" alt="Image 8" class="lazy selector-image2" id="image-8">
+            <div class="portablity-image-container w-full lg:w-1/2" data-aos="slide-left" data-aos-delay="200">
+                <img data-src="{% static 'core/img/agri/controller-app.png' %}" alt="controller application" class="lazy object-cover w-full lg:rounded-[50px]">
             </div>
         </div>
     </div>
-    <!-- <div class="w-full h-lvh agribanner bg-image-2 bg-image-1  relative overflow-hidden">
-        <div class="h-full grid place-content-center">
-            <h3 class="text-3xl text-white">Industry-leading fully autonomous flight</h3>
-            <h2 class="text-7xl text-white">Seize the farming season day and night.</h2>
-        </div>
-    </div> -->
-
-    <div id="" class="bg-white">
-        <div id="agri-mapping-feature-container" class=" py-12 px-8 text-white flex flex-col justify-between">
-            <div class="">
-                <h6>Lorem, ipsum.</h6>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-                <h3>Lorem, ipsum dolor.</h3>
-            </div>
-            <ul id="agri-mapping-feature-list" class="grid">
-              <li><p class="text-sm">Lorem, ipsum dolor.</p></li>
-              <li><p class="text-sm">Lorem, ipsum dolor.</p></li>
-              <li><p class="text-sm">Lorem, ipsum dolor.</p></li>
-            </ul>
-        </div>
-        <div class="text-black px-8 py-12 text-center space-y-3">
-            <h3 class="text-yellow-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quidem
-              delectus aspernatur cupiditate nihil vero possimus et totam neque
-              tenetur.
-            </p>
-            <img data-src="{% static 'core/img/drone-white.jpg' %}" alt=""  class="lazy w-full h-1/3"/>
-        </div>
     
+
+    <div id="" class="bg-white lg:mt-12">
+        <div id="agri-mapping-feature-container" class=" py-12 px-8 text-white flex flex-col justify-between">
+            
+        </div>
         
     </div>
 
   
-    <div class=""></div>
+    <!-- <div class=""></div>
     <div
       id="image-slider"
       class="splide max-w-full min-h-96 m-auto lg:hidden"
@@ -594,95 +401,41 @@
           <li class="splide__slide">
             <img
               class=""
-              src="{% static 'core/img/drone-white.jpg' %}"
+              src="{% static 'core/img/agri/drone-white.jpg' %}"
               alt="Image 1"
             />
           </li>
           <li class="splide__slide">
             <img
               class="h-full"
-              src="{% static 'core/img/sri_muktsar_sahib_popup.png' %}"
+              src="{% static 'core/img/agri/farmer1.png' %}"
               alt="Image 2"
             />
           </li>
           <li class="splide__slide">
             <img
               class=""
-              src="{% static 'core/img/drone-white.jpg' %}"
+              src="{% static 'core/img/agri/drone-white.jpg' %}"
               alt="Image 3"
             />
           </li>
-          <!-- Add more slides as needed -->
         </ul>
       </div>
-    </div>
-
-    <div id="agri-banners-container">
-      <div class="">
-        <p>Lorem ipsum dolor sit.</p>
-        <h3>Lorem ipsum dolor sit amet.</h3>
-      </div>
-      <div class="">
-        <p>Lorem ipsum dolor sit.</p>
-        <h3>Lorem ipsum dolor sit amet.</h3>
-      </div>
-      <div class="">
-        <div class="">
-          <h6>Lorem, ipsum.</h6>
-          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            explicabo tenetur necessitatibus!
-          </p>
-        </div>
-        <img data-src="" alt="" class="lazy"/>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab facilis
-          nesciunt debitis ut, perspiciatis distinctio ducimus nam!
-        </p>
-      </div>
-      <img data-src="" alt="" class="lazy"/>
-      <div class="">
-        <img data-src="" alt="" class="lazy"/>
-      </div>
-      
-    </div>
-    <div class="">
-      <img data-src="" alt="" class="lazy"/>
-      
-    </div>
+    </div> -->
   </section>
 
-  <section id="" class="w-full h-[100vh] bg-yellow-500">
-    <div class="w-8/12 h-full mx-auto flex items-center justify-center flex-1">
-
-        <div class="card">
-            <form method="post" id="contact-form" action="">
-              {% csrf_token %}
-              <div class="form-group">
-                <label for="id_name">Name:</label>
-                {{ form.name }}
-              </div>
-              <div class="form-group">
-                <label for="id_email">Email:</label>
-                {{ form.email }}
-              </div>
-              <div class="form-group">
-                <label for="id_message">Message:</label>
-                {{ form.message }}
-              </div>
-              <button type="submit" class="btn">Send</button>
-              <div class="form-messages"></div>
-            </form>
-          </div>
+  <section id="" class="w-full py-32 flex flex-col gap-10 justify-center items-center bg-[#fdf9e8]">
+    <h3 class="lg:text-7xl text-3xl" data-aos="fade-up" data-aos-duration="500">For support and feedback</h3>
+    <div class=""  data-aos="slide-up" data-aos-duration="400">
+        <a href="tel:+919810513518" class=" bg-yellow-500 text-white px-4 py-2 text-2xl font-medium hover:bg-transparent hover:border-2 border-yellow-500 hover:text-black hover:scale-110 transition-all duration-300 linear">Call +91 9810513518</a>
     </div>
   </section>
 </main>
 
 {% endblock body %}
 {% block javascript %}
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="{% static 'core/js/gsap/gsap.min.js' %}"></script>
+<script src="{% static 'core/js/gsap/ScrollTrigger.min.js' %}"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 function setupScrollTriggerAnimation() {
@@ -694,7 +447,7 @@ function setupScrollTriggerAnimation() {
                 trigger: panel,
                 start: "bottom 100%",
                 end: "bottom 0",
-                scrub: true,
+                scrub: false,
                 pin: true,
                 pinSpacing: false,
             });
@@ -706,7 +459,7 @@ function setupScrollTriggerAnimation() {
                 scrollTrigger: {
                     trigger: video,
                     start: "top 50%",
-                    toggleActions: "play none reverse none",
+                    toggleActions: "play none none none",
                     onEnter: () => {
                         if (containerToUnhide) {
                             containerToUnhide.classList.add('opacity-100');
@@ -721,7 +474,7 @@ function setupScrollTriggerAnimation() {
                     }
                 },
                 scale: 1, // Final scale value
-                duration: 1
+                duration: 0.7
             });
         });
     }
@@ -732,140 +485,6 @@ window.addEventListener('resize', function() {
     setupScrollTriggerAnimation();
 });
 
-function toggleContent(index) {
-      var headers = document.querySelectorAll('.selector');
-      var contents = document.querySelectorAll('.selector-content');
-      var images = document.querySelectorAll('.selector-image');
-
-      headers.forEach((header, i) => {
-        if (i === index) {
-          header.classList.add('active');
-        } else {
-          header.classList.remove('active');
-        }
-      });
-
-      contents.forEach((content, i) => {
-        if (i === index) {
-          content.classList.add('active');
-        } else {
-          content.classList.remove('active');
-        }
-      });
-
-      images.forEach((image, i) => {
-        if (i === index) {
-          image.classList.add('active');
-        } else {
-          image.classList.remove('active');
-        }
-      });
-    }
-function toggleContent1(index) {
-      var headers = document.querySelectorAll('.selector1');
-      var contents = document.querySelectorAll('.selector-content1');
-      var images = document.querySelectorAll('.selector-image1');
-
-      headers.forEach((header, i) => {
-        if (i === index) {
-          header.classList.add('active');
-        } else {
-          header.classList.remove('active');
-        }
-      });
-
-      contents.forEach((content, i) => {
-        if (i === index) {
-          content.classList.add('active');
-        } else {
-          content.classList.remove('active');
-        }
-      });
-
-      images.forEach((image, i) => {
-        if (i === index) {
-          image.classList.add('active');
-        } else {
-          image.classList.remove('active');
-        }
-      });
-    }
-function toggleContent2(index) {
-      var headers = document.querySelectorAll('.selector2');
-      var contents = document.querySelectorAll('.selector-content2');
-      var images = document.querySelectorAll('.selector-image2');
-
-      headers.forEach((header, i) => {
-        if (i === index) {
-          header.classList.add('active');
-        } else {
-          header.classList.remove('active');
-        }
-      });
-
-      contents.forEach((content, i) => {
-        if (i === index) {
-          content.classList.add('active');
-        } else {
-          content.classList.remove('active');
-        }
-      });
-
-      images.forEach((image, i) => {
-        if (i === index) {
-          image.classList.add('active');
-        } else {
-          image.classList.remove('active');
-        }
-      });
-    }
-
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(contactForm);
-            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-
-            fetch(contactForm.action, {
-                method: 'POST',
-                headers: {
-                    'X-CSRFToken': csrfToken,
-                    'X-Requested-With': 'XMLHttpRequest'
-                },
-                body: formData,
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok: ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Parsed data:', data);
-                const messagesDiv = contactForm.querySelector('.form-messages');
-                if (messagesDiv) {
-                    if (data.success) {
-                        messagesDiv.innerHTML = '<p>' + data.message + '</p>';
-                        contactForm.reset();
-                    } else {
-                        messagesDiv.innerHTML = '<p>Error: ' + data.error + '</p>';
-                    }
-                } else {
-                    console.error('Element with id form-messages not found.');
-                }
-            })
-            .catch(error => {
-                console.error('Fetch error:', error);
-                const messagesDiv = contactForm.querySelector('.form-messages');
-                if (messagesDiv) {
-                    messagesDiv.innerHTML = '<p>Error: ' + error.message + '</p>';
-                }
-            });
-        });
-    } else {
-        console.error('Form with id contact-form not found.');
-    }
 });
 </script>
 

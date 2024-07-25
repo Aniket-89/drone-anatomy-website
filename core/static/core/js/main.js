@@ -1,46 +1,39 @@
-AOS.init({
-    once: true
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3 // 30% from the top
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-underline');
+                observer.unobserve(entry.target); // Stop observing after animation is triggered
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const target = document.querySelector('.underline-text');
+    if (target) {
+        observer.observe(target);
+    }
 });
+
 window.addEventListener("load", function() {
     // Get the preloader element
     var preloader = document.getElementById('preloader');
     // Hide the preloader
     preloader.style.display = 'none';
+    // if (window.innerWidth > 768) {
+    AOS.init({
+        once: true
+    });
+    // };
 });
 
-// function setupScrollTriggerAnimation() {
-//     if (window.innerWidth >= 1024) { // Change 1024 to your desired screen width
-//         gsap.registerPlugin(ScrollTrigger);
-
-//         gsap.utils.toArray(".panel").forEach((panel, i) => {
-//             ScrollTrigger.create({
-//                 trigger: panel,
-//                 start: "top top",
-//                 end: "+=500",
-//                 pin: true,
-//                 pinSpacing: false,
-//                 scrub: 1
-//             });
-//         });
-
-//         gsap.to(".scale-up-video", {
-//             scrollTrigger: {
-//                 trigger: ".scale-up-video",
-//                 start: "top 50%",
-
-//                 toggleActions: "play none reverse none",
-//             },
-//             scale: 1, // Final scale value
-//             duration: 1
-//         });
-
-//     }
-// }
-
-// setupScrollTriggerAnimation();
-// window.addEventListener('resize', function() {
-//     setupScrollTriggerAnimation();
-// });
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -49,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         perPage: 3,
         perMove: 1,
         gap: '1rem',
-
+        pagination: false,
         focus: 'center',
         padding: {
             left: '5%',
@@ -66,7 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             768: {
                 perPage: 1,
-                height: 400,
+                height: 600,
+                padding: {
+                    left: '12px',
+                    right: '12px',
+                },
                 // width: auto,
             },
             640: {
@@ -87,8 +84,8 @@ const langSelector = document.getElementById("lang-select");
 const productsLink = document.getElementById("product-link");
 const productDropdown = document.getElementById("product-dropdown");
 
-const industryLink = document.getElementById("industry-link");
-const industryDropdown = document.getElementById("industry-dropdown");
+// const industryLink = document.getElementById("industry-link");
+// const industryDropdown = document.getElementById("industry-dropdown");
 
 const navLinks = document.querySelector(".navlinks");
 
@@ -103,9 +100,9 @@ const mobileProductLink = document.getElementById("mobile-product-link");
 const mobileProductWrapper = document.getElementById("mobile-product-link-wrapper");
 const mobileProductDropdown = document.getElementById("mobile-product-dropdown");
 
-const mobileIndustryLink = document.getElementById("mobile-industry-link");
-const mobileIndustryWrapper = document.getElementById("mobile-industry-link-wrapper");
-const mobileIndustryDropdown = document.getElementById("mobile-industry-dropdown");
+// const mobileIndustryLink = document.getElementById("mobile-industry-link");
+// const mobileIndustryWrapper = document.getElementById("mobile-industry-link-wrapper");
+// const mobileIndustryDropdown = document.getElementById("mobile-industry-dropdown");
 
 const whatsappBtn = document.getElementById("whatsapp-btn");
 
@@ -122,7 +119,7 @@ function isHomepage() {
 productsLink.addEventListener("mouseover", () => {
     productDropdown.classList.remove("hidden", "h-0");
     productDropdown.classList.add("flex");
-    industryDropdown.classList.add("hidden", "h-0");
+    // industryDropdown.classList.add("hidden", "h-0");
     dropdownActive = true;
     updateHeader();
 });
@@ -150,35 +147,35 @@ productDropdown.addEventListener("mouseout", () => {
     updateHeader();
 });
 
-industryLink.addEventListener("mouseover", () => {
-    industryDropdown.classList.remove("hidden", "h-0");
-    industryDropdown.classList.add("flex");
-    productDropdown.classList.add("hidden", "h-0");
-    dropdownActive = true;
-    updateHeader();
-});
-industryLink.addEventListener("mouseout", () => {
-    industryDropdown.classList.remove("flex");
-    industryDropdown.classList.add("hidden", "h-0");
-    dropdownActive = false;
-    updateHeader();
-});
+// industryLink.addEventListener("mouseover", () => {
+//     industryDropdown.classList.remove("hidden", "h-0");
+//     industryDropdown.classList.add("flex");
+//     productDropdown.classList.add("hidden", "h-0");
+//     dropdownActive = true;
+//     updateHeader();
+// });
+// industryLink.addEventListener("mouseout", () => {
+//     industryDropdown.classList.remove("flex");
+//     industryDropdown.classList.add("hidden", "h-0");
+//     dropdownActive = false;
+//     updateHeader();
+// });
 
 // Keep dropdown visible when hovering over it
-industryDropdown.addEventListener("mouseover", () => {
-    industryDropdown.classList.remove("hidden", "h-0");
-    industryDropdown.classList.add("flex");
-    dropdownActive = true;
-    updateHeader();
-});
+// industryDropdown.addEventListener("mouseover", () => {
+//     industryDropdown.classList.remove("hidden", "h-0");
+//     industryDropdown.classList.add("flex");
+//     dropdownActive = true;
+//     updateHeader();
+// });
 
 // Hide dropdown on mouseout
-industryDropdown.addEventListener("mouseout", () => {
-    industryDropdown.classList.remove("flex");
-    industryDropdown.classList.add("hidden", "h-0");
-    dropdownActive = false;
-    updateHeader();
-});
+// industryDropdown.addEventListener("mouseout", () => {
+//     industryDropdown.classList.remove("flex");
+//     industryDropdown.classList.add("hidden", "h-0");
+//     dropdownActive = false;
+//     updateHeader();
+// });
 
 mobileMenuBtn.addEventListener("click", () => {
     document.getElementById("open-menu-icon").classList.toggle("hidden");
@@ -191,22 +188,22 @@ mobileMenuBtn.addEventListener("click", () => {
 mobileProductLink.addEventListener("click", (e) => {
     e.preventDefault();
     mobileProductDropdown.classList.toggle("hidden");
-    mobileProductWrapper.classList.toggle("bg-gray-400");
+    mobileProductWrapper.classList.toggle("bg-accentLight");
     mobileProductLink.classList.toggle("text-yellow-500");
 
-    mobileIndustryDropdown.classList.add("hidden");
-    mobileIndustryWrapper.classList.remove("bg-gray-400");
+    // mobileIndustryDropdown.classList.add("hidden");
+    // mobileIndustryWrapper.classList.remove("bg-gray-400");
 });
 
-mobileIndustryLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    mobileIndustryDropdown.classList.toggle("hidden");
-    mobileIndustryWrapper.classList.toggle("bg-gray-400");
-    mobileIndustryLink.classList.toggle("text-yellow-500");
+// mobileIndustryLink.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     mobileIndustryDropdown.classList.toggle("hidden");
+//     mobileIndustryWrapper.classList.toggle("bg-gray-400");
+//     mobileIndustryLink.classList.toggle("text-yellow-500");
 
-    mobileProductDropdown.classList.add("hidden");
-    mobileProductWrapper.classList.remove("bg-gray-400");
-});
+//     mobileProductDropdown.classList.add("hidden");
+//     mobileProductWrapper.classList.remove("bg-gray-400");
+// });
 // Update header on scroll
 // window.addEventListener("scroll", updateHeader);
 // Function to check if the current page is the homepage
@@ -426,48 +423,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-// counter
-
-function createCounterIfInView(elementId, targetNumber, duration = 1000, onUpdate) {
-    const counterElement = document.getElementById(elementId);
-
-    if (!counterElement) {
-        throw new Error(`Element with ID "${elementId}" not found!`);
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-            let currentCount = Number(counterElement.textContent) || 0; // Get initial count or set to 0
-
-            const increment = Math.ceil((targetNumber - currentCount) / (duration / 10)); // Calculate increment per update
-
-            const intervalId = setInterval(() => {
-                currentCount += increment;
-
-                if (currentCount >= targetNumber) {
-                    currentCount = targetNumber;
-                    clearInterval(intervalId); // Stop animation when target reached
-                }
-
-                counterElement.textContent = currentCount;
-
-                if (onUpdate) {
-                    onUpdate(currentCount); // Call optional update callback
-                }
-            }, 100); // Update every 10 milliseconds (adjust as needed)
-
-            observer.unobserve(counterElement);
-        }
-    });
-
-    observer.observe(counterElement);
-}
-
-createCounterIfInView('project-counter', 200, 150);
-createCounterIfInView('exp-counter', 9);
-createCounterIfInView('client-counter', 100, 150);
-createCounterIfInView('flying-time-counter', 100000, 100);
 
 // agri-drone page
