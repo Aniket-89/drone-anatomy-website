@@ -520,19 +520,12 @@ header {
     height: 94vh;
 }
 
-#agri-speed-feature-container {
-    background-image: url('../img/drone-white.jpg');
+
+#agri-mapping-feature-container {
+    background-image: url('../img/agri/agri-banner-4.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 94vh;
-}
-
-#agri-mapping-feature-container {
-    background-image: url('../img/agri/agri-banner4.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
     height: 100lvh;
 }
 

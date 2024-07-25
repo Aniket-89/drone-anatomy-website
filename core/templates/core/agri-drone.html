@@ -54,7 +54,7 @@
     </div>   
     </section>
     
-    <section class="h-[90vh] lg:h-[100vh] flex-col flex gap-10 py-32 lg:py-12 bg-white">
+    <section class="flex-col flex gap-10 py-32 lg:py-12 bg-white">
 
         <div class="bg-white mx-auto pt-12 lg:pt-24 flex flex-col items-center gap-8">
             <h2 
@@ -65,7 +65,7 @@
             10-Litre <span class="text-[#5cea55] underline-text relative">Agricultural</span> Drone.</h2>
             
         </div>
-        <div class="w-full lg:h-[700px] py-8 bg-white lg:grid lg:place-content-center px-2">
+        <div class="w-full lg:h-[700px] py-6 bg-white lg:grid lg:place-content-center px-2">
             <div id="agri-drone-video" class="overflow-hidden rounded-lg h-max lg:h-full lg:w-[800px] mx-auto relative" data-aos="zoom-in">
                 <iframe id="ytplayer" type="text/html"
                     src="https://www.youtube.com/embed/RTzzgJ4ZjzE"
@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="text-center bg-white">
-            <a href="tel:+919810513518" class=" bg-yellow-500 text-white px-4 py-2 text-2xl font-medium hover:shadow-lg hover:bg-white hover:text-yellow-500 hover:border-2 border-yellow-500 hover:scale-110 transition-all duration-300 linear"  data-aos="zoom-out" data-aos-duration="400">Pre-Order Now</a>
+            <a href="{% url 'core:contact' %}" class=" bg-yellow-500 text-white px-4 py-2 text-2xl font-medium hover:shadow-lg hover:bg-white hover:text-yellow-500 hover:border-2 border-yellow-500 hover:scale-110 transition-all duration-300 linear"  data-aos="zoom-out" data-aos-duration="400">Pre-Order Now</a>
         </div>
     </section>
 
@@ -214,14 +214,14 @@
         <div class="flex flex-col lg:flex-row h-dvh pt-24 px-2 lg:w-9/12 mx-auto items-center justify-center lg:justify-between gap-8">
             <div class="lg:w-1/2">
                 <!-- <p class="text-xl text-white" data-aos="fade-up" data-aos-delay="200">Lorem, ipsum.</p> -->
-                <h2 class="text-5xl lg:text-7xl text-white lg:leading-[1.2]" data-aos="fade-up" data-aos-duration="800">Exceptional water resistance keeps you flying in any weather.</h2>
+                <h2 class="text-5xl 3xl:text-7xl text-white lg:leading-[1.2]" data-aos="fade-up" data-aos-duration="800">Exceptional water resistance keeps you flying in any weather.</h2>
             </div>
             <div class="space-y-8 lg:w-1/2 overflow-x-hidden">
                 <div class="lg:space-y-3">
-                    <h3 class="text-yellow-500 lg:text-5xl text-3xl" data-aos="fade-up" data-aos-duration="500">Unmatched Protection.</h3>
+                    <h3 class="text-yellow-500 3xl:text-5xl text-3xl" data-aos="fade-up" data-aos-duration="500">Unmatched Protection.</h3>
                     <p class="text-white lg:text-2xl text-xl" data-aos="fade-up" data-aos-delay="50">Conquer Any Weather.</p>
                 </div>
-                <p class="lg:text-xl text-base text-white" data-aos="fade-left">Our drone's exceptional water resistance ensures unstoppable performance, rain or shine. Get ready to boost your productivity with confidence, knowing your drone is built to withstand the elements.</p>
+                <p class="3xl:text-xl text-base text-white" data-aos="fade-left">Our drone's exceptional water resistance ensures unstoppable performance, rain or shine. Get ready to boost your productivity with confidence, knowing your drone is built to withstand the elements.</p>
             </div>
         </div>
 
@@ -232,12 +232,12 @@
             
             </div>
             <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
-                <ul class="flex justify-between w-8/12 mx-auto">
+                <ul class="flex justify-center w-8/12 mx-auto">
                     <li>
-                        <p class="text-white text-3xl leading-[1.6] mb-2 shadow-text">Max. Flow Rate</p>
-                        <p class="text-white text-xl"><span class="text-5xl shadow-text font-semibold">5</span> L/min</p>
+                        <p class="text-white 3xl:text-3xl text-2xl leading-[1.6] mb-2 shadow-text">Max. Flow Rate</p>
+                        <p class="text-white 3xl:text-xl text-lg" ><span class="3xl:text-5xl text-3xl shadow-text font-semibold">5</span> L/min</p>
                     </li>
-                    <li>
+                    <!-- <li>
                         <p class="text-white text-3xl leading-[1.6] mb-2 shadow-text">Droplet Size Range</p>
                         <p class="text-white text-xl"><span class="text-5xl shadow-text font-semibold">60-400</span> &mu;m</p>
                     </li>
@@ -248,7 +248,7 @@
                     <li>
                         <p class="text-white text-3xl leading-[1.6] mb-2 shadow-text">More Durable Peristaltic Pump</p>
                         <p class="text-white text-xl"><span class="text-5xl shadow-text font-semibold">3</span> x higher (compared with P100)</p>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -286,27 +286,27 @@
 
       
 
-      <div class="agri-more-feature-list flex flex-col lg:w-8/12 w-full lg:gap-16 gap-8 mx-auto mt-12 overflow-hidden">
-        <div class="flex flex-col-reverse lg:flex-row justify-between lg:h-[45vh] items-center gap-2 w-full px-4">
+      <div class="agri-more-feature-list flex flex-col lg:w-9/12 w-full lg:gap-16 gap-8 mx-auto mt-12 overflow-hidden">
+        <div class="flex flex-col-reverse lg:flex-row justify-between items-center gap-2 w-full px-4">
             <div class="portablity_content lg:w-1/2 h-full flex flex-col justify-between my-18" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400">
                 <div class="mt-10 space-y-4">
 
-                    <h3 class="text-white text-3xl lg:text-5xl font-semibold leading-[1.2]" data-aos="slide-up" data-aos-duration="400">Introducing India's First Ultra-Compact Agricultural Drone!</h3>
+                    <h3 class="text-white text-3xl 3xl:text-5xl font-semibold leading-[1.2]" data-aos="slide-up" data-aos-duration="400">Introducing India's First Ultra-Compact Agricultural Drone!</h3>
                     <div class="space-y-1">
 
-                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="100">Light enough to carry anywhere.</p>
-                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="200">Made for Indian conditions.</p>
-                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="300">Saves transportation costs.</p>
-                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="400">Covers 1 Acre in 5 Minutes.</p>
-                        <p class="text-white tick-icon text-base lg:text-xl relative" data-aos="slide-right" data-aos-delay="500">Ultra Fast battery charging.</p>
+                        <p class="text-white tick-icon text-base lg:text-base 3xl:text-lg relative" data-aos="slide-right" data-aos-delay="100">Light enough to carry anywhere.</p>
+                        <p class="text-white tick-icon text-base lg:text-base 3xl:text-lg relative" data-aos="slide-right" data-aos-delay="200">Made for Indian conditions.</p>
+                        <p class="text-white tick-icon text-base lg:text-base 3xl:text-lg relative" data-aos="slide-right" data-aos-delay="300">Saves transportation costs.</p>
+                        <p class="text-white tick-icon text-base lg:text-base 3xl:text-lg relative" data-aos="slide-right" data-aos-delay="400">Covers 1 Acre in 5 Minutes.</p>
+                        <p class="text-white tick-icon text-base lg:text-base 3xl:text-lg relative" data-aos="slide-right" data-aos-delay="500">Ultra Fast battery charging.</p>
                     </div>
                 </div>    
                 <div class="my-8"  data-aos="slide-up" data-aos-duration="400">
-                    <a href="tel:+919810513518" class=" bg-yellow-500 text-white px-4 py-2 text-2xl font-medium  hover:shadow-lg hover:bg-transparent hover:border-2 border-yellow-500 hover:text-white hover:scale-110 transition-all duration-300 linear">Questions? Contact Today!</a>
+                    <a href="{% url 'core:contact' %}" class=" bg-yellow-500 text-white px-4 py-2 3xl:text-2xl text-lg font-medium  hover:shadow-lg hover:bg-transparent hover:border-2 border-yellow-500 hover:text-white hover:scale-110 transition-all duration-300 linear">Questions? Contact Today!</a>
                 </div>
             </div>
             <div class="portablity-image-container lg:w-1/2 " data-aos="fade-left" data-aos-delay="200">
-                <img data-src="{% static 'core/img/agri/farmer1.png' %}" alt="farmer taking out drone from the bag" class="lazy object-cover w-full">
+                <img data-src="{% static 'core/img/agri/farmer1.png' %}" alt="farmer taking out drone from the bag" class="lazy object-cover object-bottom w-full">
             </div>
         </div>
         
@@ -330,27 +330,27 @@
         <div class="absolute top-0 left-0 w-full h-auto">
             <img data-src="{% static 'core/img/agri/comparison-drone.png' %}" alt="" class="lazy object-cover w-full h-full">
         </div>
-        <div class=" absolute top-1/2 left-[calc( 50% - width / 2) flex flex-col items-center justify-center z-[1]">
+        <div class=" absolute top-1/2 left-[calc( 50% - width/2) flex flex-col items-center justify-center z-[1]">
 
-            <div class="lg:ml-40 ml-8" data-aos="flip-up"><span class="lg:text-[140px] text-3xl font-semibold">40</span><span class="lg:text-[100px] font-semibold">% </span><span class="lg:text-5xl  text-base italic font-semibold">SMALLER</span>
+            <div class="3xl:ml-40 lg:ml-32 ml-8" data-aos="flip-up"><span class="3xl:text-[140px] lg:text-[100px] text-5xl font-semibold">40</span><span class="lg:text-[100px] font-semibold">% </span><span class="lg:text-5xl  text-base italic font-semibold">SMALLER</span>
             </div>
         </div>
     </div>
-    <div class="bg-white lg:h-lvh lg:pt-44">
+    <div class="bg-white lg:py-44">
         <div class="lg:w-8/12 w-10/12 space-y-8 mx-auto py-10">
             <div class="heading">
                 <h3 class="relative text-xl xl:text-3xl text-black shadow-text"><span class="italic text-3xl lg:text-3xl font-semibold ">P10</span><sup class="text-yellow-500 text-base top-[-1em] lg:top-[-1.2em] lg:mb-2 italic">PRO</sup></h3>
-                <h3 class="text-3xl lg:text-5xl" data-aos="fade-right">Bharat's First Compact Agricultural Drone.</h3>
+                <h3 class="text-3xl lg:text-5xl" data-aos="fade-right">India's First Compact Agricultural Drone.</h3>
             </div>
 
             <div class="flex flex-col-reverse lg:flex-row justify-between items-center gap-2 w-full">
                 <div class="portablity_content lg:w-1/2 space-y-2" data-aos="slide-up" data-aos-delay="100" data-aos-duration="400" >
                     <h2 class="text-3xl font-medium leading-[1.4]">Introducing India's First Compact Agricultural Drone</h2>
-                    <p class="text-lg">Designed specifically for Indian conditions, our rugged and compact agricultural drone is easy to carry and use. Featuring a 10-litre water tank and high-performance capabilities, it can cover up to 25 acres per day. Water Resistance and built to last, this drone is the perfect solution for efficient and effective agricultural operations.
+                    <p class="3xl:text-lg text-base">Designed specifically for Indian conditions, our rugged and compact agricultural drone is easy to carry and use. Featuring a 10-litre water tank and high-performance capabilities, it can cover up to 25 acres per day. Water Resistance and built to last, this drone is the perfect solution for efficient and effective agricultural operations.
                     </p>
-                    <p class="text-lg"><span class="font-semibold">Warranty:</span> Enjoy peace of mind with our comprehensive 3-year warranty on all parts and services.</p>
+                    <p class="3xl:text-lg text-base"><span class="font-semibold">Warranty:</span> Enjoy peace of mind with our comprehensive 3-year warranty on all parts and services.</p>
                 </div>
-                <div class="portablity-image-container lg:w-[600px] lg:h-[450px] overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <div class="portablity-image-container lg:w-[400px] 3xl:w-[600px] 3xl:h-[450px] lg:h-[320px] overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                     <img 
                     data-src="{% static 'core/img/agri/drone-with-bag.png' %}" 
                     
@@ -359,14 +359,6 @@
             </div>
 
         </div>
-        <!-- <div class="w-10/12 mx-auto text-center space-y-4 my-10">
-            <h5 class="text-xl lg:text-2xl text-yellow-500" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur.</h5>
-            <p data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eveniet totam, voluptatibus rem neque sunt!</p>
-            <div class="h-80 lg:w-10/12 mx-auto rounded-md overflow-hidden" data-aos="zoom-in">
-                <img data-src="{% static 'core/img/agri/cloud-bg.jpg' %}" alt="" class="lazy object-cover w-full h-full">
-            </div>
-            
-        </div> -->
     </div>
     <div class="bg-[#0C0C0C] lg:h-[60vh] overflow-hidden py-8">
         <div class="flex flex-col-reverse lg:flex-row justify-between items-center gap-2 w-full h-full lg:w-9/12 mx-auto">
@@ -375,7 +367,7 @@
                 <p class="lg:text-2xl text-xl">Agri specific mobile application</p>
             </div>
             <div class="portablity-image-container w-full lg:w-1/2" data-aos="slide-left" data-aos-delay="200">
-                <img data-src="{% static 'core/img/agri/controller-app.png' %}" alt="controller application" class="lazy object-cover w-full lg:rounded-[50px]">
+                <img data-src="{% static 'core/img/agri/controller-app.png' %}" alt="controller application" class="lazy object-cover w-full lg:rounded-[30px]">
             </div>
         </div>
     </div>
