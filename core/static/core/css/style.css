@@ -903,9 +903,3 @@ footer h6 {
 
 
 
-/* training page */
-.training-banner-container {
-    background-image: url('https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951407.jpg?t=st=1721651320~exp=1721654920~hmac=98784ba017cee4cec786c7f48dec5d0d910b1bc4ebfdb614356a2ac4ca6692c8&w=1060');
-    height: 30vh;
-    max-height: 500px;
-}
