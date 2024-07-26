@@ -18,14 +18,20 @@
         </div>
     </div>
 
-    <div class="flex flex-col lg:flex-row px-4 lg:w-10/12 mx-auto my-10 gap-2 justify-between">
+    <div class="flex flex-col lg:flex-row px-4 md:w-10/12 mx-auto my-16 gap-2 justify-between">
         <div class="w-full lg:w-1/2 flex flex-col justify-center gap-6">
+            <div class="flex gap-4">
+                <div class="rounded-full text-lg w-max px-4 py-2 rating relative" style="box-shadow: 2px 1px 2px #f5c000;">Rated 4.9 out of 5</div>
+                <img data-src="{% static 'training/img/stars.png' %}" width="100" height="60" alt="5stars" class="lazy h-11 ">
+            </div>
+            
             <h2 class="3xl:text-7xl lg:text-5xl text-3xl font-semibold leading-[1.3] " data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">DGCA Certified Pilot Training</h2>
-            <p data-aos="zoom-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus non nihil aliquam repellat, voluptate vero nemo. Assumenda quos molestiae totam provident quae, aut eum veritatis tenetur quam aperiam quaerat!</p>
-            <a href="#" download="DA_Training_Brochure.pdf" class="w-max 3xl:px-10 px-6 3xl:py-4 py-2 3xl:text-2xl text-lg bg-yellow-500 text-white hover:scale-105 hover:bg-yellow-600 hover:drop-shadow-md" data-aos="fade-right">Download Brochure</a>
+            <p data-aos="zoom-in">Unlock your true potential and join us on a journey of excellence in the exciting field of drone aviation!</p>
+                <a href="#" download="DA_Training_Brochure.pdf" class="w-max shadow-lg 3xl:px-10 px-4 3xl:py-4 py-2 3xl:text-2xl text-lg bg-yellow-500 text-white hover:scale-105 hover:bg-yellow-600 hover:drop-shadow-md" data-aos="fade-right">Download Brochure</a>
+            <img data-src="{% static 'training/img/DGCA-LOGO.png' %}" height="200" width="300" alt="DGCA LOGO" class="lazy object-contain">
         </div>
 
-        <div class="3xl:w-1/2 lg:w-1/3 aspect-1 flex items-end justify-end">
+        <div class="3xl:w-1/2 lg:w-1/3 aspect-1 flex lg:items-end justify-end">
             
             <div class="traning-image rounded">
                 <!-- <img data-src="{% static 'core/img/farmer1.png' %}" alt="" class="lazy h-full w-full object-cover object-center"> -->
@@ -33,27 +39,102 @@
         </div>
     </div>
 
-    <div class="w-full px-2 lg:w-10/12 lg:my-28 my-8 mx-auto flex flex-col gap-4">
+    <div class="w-full px-4 md:w-10/12 lg:my-28 my-8 mx-auto flex flex-col gap-4">
+        <div class="text-xs bg-slate-200 font-semibold text-black rounded-full px-4 py-1 w-max shadow-md">Become DGCA Certified in 5 days.</div>
         <div class="">
             <h3 class="text-3xl font-semibold mb-2">Course Overview</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolores recusandae, expedita eaque repudiandae repellendus totam similique sequi illum sapiente doloribus quaerat consectetur cumque reiciendis temporibus magni placeat. Incidunt nobis velit neque ipsum quaerat corrupti voluptatibus exercitationem ullam aspernatur deserunt.</p>
+            <p>Welcome to our DGCA-approved Drone Pilot Training Course, where we aim to elevate your aspirations and transform you into the skilled pilot you've always dreamed of becoming. Our comprehensive program is designed to meet the requirements set by the Directorate General of Civil Aviation (DGCA), ensuring that you receive top-notch training and certification for commercial drone flying.</p>
         </div> 
 
-        <div class="">
+        <div class="space-y-2">
             <h3 class="text-3xl font-semibold mb-2">Certification</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque repellat facilis cupiditate placeat quaerat quidem non, nihil exercitationem commodi nobis.</p>
+            <p>Currently our programs are only available in Delhi, Chandigarh, Gandhinagar and Jaipur.</p>
+            <p>RPTO Locations:</p>
+            <ol>
+                <li>Delhi</li>
+                <li>Chandigarh</li>
+                <li>Gandhinagar</li>
+                <li>Jaipur</li>
+            </ol>
+        </div>
+        <div class="">
+            <h3 class="text-3xl font-semibold mb-2">Location</h3>
+            <p>The course is aligned with the Drone Rules of 2021, and upon completion, you will be awarded a DGCA Remote Pilot Certificate (RPC) valid for ten years.</p>
         </div>
 
         <div class="">
             <h3 class="text-3xl font-semibold mb-2">Learning Outcomes</h3>
-            <div class="">
-                <input type="checkbox" id="line1" class="course-details peer" ><label for="line1">Lorem ipsum dolor sit.</label>
-                <p class="hidden peer-checked:flex">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error quos amet unde sint dolorem sunt dignissimos consequatur. Omnis, animi quis.</p>
+            <div class="border border-gray-400 p-4 lg:w-1/2">
+                <input type="checkbox" id="line1" class="course-details peer" ><label for="line1" class="text-lg peer-checked:text-yellow-500 peer-checked:font-semibold hover:cursor-pointer">Guidance on Industrial and Entrepreneurial Opportunities</label>
+                <p class="hidden peer-checked:flex">Explore the vast possibilities in the drone industry, uncovering potential industrial applications and entrepreneurial ventures.</p>
+            </div>
+            <div class="border border-gray-400 p-4 lg:w-1/2">
+                <input type="checkbox" id="line2" class="course-details peer" ><label for="line2" class="text-lg peer-checked:text-yellow-500 peer-checked:font-semibold hover:cursor-pointer">Live Practical Sessions</label>
+                <p class="hidden peer-checked:flex">Immerse yourself in real-world scenarios through live practical sessions to sharpen your piloting skills.</p>
+            </div>
+            <div class="border border-gray-400 p-4 lg:w-1/2">
+                <input type="checkbox" id="line3" class="course-details peer" ><label for="line3" class="text-lg peer-checked:text-yellow-500 peer-checked:font-semibold hover:cursor-pointer">Hands-On Simulator Training</label>
+                <p class="hidden peer-checked:flex">Gain confidence and expertise in piloting drones with our cutting-edge simulator training, providing a risk-free environment for practice.</p>
+            </div>
+            <div class="border border-gray-400 p-4 lg:w-1/2">
+                <input type="checkbox" id="line4" class="course-details peer" ><label for="line4" class="text-lg peer-checked:text-yellow-500 peer-checked:font-semibold hover:cursor-pointer">Career Guidance from Experts</label>
+                <p class="hidden peer-checked:flex">Benefit from valuable insights and advice from industry experts, shaping your path to success in the drone industry.</p>
             </div>
         </div>
     </div>
-    
-    <section class="w-full h-max py-16 bg-[#fdf9e8] px-2">
+    <section>
+        <div class="w-full h-max py-16 bg-[#fdf9e8] px-4">
+            <div class="flex flex-col w-full md:w-10/12 max-w-[1280px] mx-auto gap-10 justify-center items-center">
+
+                <h3 class="3xl:text-5xl lg:text-5xl text-3xl font-medium text-center" data-aos="fade-up" data-aos-duration="500">FAQ</h3>
+                <div class="w-full"  data-aos="slide-up" data-aos-duration="400">
+                    <div class="w-full p-2 bg-white rounded-lg">
+                        <details class="w-full p-2 bg-white rounded-lg">
+                            <summary class="w-full p-2 bg-white rounded-lg cursor-pointer font-medium focus:font-semibold">
+                                What is the duration of the course?
+                            </summary>
+                            <div class="px-4 py-2">
+                                The course is aligned with the Drone Rules of 2021, and upon completion, you will be awarded a DGCA Remote Pilot Certificate (RPC) valid for ten years.
+                            </div>
+                        </details>
+
+                        <details class="w-full p-2 bg-white rounded-lg">
+                            <summary class="w-full p-2 bg-white rounded-lg cursor-pointer font-medium focus:font-semibold">
+                                How long will it take to complete the course?
+                            </summary>
+                            <div class="px-4 py-2">
+                                The course is aligned with the Drone Rules of 2021, and upon completion, you will be awarded a DGCA Remote Pilot Certificate (RPC) valid for ten years.
+                            </div>
+                        </details>
+
+                        <details class="w-full p-2 bg-white rounded-lg">
+                            <summary class="w-full p-2 bg-white rounded-lg cursor-pointer font-medium focus:font-semibold">
+                                How much does the course cost?
+                            </summary>
+                            <div class="px-4 py-2">
+                                The course is aligned with the Drone Rules of 2021, and upon completion, you will be awarded a DGCA Remote Pilot Certificate (RPC) valid for ten years.
+                            </div>
+                        </details>
+
+                        <details class="w-full p-2 bg-white rounded-lg">
+                            <summary class="w-full p-2 bg-white rounded-lg cursor-pointer font-medium focus:font-semibold">
+                                What are the prerequisites for the course?
+                            </summary>
+                            <div class="px-4 py-2">
+                                The course is aligned with the Drone Rules of 2021, and upon completion, you will be awarded a DGCA Remote Pilot Certificate (RPC) valid for ten years.
+                            </div>
+                        </details>
+
+                        <details class="w-full p-2 bg-white rounded-lg">
+                            <summary class="w-full p-2 bg-white rounded-lg cursor-pointer font-medium focus:font-semibold">
+                                What are the prerequisites for the course?
+                            </summary>
+                            <div class="px-4 py-2">
+                                The course is aligned with the Drone Rules of 2021, and upon completion, you will be awarded a DGCA Remote Pilot Certificate (RPC) valid for ten years.
+                            </div>
+                        </details>
+    </section>
+    <section class="w-full h-max py-16 px-2">
         <div class="flex flex-col gap-10 justify-center items-center">
 
             <h3 class="3xl:text-5xl text-3xl text-center" data-aos="fade-up" data-aos-duration="500">Enroll today and embrace the skies legally and with confidence!</h3>
@@ -62,7 +143,13 @@
                 <a href="{% url 'core:contact' %}" class=" bg-yellow-500 text-white px-4 py-2 3xl:text-2xl text-lg font-medium hover:bg-transparent hover:border-2 border-yellow-500 hover:text-black hover:scale-110 transition-all duration-300 linear">Enroll Now</a>
             </div>
         </div>
-        </section>
+    </section>
+
+    
 </main>
 
 {% endblock body %}
+
+{% block javascript %}
+<script src="https://kit.fontawesome.com/97d5cda2b2.js" crossorigin="anonymous"></script>
+{% endblock javascript %}

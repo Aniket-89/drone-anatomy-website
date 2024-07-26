@@ -5,8 +5,20 @@ input[type="checkbox"] {
     height: 0;
     width: 0;
 }
+
+
+/* training page */
+.training-banner-container {
+    background-image: url('https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    height: 30vh;
+    max-height: 500px;
+}
+
 .traning-image {
-    background-image: url('../img/farmer1.png');
+    background-image: url('../img/training2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -24,7 +36,7 @@ input[type="checkbox"] {
 .traning-image::before {
     content: '';
     position: absolute;
-    background-image: url('../img/farmer2.png');
+    background-image: url('../img/training1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
