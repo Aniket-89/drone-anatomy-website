@@ -27,29 +27,9 @@
     </div>
     <div class="w-full h-lvh hidden relative lg:block">
 
-        <video data-src="{% static 'core/spray.mp4' %}" autoplay loop muted class="lazy object-cover h-full w-full"></video>
+        <video data-src="{% static 'core/drone_animation.mp4' %}" autoplay loop muted class="lazy object-cover h-full w-full"></video>
         
-            <div class="spray-video-content absolute bottom-24 left-0 w-full mx-auto opacity-0 transition-all delay-500 duration-300 ease-in z-[1]" >
-                <ul class="flex justify-between w-8/12 mx-auto">
-                    <li>
-                        <p class="text-white">Max. Flow Rate</p>
-                        <p class="text-white"><span>22</span> L/min</p>
-                    </li>
-                    <li>
-                        <p class="text-white">Max. Flow Rate</p>
-                        <p class="text-white"><span>22</span> L/min</p>
-                    </li>
-                    <li>
-                        <p class="text-white">Max. Flow Rate</p>
-                        <p class="text-white"><span>22</span> L/min</p>
-                    </li>
-                    <li>
-                        <p class="text-white">Max. Flow Rate</p>
-                        <p class="text-white"><span>22</span> L/min</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            
         
     </div>   
     </section>
@@ -151,7 +131,14 @@
         </div>
     </div>
 
-    
+    <div class="w-full h-svh hidden relative lg:block">
+
+        <div class="scale-up-video absolute scale-50 w-full h-full grid overflow-hidden">
+            <video data-src="{% static 'core/spray.mp4' %}" autoplay loop muted class="lazy object-cover h-auto w-full"></video>
+            
+        </div>
+
+    </div>    
 
     <div id="agri-spray-feature-container" class="px-8 py-12 text-white relative">
       <div class="absolute top-[6%] left-[5%] lg:left-[10%] 3xl:top-[20%] 3xl:left-[15%] flex flex-col gap-2 lg:w-10/12 mx-auto">
