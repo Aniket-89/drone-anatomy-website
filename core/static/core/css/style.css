@@ -464,7 +464,7 @@ header {
         left: 50%;
         top: 10px;
         width: 0;
-        height: 90.4%;
+        height: 92%;
         border-left: 1px solid gray;
     }
 
@@ -526,7 +526,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100lvh;
+    height: auto;
 }
 
 @media screen and (max-width: 900px) {
