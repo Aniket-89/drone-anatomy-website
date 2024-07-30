@@ -373,7 +373,7 @@ header {
     background-image: url('../img/agri/agri-drone-banner.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     height: 100vh;
 }
 
@@ -383,7 +383,7 @@ header {
     left: 10%;
 }
 
-#hero-1-content h3::after {
+/* #hero-1-content h3::after {
     content: 'Agricultural Drone';
     position: absolute;
     bottom: 4px;
@@ -392,32 +392,32 @@ header {
     font-style: italic;
     left: 30%;
     width: 100%;
-}
+} */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:791px) {
     #hero-1-content {
         top: 15%;
         left: 5%;
     }
     
-    #hero-1-content h3::after {
+    /* #hero-1-content h3::after {
         bottom: 2px;
         font-size: 1.1rem;
         left: 27%;
         width: fit-content;
 
-    }
+    } */
 }
 
 @media screen and (min-width:791px) and (max-width:1400px) {
     #hero-1-content {
-        top: 10%;
-        left: 25%;
+        top: 20%;
+        left: 5%;
     }
-    #hero-1-content h3::after {
+    /* #hero-1-content h3::after {
         font-size: 1.25rem;
-        left: 45%;
-    }
+        left: 25%;
+    } */
 }
 
 @media screen and (max-width:1100px) {
