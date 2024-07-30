@@ -1,9 +1,8 @@
 .blog-banner {
-    background-image: url('../img/blog-banner1.jpg');
-    /* background-image: url('../img/blog-banner.jpg'); */
+    background-image: url('../img/blog-banner.jpg');
     background-color: black;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 
