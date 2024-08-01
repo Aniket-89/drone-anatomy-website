@@ -91,6 +91,16 @@ def agri_view(request):
         return render(request, 'core/agri-drone.html', {'form': form, 'success': success})
 
 
+def uav_data_processing_view(request):
+
+    return render(request, 'core/uav-data-processing.html', context={})
+
+
+def mapping_view(request):
+
+    return render(request, 'core/mapping.html', context={})
+
+
 def about_view(request):
     """
     Renders the about page.
