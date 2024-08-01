@@ -30,7 +30,7 @@
         <li id="product-link" class="h-full flex items-center">
             
           <a
-            href=""
+            href="#"
             class="nav-links transition-colors group duration-150 ease-in-out hover:text-yellow-400"
             >{% trans "PRODUCTS" %}</a
           >
@@ -50,27 +50,25 @@
             </div>
         </li>
 
-        <!-- <li id="industry-link" class="h-full flex items-center">
+        <li id="industry-link" class="h-full flex items-center">
             
             <a
-              href=""
+              href="#"
               class="nav-links transition-colors group duration-150 ease-in-out hover:text-yellow-400"
               >{% trans "SOLUTIONS" %}</a
             >
             <div
               id="industry-dropdown"
-              class="h-0 hidden w-fit absolute top-20 justify-between bg-white rounded text-black transition-transform duration-500 ease-linear hover:flex"
+              class="h-0 hidden w-fit absolute justify-between bg-white rounded text-black transition-transform duration-500 ease-linear hover:flex"
+              style="top: 72px;"
               >
               <ul>
-                <li class="px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
-                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
-                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
-                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
-                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
+                <li class="px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:mapping' %}">Mapping & Surveying</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:uav-data-processing' %}">UAV Data Processing</a></li>
                 
             </ul>
               </div>
-          </li> -->
+          </li>
 
         <li>
           <a
@@ -111,7 +109,7 @@
       </button>
       <a href="{% url 'core:contact' %}"
       id="cta-white"
-        class="cta-accent hidden bg-white font-medium px-4 leading-8 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-500 hover:text-white xl:inline"
+        class="cta-accent hidden hover:bg-yellow-500 font-medium px-4 leading-8 text-black transition-colors duration-300 ease-in-out hover:text-white xl:inline"
       >
         {% trans "Contact Us" %}
     </a>
@@ -178,14 +176,24 @@
                 
             </ul>
           </div>
-          <!-- <li id="mobile-industry-link-wrapper">
+          <li id="mobile-industry-link-wrapper">
             <a
               href="#"
               id="mobile-industry-link"
               class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
               >{% trans "SOLUTIONS" %}</a
             >
-          </li> -->
+          </li>
+          <div id="mobile-industry-dropdown" class="py-2 hidden">
+            <ul>
+                <li class="px-3 py-1 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
+                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
+                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
+                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
+                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
+                
+            </ul>
+          </div>
           
 
           <li>

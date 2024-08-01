@@ -8,6 +8,21 @@ label{
     font-weight: 500;
 }
 
+.active-slideshow {
+    opacity: 1;
+    animation: fade 0.3s linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .shadow-text {
     text-shadow: 1px 1px 2px #676463bd;
 }
@@ -383,16 +398,6 @@ header {
     left: 10%;
 }
 
-/* #hero-1-content h3::after {
-    content: 'Agricultural Drone';
-    position: absolute;
-    bottom: 4px;
-    font-size: 2rem;
-    font-weight: 500;
-    font-style: italic;
-    left: 30%;
-    width: 100%;
-} */
 
 @media screen and (max-width:791px) {
     #hero-1-content {
@@ -400,13 +405,6 @@ header {
         left: 5%;
     }
     
-    /* #hero-1-content h3::after {
-        bottom: 2px;
-        font-size: 1.1rem;
-        left: 27%;
-        width: fit-content;
-
-    } */
 }
 
 @media screen and (min-width:791px) and (max-width:1400px) {
@@ -414,10 +412,6 @@ header {
         top: 20%;
         left: 5%;
     }
-    /* #hero-1-content h3::after {
-        font-size: 1.25rem;
-        left: 25%;
-    } */
 }
 
 @media screen and (max-width:1100px) {
@@ -537,12 +531,6 @@ header {
     }
 }
 
-/* #featured-section {
-    background-image: url('../img/cloud-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-} */
 
 #featured-section p {
     font-size: 14px;

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Solutions | Drone Anatomy
+{% endblock title %}\
+
+{% block body %}
+
+<main class="">
+    <div class="relative h-dvh flex items-center">
+        <img data-src="https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060" alt="" class="lazy absolute top-0 left-0 object-cover object-center h-full w-full z-[-1]">
+        
+        <div class="w-10/12 flex justify-between mx-auto">
+            <div class="">
+
+                <h1 class="xl:text-5xl py-4 text-3xl font-semibold leading-[1.4]" data-aos="fade-up" data-aos-duration="400">UAV Data Processing</h1>
+                <h3 class="text-white" data-aos="fade-up" data-aos-delay="200">Decode the vault of high-quality UAV Data through our Aerial Data Processing solutions, and craft your vision into reality.</h3>
+            </div>
+            <div class="flex flex-col gap-4">
+                <a href="{% url 'core:contact' %}" class="btn">Talk to our team</a>
+                <a href="{% url 'core:whatsapp-redirect' %}" class="bg-white px-4 py-2 text-center">Enquire on whatsapp</a>
+            </div>
+        </div>
+    </div>
+    <div class="w-11/12 lg:w-9/12 mx-auto flex flex-col gap-10 my-16">
+
+        <div class="space-y-4">
+            <h2 class="text-3xl font-semibold">UAV Data Processing</h2>
+            <p class="text-justify">UAV, an abbreviation for Unmanned Aerial Vehicle, is an aircraft that demands no pilot and can both fly autonomously by pre-programmed flight systems or be remotely controlled. With the best UAV startup in India, be ready to unlock novel insights into the technological era. We grant drone-powered solutions through highly-equipped Unmanned Aerial Vehicles (UAVs) along with our GIS specialists in action. UAV mapping, UAV inspection, and UAV surveying and mapping encourage us to sail through procuring reliable and widespread information effortlessly. </p>
+        </div>
+        <div class="flex justify-between lg:justify-center gap-4 lg:gap-8 my-2">
+            <div class="flex flex-col gap-2 justify-center font-medium items-center lg:w-1/5 shadow-md aspect-1 hover:bg-yellow-500 transition-colors duration-300 hover:text-white hover:shadow-lg" data-aos="zoom-in">
+                <img data-src="{% static 'core/img/dataprocessing.png' %}" alt="" class="lazy w-1/2">
+
+                <h3 class="text-center">5x Faster Data Processing</h3>
+            </div>
+            <div class="flex flex-col gap-2 justify-center font-medium items-center lg:w-1/5 shadow-md aspect-1 hover:bg-yellow-500 transition-colors duration-300 hover:text-white hover:shadow-lg" data-aos="zoom-in">
+                <img data-src="{% static 'core/img/expert.png' %}" alt="" class="lazy w-1/2">
+                <h3 class="text-center">Team of GIS Experts</h3>
+            </div>
+            <div class="flex flex-col gap-2 justify-center font-medium items-center lg:w-1/5 shadow-md aspect-1 hover:bg-yellow-500 transition-colors duration-300 hover:text-white hover:shadow-lg" data-aos="zoom-in">
+                <img data-src="{% static 'core/img/deliverable.png' %}" alt="" class="lazy w-1/2">
+
+                <h3 class="text-center">Deliverables on Time</h3>
+            </div>
+        </div>
+
+        <div class="my-8">
+            <h2 class="text-3xl my-8 font-medium">Deliverables We Offer</h2>
+            <div class="grid lg:grid-cols-3 lg:gap-8 gap-4 justify-between">
+                <div class="flex flex-col p-4 gap-4 shadow-lg bg-accentLight" data-aos="zoom-in">
+                    <h3 class="font-medium text-xl">Orthomosaic Maps</h3>
+                    <p class="text-justify">Drone images are corrected for image distortion and stitched together during post-processing to create a highly-accurate orthomosaic map. Each pixel contains 2D geo-information (X, Y) and can directly procure accurate measurements, such as horizontal distances and surfaces.</p>
+                </div>
+                <div class="flex flex-col p-4 gap-4 shadow-lg bg-accentLight" data-aos="zoom-in">
+                    <h3 class="font-medium text-xl">3D Point Cloud</h3>
+                    <p class="text-justify">A densified point cloud can be generated from drone images. Each point contains geospatial (X, Y, Z) and color information. It provides a very accurate model for distance (slant and horizontal), area and volume measurements.</p>
+                </div>
+                <div class="flex flex-col p-4 gap-4 shadow-lg bg-accentLight" data-aos="zoom-in">
+                    <h3 class="font-medium text-xl">3D textured mesh</h3>
+                    <p class="text-justify">The 3D textured mesh replicates the edges, faces, vertices, and textures of the area captured by the drone. This model is particularly beneficial for visual inspections and becomes especially valuable when external stakeholders or public participation is integral to a project.</p>
+                </div>
+                <div class="flex flex-col p-4 gap-4 shadow-lg bg-accentLight" data-aos="zoom-in">
+                    <h3 class="font-medium text-xl">Digital Surface Models (DSM)</h3>
+                    <p class="text-justify">Drone images can also be used to create DSM models of the area. Each pixel contains 2D information (X, Y) and the altitude (Z value) of the highest point for this position.</p>
+                </div>
+                <div class="flex flex-col p-4 gap-4 shadow-lg bg-accentLight" data-aos="zoom-in"> 
+                    <h3 class="font-medium text-xl">Digital Terrain Models (DTM)</h3>
+                    <p class="text-justify">After filtering objects such as buildings, the drone images can be used to create DTMs with each pixel containing 2.5D information (X, Y, and Z value of the highest altitude).</p>
+                </div>
+                <div class="flex flex-col p-4 gap-4 shadow-lg bg-accentLight" data-aos="zoom-in">
+                    <h3 class="font-medium text-xl">Contour Maps</h3>
+                    <p class="text-justify">Depending on the project requirements, either the DTM or DSM model, with custom contour intervals, can be used to create a contour lines map, giving you a better understanding of the surface of the area shot by the drone.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full flex h-[30vh] flex-col gap-10 justify-center items-center bg-[#fdf9e8]">
+        <h3 class="lg:text-3xl text-xl text-center" data-aos="fade-up" data-aos-duration="500">Talk to our team for any queries regarding drone surveying for your Industry.</h3>
+        <!-- <h4>Talk to our team for any queries regarding drone surveying for your Industry.</h4> -->
+        <a href="{% url 'core:contact' %}" class=" bg-yellow-500 text-white px-4 py-2 3xl:text-2xl text-lg font-medium  hover:bg-transparent hover:border-2 border-yellow-500 hover:text-black hover:scale-105 transition-all duration-300 ease-linear">Get in touch with us</a>
+    </div>
+</main>
+
+{% endblock body %}
