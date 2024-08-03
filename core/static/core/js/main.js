@@ -415,21 +415,24 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+});
 
-    const slideElement = document.querySelector('.slide');
-    const images = slideElement.getAttribute('data-images').split(', ');
-    let currentIndex = 0;
 
-    function changeSlide() {
-        slideElement.classList.remove('active-slideshow');
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            slideElement.src = images[currentIndex];
-            slideElement.classList.add('active-slideshow');
-        }, 3000); // Match the transition duration
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.solution-banner');
+    let current = 0;
+
+    function changeImage() {
+        images[current].classList.remove('active');
+        console.log(current)
+        current = (current + 1) % images.length;
+        console.log(current)
+        
+        images[current].classList.add('active');
+        console.log('image changed')
     }
 
-    setInterval(changeSlide, 5000); // Change slide every 5 seconds
+    setInterval(changeImage, 3000); // Change image every 3 seconds
 });
 
 

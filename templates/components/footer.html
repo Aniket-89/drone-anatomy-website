@@ -8,21 +8,21 @@
         <div class="space-y-3">
           <h6 class="text-white">Products</h6>
           <ul class="flex flex-wrap flex-row lg:flex-nowrap lg:flex-col gap-4 lg:gap-2">
-            <li class="hover:text-yellow-500">
-              <a href="{% url 'core:agri-detail' %}">VTOL</a>
-            </li>
-            <li class="hover:text-yellow-500">
-              <a href="{% url 'core:agri-detail' %}">Kamakazi</a>
-            </li>
-            <li class="hover:text-yellow-500">
-              <a href="{% url 'core:agri-detail' %}">UAV Parts</a>
-            </li>
-            <li class="hover:text-yellow-500">
-              <a href="{% url 'core:agri-detail' %}">Agriculture Drones</a>
-            </li>
-            <li class="hover:text-yellow-500">
-              <a href="{% url 'core:agri-detail' %}">Surveilance Drones</a>
-            </li>
+              <li class="hover:text-yellow-500">
+                <a href="{% url 'core:agri-detail' %}">Agriculture Drones</a>
+              </li>
+              <li class="hover:text-yellow-500">
+                <a href="{% url 'core:agri-detail' %}">Surveilance Drones</a>
+              </li>
+              <li class="hover:text-yellow-500">
+                <a href="{% url 'core:agri-detail' %}">Kamakazi</a>
+              </li>
+              <li class="hover:text-yellow-500">
+                <a href="{% url 'core:agri-detail' %}">UAV Parts</a>
+              </li>
+                <li class="hover:text-yellow-500">
+                    <a href="{% url 'core:agri-detail' %}">VTOL</a>
+                </li>
           </ul>
         </div>
 
@@ -30,12 +30,12 @@
           <h6 class="text-white">Solutions</h6>
           <ul  class="flex flex-row flex-wrap lg:flex-nowrap lg:flex-col gap-4 lg:gap-2">
             <li class="hover:text-yellow-500">
-              <a href="#">VTOL</a>
+              <a href="{% url 'core:uav-data-processing' %}">UAV Data Processing</a>
             </li>
             <li class="hover:text-yellow-500">
-              <a href="#">Kamakazi</a>
+              <a href="{% url 'core:mapping' %}">Mapping</a>
             </li>
-            <li class="hover:text-yellow-500">
+            <!-- <li class="hover:text-yellow-500">
               <a href="#">UAV Parts</a>
             </li>
             <li class="hover:text-yellow-500">
@@ -43,20 +43,20 @@
             </li>
             <li class="hover:text-yellow-500">
               <a href="{% url 'core:agri-detail' %}">Agriculture Drones</a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
         <div class="space-y-3">
           <h6 class="text-white">Links</h6>
           <ul  class="flex flex-wrap flex-row lg:flex-nowrap lg:flex-col gap-4 lg:gap-2">
-            <li class="hover:text-yellow-500">
-              <a href="{% url 'core:about' %}">About</a>
-            </li>
+              <li class="hover:text-yellow-500"><a href="{% url 'core:about' %}">Contact Us</a></li>
+              <li class="hover:text-yellow-500">
+                <a href="{% url 'core:about' %}">About Us</a>
+              </li>
+              <li class="hover:text-yellow-500"><a href="{% url 'training:training' %}">Training</a></li>
+              <li class="hover:text-yellow-500"><a href="{% url 'core:career' %}">Career</a></li>
             <li class="hover:text-yellow-500"><a href="{% url 'blog:bloglist' %}">Blogs</a></li>
-            <li class="hover:text-yellow-500"><a href="{% url 'training:training' %}">Training</a></li>
-            <li class="hover:text-yellow-500"><a href="{% url 'core:career' %}">Career</a></li>
-            <li class="hover:text-yellow-500"><a href="{% url 'core:about' %}">Contact Us</a></li>
           </ul>
         </div>
       </div>

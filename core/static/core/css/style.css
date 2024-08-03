@@ -4,24 +4,60 @@ video {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
-label{
+
+label {
     font-weight: 500;
 }
 
-.active-slideshow {
-    opacity: 1;
-    animation: fade 0.3s linear;
+
+.solution-banner-container {
+    /* background-image: url('https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* z-index: -1; */
+    height: 100vh;
+    width: 100%;
+    animation: fade 15s linear infinite;
 }
 
 @keyframes fade {
     0% {
-        opacity: 0;
+        background-image: url('https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060');
+
+    }
+
+    25% {
+        background-image: url('https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060');
+    }
+
+    30% {
+        background-image: url('https://img.freepik.com/free-photo/beautiful-shot-mountains-reflecting-cold-lake-cloudy-sky_181624-4446.jpg?t=st=1722674992~exp=1722678592~hmac=a2ca85d5bfd5d8b42e5e7468ecf63fe54a8cafdc038f49620842aacf2f1a403f&w=996');
+
+    }
+
+    65% {
+        background-image: url('https://img.freepik.com/free-photo/beautiful-shot-mountains-reflecting-cold-lake-cloudy-sky_181624-4446.jpg?t=st=1722674992~exp=1722678592~hmac=a2ca85d5bfd5d8b42e5e7468ecf63fe54a8cafdc038f49620842aacf2f1a403f&w=996');
+
+    }
+
+    70% {
+        background-image: url('https://img.freepik.com/free-photo/sunset-sea_1204-522.jpg?t=st=1722675038~exp=1722678638~hmac=fe0021a53b235d9b1fc030ef136e50c4c4d960d8d5ff7c7193ca97fdc1f0189b&w=996');
+
+    }
+
+    95% {
+        background-image: url('https://img.freepik.com/free-photo/sunset-sea_1204-522.jpg?t=st=1722675038~exp=1722678638~hmac=fe0021a53b235d9b1fc030ef136e50c4c4d960d8d5ff7c7193ca97fdc1f0189b&w=996');
+
     }
 
     100% {
-        opacity: 1;
+        background-image: url('https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060');
+
+
     }
 }
+
 
 .shadow-text {
     text-shadow: 1px 1px 2px #676463bd;
@@ -38,7 +74,7 @@ label{
     z-index: -1;
     border-radius: 2px;
     border-bottom: 4px solid #0c0c0c;
-    
+
 }
 
 @keyframes underlineAnimation {
@@ -62,7 +98,7 @@ label{
     content: url('../img/tick-square.png');
     margin-right: 8px;
     /* margin-top: 8px; */
-    
+
 }
 
 .loaded {
@@ -79,7 +115,7 @@ label{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #0B0C0C;
     /* Preloader background color */
     z-index: 9999;
     /* Ensure it appears on top of other content */
@@ -164,7 +200,7 @@ header {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 60%/cover;
-    
+
 }
 
 .career-banner {
@@ -174,6 +210,7 @@ header {
     background-repeat: no-repeat;
     background-position: right;
 }
+
 .career-banner::before {
     content: '';
     background-image: linear-gradient(to right, #f5c000 25%, rgb(255, 204, 0, 0.4));
@@ -288,13 +325,15 @@ header {
         left: -132px;
     }
 }
+
 @keyframes scrollRight {
     to {
         right: -132px;
     }
 }
 
-.partner-list-l, .partner-list-r {
+.partner-list-l,
+.partner-list-r {
     position: relative;
     width: 100%;
     min-width: calc(132px * 7);
@@ -302,7 +341,7 @@ header {
 }
 
 
-.partner-list-l > li {
+.partner-list-l>li {
     position: absolute;
     left: 100%;
     width: 132px;
@@ -312,7 +351,8 @@ header {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-.partner-list-r > li {
+
+.partner-list-r>li {
     position: absolute;
     right: 100%;
     width: 132px;
@@ -323,7 +363,8 @@ header {
     animation-iteration-count: infinite;
 }
 
-.partner-list-l img, .partner-list-l img {
+.partner-list-l img,
+.partner-list-l img {
     object-fit: contain;
     aspect-ratio: 3/2;
     height: 100%;
@@ -333,45 +374,59 @@ header {
 .partner-logo1 {
     animation-delay: calc(30s / 7 * (7 - 1) * -1);
 }
+
 .partner-logo2 {
     animation-delay: calc(30s / 7 * (7 - 2) * -1);
 }
+
 .partner-logo3 {
     animation-delay: calc(30s / 7 * (7 - 3) * -1);
 }
+
 .partner-logo4 {
     animation-delay: calc(30s / 7 * (7 - 4) * -1);
 }
+
 .partner-logo5 {
     animation-delay: calc(30s / 7 * (7 - 5) * -1);
 }
+
 .partner-logo6 {
     animation-delay: calc(30s / 7 * (7 - 6) * -1);
 }
+
 .partner-logo7 {
     animation-delay: calc(30s / 7 * (7 - 7) * -1);
 }
+
 .partner-logo8 {
     animation-delay: calc(30s / 7 * (7 - 1) * -1);
 }
+
 .partner-logo9 {
     animation-delay: calc(30s / 7 * (7 - 2) * -1);
 }
+
 .partner-logo10 {
     animation-delay: calc(30s / 7 * (7 - 3) * -1);
 }
+
 .partner-logo11 {
     animation-delay: calc(30s / 7 * (7 - 4) * -1);
 }
+
 .partner-logo12 {
     animation-delay: calc(30s / 7 * (7 - 5) * -1);
 }
+
 .partner-logo13 {
     animation-delay: calc(30s / 7 * (7 - 6) * -1);
 }
+
 .partner-logo14 {
     animation-delay: calc(30s / 7 * (7 - 7) * -1);
 }
+
 .partner-logo15 {
     animation-delay: calc(30s / 7 * (7 - 8) * -1);
 }
@@ -404,7 +459,7 @@ header {
         top: 15%;
         left: 5%;
     }
-    
+
 }
 
 @media screen and (min-width:791px) and (max-width:1400px) {
@@ -656,6 +711,7 @@ footer h6 {
         height: 440px;
         width: auto;
     }
+
     #image-slider {
         height: 45vh;
     }
@@ -888,6 +944,3 @@ footer h6 {
     animation-timeline: view();
     /* transition: transform 0.5s; */
 }
-
-
-
