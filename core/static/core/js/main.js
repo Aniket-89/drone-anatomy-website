@@ -266,7 +266,6 @@ function applyInitialHeaderStyles() {
         langSelector.classList.remove("text-black");
         langSelector.classList.add("text-white");
     } else {
-        header.classList.add("backdrop-blur-md");
         logoLight.classList.add("hidden");
         logoDark.classList.remove("hidden");
         cta.classList.remove(
@@ -319,7 +318,7 @@ window.addEventListener("scroll", updateHeader);
 function updateHeader() {
     const scrollY = window.scrollY;
 
-    if (scrollY > 50 || dropdownActive || mobileMenuActive) {
+    if (scrollY > 50 || dropdownActive || mobileMenuActive || window.location.pathname === "mapping" || window.location.pathname ==="uav-data-processing" || window.location.pathname === "gallery") {
         applyScrolledHeaderStyles();
     } else {
         applyInitialHeaderStyles();
