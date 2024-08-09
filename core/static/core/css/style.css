@@ -11,24 +11,36 @@ label {
 
 
 .solution-banner-container {
-    /* background-image: url('https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060'); */
+    background-image: url('../img/solutions/uav-data-processing-banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     /* z-index: -1; */
     height: 100vh;
     width: 100%;
-    animation: fade 15s linear infinite;
+    /* animation: fade 15s linear infinite; */
+}
+.mapping-banner-container {
+    background-image: url('../img/solutions/mapping-banner1.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* z-index: -1; */
+    height: 100vh;
+    width: 100%;
+    /* animation: fade 15s linear infinite; */
 }
 
 @keyframes fade {
     0% {
-        background-image: url('https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060');
+    background-image: url('../img/solutions/uav-data-processing-banner.png');
+
 
     }
 
     25% {
-        background-image: url('https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060');
+    background-image: url('../img/solutions/uav-data-processing-banner.png');
+
     }
 
     30% {
@@ -52,11 +64,13 @@ label {
     }
 
     100% {
-        background-image: url('https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060');
+    background-image: url('../img/solutions/uav-data-processing-banner.png');
+
 
 
     }
 }
+
 
 
 .shadow-text {

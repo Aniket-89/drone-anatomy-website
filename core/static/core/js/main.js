@@ -111,9 +111,7 @@ const isHomePage = window.location.pathname === "/"; // Check for homepage URL
 let dropdownActive = false;
 let mobileMenuActive = false;
 
-function isHomepage() {
-    return window.location.pathname === "/" || window.location.pathname === "/index.html";
-}
+
 
 // Show dropdown on hover
 productsLink.addEventListener("mouseover", () => {
@@ -208,7 +206,11 @@ mobileIndustryLink.addEventListener("click", (e) => {
 window.addEventListener("scroll", updateHeader);
 // Function to check if the current page is the homepage
 function isHomepage() {
-    return window.location.pathname === "/" || window.location.pathname === "/index.html";
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html")  {
+        
+        return true
+    }
+    return false
 }
 
 function applyScrolledHeaderStyles() {
@@ -247,7 +249,7 @@ function applyScrolledHeaderStyles() {
 
 function applyInitialHeaderStyles() {
     if (isHomepage()) {
-        header.classList.add("text-white", "backdrop-blur-md")
+        header.classList.add("text-white", "backdrop-blur-sm")
         logoLight.classList.remove("hidden");
         logoDark.classList.add("hidden");
         navLinks.classList.remove("text-black");
@@ -264,6 +266,7 @@ function applyInitialHeaderStyles() {
         langSelector.classList.remove("text-black");
         langSelector.classList.add("text-white");
     } else {
+        header.classList.add("backdrop-blur-md");
         logoLight.classList.add("hidden");
         logoDark.classList.remove("hidden");
         cta.classList.remove(
@@ -418,22 +421,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.solution-banner');
-    let current = 0;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const images = document.querySelectorAll('.solution-banner');
+//     let current = 0;
 
-    function changeImage() {
-        images[current].classList.remove('active');
-        console.log(current)
-        current = (current + 1) % images.length;
-        console.log(current)
+//     function changeImage() {
+//         images[current].classList.remove('active');
+//         console.log(current)
+//         current = (current + 1) % images.length;
+//         console.log(current)
         
-        images[current].classList.add('active');
-        console.log('image changed')
-    }
+//         images[current].classList.add('active');
+//         console.log('image changed')
+//     }
 
-    setInterval(changeImage, 3000); // Change image every 3 seconds
-});
+//     setInterval(changeImage, 3000); // Change image every 3 seconds
+// });
 
 
 

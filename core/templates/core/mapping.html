@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Solutions | Drone Anatomy
-{% endblock title %}\
+{% endblock title %}
 
 {% block body %}
 
 <main class="flex-1">
-    <div class="relative h-dvh flex items-center">
-        <img data-src="https://img.freepik.com/free-photo/bangkok-city-sunrise-thailand_335224-868.jpg?t=st=1722432184~exp=1722435784~hmac=d4c014bcda37bb3732497fd28e2ab3aa46c45dcddf3c3e8efe1bc966e5283bed&w=1060" alt="" class="lazy absolute top-0 left-0 object-cover object-center h-full w-full z-[-1]">
+    <div class="relative h-dvh flex items-center mapping-banner-container">
+        <video data-src="{% static 'core/mapping-banner-vid.mp4' %}" class="lazy absolute top-0 left-0 w-full h-full object-cover" autoplay loop muted></video>
         <div class="w-10/12 mx-auto">
             <div class="">
 
-                <h1 class="xl:text-5xl py-4 text-3xl font-semibold leading-[1.4]" data-aos="fade-up" data-aos-duration="400">Aerial Drone Surveying and Mapping</h1>
-                <h3 class="text-white" data-aos="fade-up" data-aos-delay="200">Our stellar Aerial Drone Surveying / Mapping techniques are here to promote your treasured business to the next level by preserving time and money.</h3>
+                <h1 class="xl:text-5xl py-4 text-3xl font-semibold leading-[1.4] shadow-text text-white" data-aos="fade-up" data-aos-duration="400">Aerial Drone Surveying and Mapping</h1>
+                <p class="text-white" data-aos="fade-up" data-aos-delay="200">Our stellar Aerial Drone Surveying / Mapping techniques are here to promote your treasured business to the next level by preserving time and money.</p>
             </div>
         </div>
     </div>
