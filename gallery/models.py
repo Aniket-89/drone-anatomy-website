@@ -22,7 +22,7 @@ class GalleryImage(models.Model):
         else:
             return None
         
-   def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):
         # Save the instance first to ensure `self.image` has a value
         super(GalleryImage, self).save(*args, **kwargs)
 
