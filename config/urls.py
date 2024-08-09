@@ -10,6 +10,8 @@ urlpatterns = [
     path('', include("core.urls")),
     path('tinymce/', include('tinymce.urls')),
     path('blogs/', include("blog.urls")),
+    path('shop/', include("shop.urls")),
+    path('gallery/', include("gallery.urls")),
     path('training/', include("training.urls")),
 ]
 
