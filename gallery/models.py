@@ -1,6 +1,7 @@
 import io
 from PIL import Image
 from django.db import models
+from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
 
@@ -21,13 +22,15 @@ class GalleryImage(models.Model):
         else:
             return None
         
-    def save(self, *args, **kwargs):
+   def save(self, *args, **kwargs):
         # Save the instance first to ensure `self.image` has a value
         super(GalleryImage, self).save(*args, **kwargs)
 
         if self.image:
-            # Open the image using the in-memory file
-            image = Image.open(self.image)
+            # Open the image using the in-memory file from default storage
+            img_read = default_storage.open(self.image.name, 'rb')
+            image = Image.open(img_read)
+            
             max_width = 800
 
             # Resize the image if it's wider than the max width
@@ -39,11 +42,11 @@ class GalleryImage(models.Model):
                 # Resize the image
                 image = image.resize(new_size, Image.Resampling.LANCZOS)
 
-                # Save the image to a BytesIO object
+                # Save the resized image to a BytesIO object
                 image_io = io.BytesIO()
                 image.save(image_io, format=image.format, quality=80)
 
-                # Save the new image to the ImageField
+                # Replace the original image with the resized one
                 self.image.save(self.image.name, ContentFile(image_io.getvalue()), save=False)
 
         # Call save again to save the resized image
