@@ -206,7 +206,7 @@ mobileIndustryLink.addEventListener("click", (e) => {
 window.addEventListener("scroll", updateHeader);
 // Function to check if the current page is the homepage
 function isHomepage() {
-    if (window.location.pathname === "/" || window.location.pathname === "/index.html")  {
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html" || window.location.pathname === "/uav-data-processing")  {
         
         return true
     }
