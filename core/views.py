@@ -214,7 +214,7 @@ def contact_view(request):
             # Send email to the admin
             try:
                 send_mail(
-                    'Test Mail',
+                    'Contact Form - Website',
                     f'Name: {name}\nEmail: {email}\n\nMessage:\n{message}',
                     settings.DEFAULT_FROM_EMAIL,  # Or use email
                     ['admin@droneanatomy.com'],
@@ -259,6 +259,11 @@ def contact_view(request):
         # Render the contact page with the form and success message (if any)
         return render(request, 'core/contact.html', {'form': form, 'success': success})
     
+
+def upcoming_view(request):
+
+    return render(request, "core/upcoming.html", {})
+
 
 def whatsapp_redirect(request):
     """
@@ -362,7 +367,7 @@ def set_language(request):
 
 
 def send_career_form_email(name, email, position, message, pdf_path, resume):
-    email_subject = 'Career Form'
+    email_subject = 'Career Form from website'
     email_body = f'Name: {name}\nEmail: {email}\nApplying for Position: {position}\n\nMessage:\n{message}'
     recipient_list = ['admin@droneanatomy.com']
     

@@ -262,10 +262,30 @@ function applyInitialHeaderStyles() {
             "hover:bg-yellow-500",
             "hover:text-white"
         );
+        header.classList.remove(
+            "bg-white",
+            // "shadow-sm",
+            // "shadow-shadow",
+            // "lg:h-22"
+        );
+        header.classList.add(
+            "bg-transparent",
+            // "text-white",
+            "border-b",
+            // "lg:h-24"
+        );
         cta.classList.add("border-white", "text-white");
+        ctaAccent.classList.remove("bg-yellow-500", "text-white", "hover:bg-white", "hover:border-black", "hover:border", "hover:text-yellow-500");
+    ctaAccent.classList.add("bg-white", "text-black");
         langSelector.classList.remove("text-black");
         langSelector.classList.add("text-white");
-    } else {
+
+    } else if (window.location.pathname === "/uav-data-processing" || window.location.pathname === "/mapping" || window.location.pathname === "/gallery"){
+        applyScrolledHeaderStyles();
+
+    }
+    
+    else {
         logoLight.classList.add("hidden");
         logoDark.classList.remove("hidden");
         cta.classList.remove(
@@ -276,23 +296,25 @@ function applyInitialHeaderStyles() {
         );
         cta.classList.add("border-black", "text-black");
         document.getElementById("lang-select").classList.add("text-black")
+        header.classList.remove(
+            "bg-white",
+            // "shadow-sm",
+            // "shadow-shadow",
+            // "lg:h-22"
+        );
+        header.classList.add(
+            "bg-transparent",
+            // "text-white",
+            "border-b",
+            // "lg:h-24"
+        );
+        ctaAccent.classList.remove("bg-yellow-500", "text-white", "hover:bg-white", "hover:border-black", "hover:border", "hover:text-yellow-500");
+    ctaAccent.classList.add("bg-white", "text-black");
     }
 
-    header.classList.remove(
-        "bg-white",
-        // "shadow-sm",
-        // "shadow-shadow",
-        // "lg:h-22"
-    );
-    header.classList.add(
-        "bg-transparent",
-        // "text-white",
-        "border-b",
-        // "lg:h-24"
-    );
+   
 
-    ctaAccent.classList.remove("bg-yellow-500", "text-white", "hover:bg-white", "hover:border-black", "hover:border", "hover:text-yellow-500");
-    ctaAccent.classList.add("bg-white", "text-black");
+    
 
     // logoSize.classList.remove("h-[32px]", "md:h-[60px]", "xl:h-[64px]");
     // logoSize.classList.add("h-[35px]", "md:h-[64px]", "xl:h-[96px]");
@@ -318,7 +340,7 @@ window.addEventListener("scroll", updateHeader);
 function updateHeader() {
     const scrollY = window.scrollY;
 
-    if (scrollY > 50 || dropdownActive || mobileMenuActive || window.location.pathname === "mapping" || window.location.pathname ==="uav-data-processing" || window.location.pathname === "gallery") {
+    if (scrollY > 50 || dropdownActive || mobileMenuActive) {
         applyScrolledHeaderStyles();
     } else {
         applyInitialHeaderStyles();
