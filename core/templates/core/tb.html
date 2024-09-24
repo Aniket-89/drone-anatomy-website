@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load static %}
+{% block title %}Thrust Bench | Drone Anatomy{% endblock title %}
+{% block body %}
+
+<main>
+    <div class="w-full max-w-[1920px] h-[60vh] max-h-[600px] mx-auto flex items-end justify-center" style="background: linear-gradient(13deg, rgba(55,50,51,1) 0%, rgba(115,117,107,0.97) 58%, rgba(202,203,195,1) 100%);">
+        <!-- <img
+        data-src="{% static 'core/img/tb/tb6_l.jpg' %}"
+        alt=""
+        class="lazy w-full h-full object-cover object-center"
+        /> -->
+        <h1 class="lg:text-7xl text-5xl text-white font-semibold my-8">DA-20KGF</h1>
+    </div>
+    <div class="xl:w-8/12 lg:9/12 max-w-5xl mx-auto my-20 flex flex-col lg:flex-row justify-between gap-12">
+        <div class="w-1/3 h-[400px] mx-4 lg:mx-0 overflow-hidden rounded-md shadow-md ">
+
+            <img data-src="{% static 'core/img/tb/tb7.jpg' %}" height="400" width="220" alt="tb" class="lazy hover:scale-105 transition-transform ease-in-out duration-200 w-full h-full object-cover object-center">
+        </div>
+        <article class="mx-auto px-4 w-2/3">
+            <h2 class="text-2xl my-2 font-semibold">DA-20KGF Thrust Bench</h2>
+            <p class="text-justify text-black">
+                DA-20KGF motor and propeller test stand is designed to test motors and propellers of medium UAV. It allows you to finish drone torque measuring of 20kg thrust for max 40'' propeller. The test stand will help you to figure out the most efficient drone propulsion system and extend the flight time.
+                <br>
+                The thrust tester is capable of testing the thrust, torque, voltage, current, RPM, motor and propeller efficiency of your drone propulsion system.
+            </p>
+            <h3 class="text-xl font-medium mt-4 mb-4">Specification of DA-20KGF Drone Torque Measuring</h3>
+            <div class="flex lg:gap-16 gap-8">
+                <ul class="space-y-2">
+                    <li class="text-gray-500">Suggested Propulsion System</li>
+                    <li class="text-gray-500">Max Thrust</li>
+                    <li class="text-gray-500">Max Propeller</li>
+                    <li class="text-gray-500">Current</li>
+                    <li class="text-gray-500">RPM</li>
+                    <li class="text-gray-500">Temperature</li>
+                </ul>        
+                
+                <ul class="space-y-2">
+                    <li class="text-gray-500">Max Thrust > 3kg</li>
+                    <li class="text-gray-500">20kg</li>
+                    <li class="text-gray-500">40inch</li>
+                    <li class="text-gray-500">0-150A</li>
+                    <li class="text-gray-500">30-15000RPM</li>
+                    <li class="text-gray-500">0-100°C</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+
+    <section class="w-full bg-zinc-50 text-center py-8">
+        <h2 class="my-8 lg:text-5xl text-3xl font-semibold">DA ThrustBench Console</h2>
+        <h3 class="text-lg">DA ThrustBench console software allows you to monitor the key data and display the data in diagrams.</h3>
+    
+        <div class="lg:w-[70vw] max-w-5xl h-fit mx-auto my-12">
+            <img data-src="{% static 'core/img/tb/tb_console.png' %}" alt="tb console" class="lazy w-full h-full object-cover object-center">
+        </div>
+    </section>
+    <section
+        id=""
+        class="w-full py-32 flex flex-col gap-10 justify-center items-center bg-[#fdf9e8]"
+    >
+        <h3
+        class="lg:text-5xl text-3xl text-center"
+        data-aos="fade-up"
+        data-aos-duration="500"
+        >
+        Contact To Learn More
+        </h3>
+        <div class="" data-aos="slide-up" data-aos-duration="400">
+        <a
+            href="{% url 'core:whatsapp-redirect' %}" target="_blank"
+            class="bg-yellow-500 text-white px-4 py-2 xl:text-2xl text-lg font-medium hover:bg-transparent hover:border-2 border-yellow-500 hover:text-black hover:scale-110 transition-all duration-300 linear"
+            >Contact Us</a
+        >
+        </div>
+    </section>
+</main>
+{% endblock body %}

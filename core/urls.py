@@ -11,8 +11,10 @@ urlpatterns = [
     path('contact', views.contact_view, name='contact'),
     path('career', views.career_view, name='career'),
     path('mapping', views.mapping_view, name='mapping'),
+    path('thrustbench', views.tb_view, name='tb'),
     path('uav-data-processing', views.uav_data_processing_view, name='uav-data-processing'),
     path('subscribe', views.subscribe_newsletter, name='subscribe_newsletter'),
     path('whatsapp-redirect', views.whatsapp_redirect, name='whatsapp-redirect'),
     path('lang-select', views.set_language, name='set-language'),
+    path('upcoming', views.upcoming_view, name='upcoming-page'),
 ]

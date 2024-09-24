@@ -91,6 +91,11 @@ def agri_view(request):
         return render(request, 'core/agri-drone.html', {'form': form, 'success': success})
 
 
+def tb_view(request):
+
+    return render(request, 'core/tb.html', {})
+
+
 def uav_data_processing_view(request):
 
     return render(request, 'core/uav-data-processing.html', context={})

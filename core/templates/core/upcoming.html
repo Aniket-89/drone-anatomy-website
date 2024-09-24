@@ -1,0 +1,83 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block css %}
+<style>
+    .upcomingBanner {
+
+        background: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+</style>
+{% endblock css %}
+{% block body %}
+<main class="flex-1">
+  <div class="upcomingBanner flex flex-col items-center justify-center gap-4 mt-24 w-full h-[30vh] bg-black text-white text-center">
+    <h1 class="text-2xl lg:text-5xl 3xl:text-5xl font-semibold">Discover Our Upcoming Products</h1>
+    <p>
+      Discover our innovative products coming soon. Be the first to experience
+      the future of technology and sustainability.
+    </p>
+  </div>
+  <div class="py-4">
+      <h2 class="text-5xl font-semibold text-center leading-[1.5] mt-8">Coming Soon</h2>
+    
+    <div class="upcoming-products-list md:grid md:grid-cols-2 justify-between gap-4 w-10/12 mx-auto mt-8">
+        <div class="upcoming-product-card w-full border-2 p-4 flex flex-col shadow-md my-8 bg-gray-100">
+            <h3 class="text-5xl font-medium">Mini Drone</h3>
+            <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="overflow-hidden w-full aspect-[16/9] my-8 rounded">
+                <img data-src="{% static 'core/img/p10.png' %}" alt="mini drone image" class="lazy h-full w-full object-contain" >
+            </div>
+            <div class="flex justify-between items-center">
+                <a href="#" class="cta-accent bg-black px-3 py-1 items-center justify-center text-white text-sm sm:text-lg transition-all duration-400 ease-in-out hover:bg-yellow-400 hover:text-black flex">Learn More</a>
+                <p>12/1/2025</p>
+            </div>
+        </div>
+        <div class="upcoming-product-card w-full border-2 rounded p-4 flex flex-col shadow-md my-8">
+            <h3 class="text-3xl font-semibold">Mini Drone</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="overflow-hidden w-full aspect-[16/9] bg-slate-300 my-8 rounded">
+                <img data-src="{% static 'core/img/p16.png' %}" alt="mini drone image" class="lazy h-full w-full object-contain object-center">
+            </div>
+            <div class="flex justify-between items-center">
+                <a href="#" class="cta-accent bg-yellow-500 px-4 py-2 items-center justify-center text-white text-sm sm:text-lg transition-all duration-400 ease-in-out hover:bg-yellow-400 hover:text-black flex">Learn More</a>
+                <p>12/1/2025</p>
+            </div>
+        </div>
+        <div class="upcoming-product-card w-full border-2 rounded p-4 flex flex-col shadow-md my-8">
+            <h3 class="text-3xl font-semibold">Mini Drone</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa itaque dicta ipsam suscipit, qui voluptates accusamus molestias aperiam libero!</p>
+            <div class="overflow-hidden w-full aspect-[16/9] bg-slate-300 my-8 rounded">
+                <img src="" alt="mini drone image" class="h-full w-full object-cover">
+            </div>
+            <div class="flex justify-between items-center">
+                <a href="#" class="cta-accent bg-yellow-500 px-4 py-2 items-center justify-center text-white text-sm sm:text-lg transition-all duration-400 ease-in-out hover:bg-yellow-400 hover:text-black flex">Learn More</a>
+                <p>12/1/2025</p>
+            </div>
+        </div>
+        <div class="upcoming-product-card w-full border-2 rounded p-4 flex flex-col shadow-md my-8">
+            <h3 class="text-3xl font-semibold">Mini Drone</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa itaque dicta ipsam suscipit, qui voluptates accusamus molestias aperiam libero!</p>
+            <div class="overflow-hidden w-full aspect-[16/9] bg-slate-300 my-8 rounded">
+                <img src="" alt="mini drone image" class="h-full w-full object-cover">
+            </div>
+            <div class="flex justify-between items-center">
+                <a href="#" class="cta-accent bg-yellow-500 px-4 py-2 items-center justify-center text-white text-sm sm:text-lg transition-all duration-400 ease-in-out hover:bg-yellow-400 hover:text-black flex">Learn More</a>
+                <p>12/1/2025</p>
+            </div>
+        </div>
+
+    </div>
+    
+  </div>
+
+  <!-- <div class="">
+    <h1>Stay Updated</h1>
+    <p>Be the first to know about our product launches and exclusive offers.</p>
+    <form action="">
+        input
+    </form>
+  </div> -->
+</main>
+{% endblock body %}

@@ -190,24 +190,24 @@ mobileProductLink.addEventListener("click", (e) => {
     mobileProductLink.classList.toggle("text-yellow-500");
 
     mobileIndustryDropdown.classList.add("hidden");
-    mobileIndustryWrapper.classList.remove("bg-gray-400");
+    mobileIndustryWrapper.classList.remove("bg-accentLight");
 });
 
 mobileIndustryLink.addEventListener("click", (e) => {
     e.preventDefault();
     mobileIndustryDropdown.classList.toggle("hidden");
-    mobileIndustryWrapper.classList.toggle("bg-gray-400");
+    mobileIndustryWrapper.classList.toggle("bg-accentLight");
     mobileIndustryLink.classList.toggle("text-yellow-500");
 
     mobileProductDropdown.classList.add("hidden");
-    mobileProductWrapper.classList.remove("bg-gray-400");
+    mobileProductWrapper.classList.remove("bg-accentLight");
 });
 // Update header on scroll
 window.addEventListener("scroll", updateHeader);
 // Function to check if the current page is the homepage
 function isHomepage() {
-    if (window.location.pathname === "/" || window.location.pathname === "/index.html")  {
-        
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+
         return true
     }
     return false
@@ -276,16 +276,14 @@ function applyInitialHeaderStyles() {
         );
         cta.classList.add("border-white", "text-white");
         ctaAccent.classList.remove("bg-yellow-500", "text-white", "hover:bg-white", "hover:border-black", "hover:border", "hover:text-yellow-500");
-    ctaAccent.classList.add("bg-white", "text-black");
+        ctaAccent.classList.add("bg-white", "text-black");
         langSelector.classList.remove("text-black");
         langSelector.classList.add("text-white");
 
-    } else if (window.location.pathname === "/uav-data-processing" || window.location.pathname === "/mapping" || window.location.pathname === "/gallery"){
+    } else if (window.location.pathname === "/uav-data-processing" || window.location.pathname === "/mapping" || window.location.pathname === "/gallery") {
         applyScrolledHeaderStyles();
 
-    }
-    
-    else {
+    } else {
         logoLight.classList.add("hidden");
         logoDark.classList.remove("hidden");
         cta.classList.remove(
@@ -309,12 +307,12 @@ function applyInitialHeaderStyles() {
             // "lg:h-24"
         );
         ctaAccent.classList.remove("bg-yellow-500", "text-white", "hover:bg-white", "hover:border-black", "hover:border", "hover:text-yellow-500");
-    ctaAccent.classList.add("bg-white", "text-black");
+        ctaAccent.classList.add("bg-white", "text-black");
     }
 
-   
 
-    
+
+
 
     // logoSize.classList.remove("h-[32px]", "md:h-[60px]", "xl:h-[64px]");
     // logoSize.classList.add("h-[35px]", "md:h-[64px]", "xl:h-[96px]");
@@ -451,7 +449,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //         console.log(current)
 //         current = (current + 1) % images.length;
 //         console.log(current)
-        
+
 //         images[current].classList.add('active');
 //         console.log('image changed')
 //     }
