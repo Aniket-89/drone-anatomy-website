@@ -41,11 +41,8 @@
             >
             <ul>
                 <li class="px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
-                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
-                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
-                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
-                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
-                
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:tb' %}">Thrust Bench</a></li>
+                <li class="border-t border-gray-400 px-6 py-2 text-lg hover:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Flight Controller</a></li>
             </ul>
             </div>
         </li>
@@ -166,32 +163,25 @@
               >{% trans "PRODUCTS" %}</a
             >
           </li>
-          <div id="mobile-product-dropdown" class="py-2 hidden">
-            <ul>
-                <li class="px-3 py-1 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
-                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
-                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
-                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
-                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
-                
+          <div id="mobile-product-dropdown" class="hidden">
+            <ul class="space-y-1">
+                <li class="pl-3 text-base text-gray-500 hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
+                <li class="pl-3 text-base text-gray-500 hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:tb' %}">Thrust Bench</a></li>
+                <li class="pl-3 text-base text-gray-500 hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Flight Controller</a></li>
             </ul>
           </div>
           <li id="mobile-industry-link-wrapper">
             <a
               href="#"
               id="mobile-industry-link"
-              class="nav-links transition-colors duration-300 ease-in-out hover:text-yellow-400"
+              class="nav-links block transition-colors duration-300 ease-in-out w-full hover:text-yellow-400"
               >{% trans "SOLUTIONS" %}</a
             >
           </li>
-          <div id="mobile-industry-dropdown" class="py-2 hidden">
-            <ul>
-                <li class="px-3 py-1 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Agriculture Drones</a></li>
-                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Surveilance Drones</a></li>
-                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">VTOL</a></li>
-                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">Kamakazi</a></li>
-                <li class="px-3 py-2 text-lg hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:agri-detail' %}">UAV Parts</a></li>
-                
+          <div id="mobile-industry-dropdown" class="hidden">
+            <ul class="space-y-1">
+                <li class="pl-3 text-base text-gray-500 hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:mapping' %}">Mapping and Surveying</a></li>
+                <li class="pl-3 text-base text-gray-500 hover:text-yellow-500 focus:text-yellow-500"><a href="{% url 'core:uav-data-processing' %}">UAV Data Processing</a></li>                
             </ul>
           </div>
           
