@@ -4,6 +4,7 @@ from django.utils.html import strip_tags
 from django.utils.text import Truncator
 from tinymce.models import HTMLField
 
+
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=100)
